@@ -503,7 +503,6 @@ h2, .h2 {
 }
 
 .btn {
-  font-weight: 500;
   font-size: rem(10);
   line-height: 160%;
   letter-spacing: -0.05em;
@@ -522,6 +521,7 @@ h2, .h2 {
   position: relative;
   z-index: 2;
   display: inline-block;
+  font-weight: 500;
   @include mt;
   --bs-btn-color: #074287;
   --bs-btn-border-color: #074287;
@@ -543,12 +543,14 @@ h2, .h2 {
 }
 
 .btn-primary {
+  background: $gradient-dark;
+  @include mt;
   --bs-btn-color: #fff;
-  --bs-btn-bg: #074287;
-  --bs-btn-border-color: #074287;
+  --bs-btn-bg: #{$primary};
+  --bs-btn-border-color: #{transparent};
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #063873;
-  --bs-btn-hover-border-color: #06356c;
+  --bs-btn-hover-bg: #{$primary};
+  --bs-btn-hover-border-color: #{transparent};
   --bs-btn-focus-shadow-rgb: 44, 94, 153;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #06356c;
@@ -557,4 +559,7 @@ h2, .h2 {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #074287;
   --bs-btn-disabled-border-color: #074287;
+  &:hover {
+    background: var(--bs-btn-hover-bg);
+  }
 }
