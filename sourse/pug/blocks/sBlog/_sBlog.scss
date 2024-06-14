@@ -1,8 +1,12 @@
 // start .sBlog
 .sBlog {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sPT: #{rem(24)};
+	--sPB: #{rem(33)};
+	--sTPB: #{rem(30)};
+    @include media-breakpoint-up(md) {
+      --sPT: #{rem(58)};
+      --sTPB: #{rem(47)};
+    }
 	
 	&__row{
 		--bs-gutter-x: #{rem(8)};
