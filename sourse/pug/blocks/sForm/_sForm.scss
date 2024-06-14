@@ -96,13 +96,14 @@
 
 .form-control {
   --bs-border-radius: #{rem(50)};
-  line-height: 240%;
+  line-height: 1.7;
   &::placeholder {
     opacity: .8;
     @include media-breakpoint-up(md) {
       font-size: rem(14);
     }
   }
+  padding: rem(12) rem(30);
 	@include media-breakpoint-up(md) {
     font-size: rem(14);
     padding: rem(20) rem(36);
@@ -117,5 +118,61 @@
   }
 	@include media-breakpoint-up(md) {
     border-radius: $border-radius-xl;
+  }
+}
+
+.sForm {
+  &--consult {
+    h2 {
+      @include media-breakpoint-up(lg) {
+        margin-bottom: rem(50);
+      }
+    }
+    .form-wrap {
+      @include media-breakpoint-down(md) {
+        padding-top: rem(40);
+      }
+    }
+
+    p {
+      margin: auto;
+      margin-bottom: rem(40);
+    }
+    .small {
+      text-align: center;
+      max-width: rem(240);
+      margin: auto;
+      opacity: .5;
+      line-height: 98%;
+      letter-spacing: -0.05em;
+      @include media-breakpoint-up(lg) {
+        text-align: start;
+        margin-right: 0;
+        max-width: rem(230);
+      }
+    }
+  }
+
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(13);
+    margin-bottom: rem(20);
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .form-group {
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        min-width: rem(240);
+        flex-shrink: 0;
+      }
+    }
   }
 }

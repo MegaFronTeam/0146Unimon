@@ -508,7 +508,7 @@ h2, .h2 {
   letter-spacing: -0.05em;
 	@include media-breakpoint-up(md) {
     font-size: rem(14);
-    --bs-btn-padding-y: #{rem(24)};
+    --bs-btn-padding-y: #{rem(20)};
     --bs-btn-padding-x: #{rem(32)};
   }
 

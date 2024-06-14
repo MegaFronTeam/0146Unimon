@@ -6,10 +6,27 @@ mixin sForm()
 				h2 Хотите получать новости?
 				+e.row.row
 					+e.col.col-md-5
-						p Оставьте ваш  электронный адрес и будьте в курсе последних новостей
+						p Оставьте ваш	электронный адрес и будьте в курсе последних новостей
 					+e.col.col-md-7
 						.d-flex
 							+input("Адрес электронной почты",'email')
 							+e.btn.btn.btn-primary(type="submit") Отправить заявку
 						+policy
+	// end sForm
+
+mixin sForm2()
+	// start sForm
+	+b.SECTION.sForm--consult.section#sForm&attributes(attributes)
+		.container
+			+form-wrap
+				.text-center
+					.d-none.d-lg-block: h2 Закажите бесплатную консультацию специалиста по выбору оптимального оборудования
+					.d-lg-none: h2 Бесплатная консультация
+					.d-lg-none: p Закажите бесплатную консультацию специалиста по выбору оптимального оборудования
+				.form-wrapper
+					+input("*Ваше имя ",'text')
+					+input("E-mail ",'email')
+					+input("*Номер телефона ",'tel')
+					+e.btn.btn.btn-primary(type="submit") Отправить заявку
+				.small.fw-500 Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
 	// end sForm
