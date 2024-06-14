@@ -111,8 +111,11 @@
 
 .form-wrap {
   background: $gradient-light;
-  border-radius: $border-radius-xl;
+  border-radius: $border-radius;
   &__btn {
     margin-bottom: 0;
+  }
+	@include media-breakpoint-up(md) {
+    border-radius: $border-radius-xl;
   }
 }

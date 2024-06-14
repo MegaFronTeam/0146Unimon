@@ -34,7 +34,37 @@
 						<div class="section-title">
 							<h1>Блог</h1>
 						</div>
-						<div class="sBlog__row row">
+						<div class="sBlog__navigation row">
+							<div class="sBlog__col d-none d-md-block col-12 col-lg-7">
+								<div class="sBlog__item-left"><a class="title title_active" href="#">Все</a><a class="title" href="#">Рубрика 1</a><a class="title" href="#">Рубрика 2</a><a class="title" href="#">Рубрика 3</a><a class="title" href="#">Рубрика 4</a>
+								</div>
+							</div>
+							<div class="sBlog__col col">
+								<div class="sBlog__item">
+									<div class="sBlog__input-wrap form-group custom-select-wrap">
+										<select class="sBlog__input form-select custom-select-js" name="select" data-placeholder="Все рубрики">
+											<option value="Все рубрики">Все рубрики</option>
+											<option value="Все рубрики1">Все рубрики1</option>
+											<option value="Все рубрики2">Все рубрики2</option>
+											<option value="Все рубрики3">Все рубрики3</option>
+											<option value="Все рубрики4">Все рубрики4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="search-block">
+										<form>
+											<input type="text" placeholder="" inputmode="search"/>
+											<button> 
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg>
+											</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sBlog__row-cards row">
 							<div class="sBlog__col col-12 col-sm-6 col-lg-4">
 								<a class="blog-card" href="#">
 									<div class="blog-card__content">

@@ -4,7 +4,19 @@ mixin sBlog(data)
 		.container
 			+b.section-title
 				h1 Блог
-			+e.row.row
+			+e.navigation.row
+				+e.col.d-none.d-md-block.col-12.col-lg-7
+					+e.item-left
+						a(href='#').title.title_active Все
+						a(href='#').title Рубрика 1
+						a(href='#').title Рубрика 2
+						a(href='#').title Рубрика 3
+						a(href='#').title Рубрика 4
+				+e.col.col
+					+e.item
+						+input("Все рубрики",'select','')
+						+search
+			+e.row-cards.row
 				+blogCard('example.jpg', 'Безопасность систем мониторинга', 'Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower', '01.04.2024', '#безопасность', '#надежность')
 				+blogCard('example.jpg', 'Виды мониторинга температуры', 'In the ever-evolving landscape of the Internet of Things (IoT), connectivity is the key to unlocking', '01.04.2024', '#рубрика')
 				+blogCard('example.jpg', 'Безопасность систем мониторинга', 'Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower', '01.04.2024', '#безопасность', '#надежность')

@@ -2,18 +2,29 @@
 .sBlog {
 	--sPT: #{rem(24)};
 	--sPB: #{rem(33)};
-	--sTPB: #{rem(30)};
+	--sTPB: #{rem(20)};
     @include media-breakpoint-up(md) {
       --sPT: #{rem(58)};
-      --sTPB: #{rem(47)};
+      --sTPB: #{rem(15)};
     }
-	
-	&__row{
+
+  &__navigation {
+    position: relative;
+    margin-bottom: rem(15);
+    align-items: center;
+		--bs-gutter-y: #{rem(8)};
+    // overflow: hidden;
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem(22);
+    }
+  }
+
+	&__row-cards {
 		--bs-gutter-x: #{rem(8)};
 		--bs-gutter-y: #{rem(8)};
     margin-bottom: rem(29);
     @include media-breakpoint-up(md) {
-		  --bs-gutter-x: #{rem(20)};
+      --bs-gutter-x: #{rem(20)};
       --bs-gutter-y: #{rem(30)};
       margin-bottom: rem(46);
     }
@@ -24,11 +35,62 @@
       text-align: start;
     }
 	}
-	&__col{
-		
-	}
+
+  .title {
+    min-width: rem(50);
+    display: inline-block;
+    padding-bottom: rem(17);
+    padding-top: rem(17);
+    color: $gray-700;
+    flex-shrink: 0;
+    font-size: rem(15);
+    &_active {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: rem(5);
+        background: $blue-600;
+        border-radius: $border-radius;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__item-left {
+		display: flex;
+    gap: rem(43);
+    position: relative;
+    @include media-breakpoint-up(lg) {
+      position: static;
+    }
+    @include media-breakpoint-up(md) {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $gray-200;
+        @include media-breakpoint-up(lg) {
+          left: 10px;
+          width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+
 	&__item{
-		
+		display: flex;
+    gap: rem(4);
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+      gap: rem(10);
+    }
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -48,7 +110,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: rem(50);
-  border: 1px solid $gray-200;
+  border: 1px solid $gray-100;
   padding: rem(46) rem(27);
   box-shadow: 1px -5px 44px 0 rgba(0, 0, 0, 0.05);
   @include mt;
@@ -62,7 +124,7 @@
   }
 
   &:hover {
-    box-shadow: -5px 30px 59px 0 rgba(148, 188, 200, 0.4);
+    box-shadow: -5px 20px 59px 0 rgba(148, 188, 200, 0.4);
   }
 
   &__img-wrap {
