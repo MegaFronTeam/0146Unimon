@@ -2,15 +2,14 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
 			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
-				+policy
+				h2 Хотите получать новости?
+				+e.row.row
+					+e.col.col-md-5
+						p Оставьте ваш  электронный адрес и будьте в курсе последних новостей
+					+e.col.col-md-7
+						.d-flex
+							+input("Адрес электронной почты",'email')
+							+e.btn.btn.btn-primary(type="submit") Отправить заявку
+						+policy
 	// end sForm

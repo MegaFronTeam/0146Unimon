@@ -58,3 +58,24 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 	/* <-- Apparently some margin are still there even though it's hidden */
 }
+
+.policy {
+  color: $blue-700;
+  opacity: .4;
+
+  .custom-input__text {
+    font-size: rem(8);
+    line-height: 112%;
+    display: inline-block;
+    @include media-breakpoint-up(md) {
+      font-size: rem(12);
+    }
+    a {
+      font-weight: 600;
+    }
+  }
+
+  .form-check {
+    min-height: none;
+  }
+}

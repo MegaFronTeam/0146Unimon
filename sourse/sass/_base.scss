@@ -485,14 +485,20 @@ h4, .h4,
   background-clip: text;
   color: transparent;
   display: inline-block;
+  letter-spacing: -0.06em;
 }
 
 
 h1, .h1 {
   font-size: rem(36);
-  letter-spacing: -0.06em;
 	@include media-breakpoint-up(md) {
     font-size: rem(64);
+  }
+}
+h2, .h2 {
+  font-size: rem(24);
+	@include media-breakpoint-up(md) {
+    font-size: rem(48);
   }
 }
 
@@ -534,4 +540,21 @@ h1, .h1 {
   &:hover, &:active {
     background-clip: unset;
   }
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #074287;
+  --bs-btn-border-color: #074287;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #063873;
+  --bs-btn-hover-border-color: #06356c;
+  --bs-btn-focus-shadow-rgb: 44, 94, 153;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #06356c;
+  --bs-btn-active-border-color: #053265;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #074287;
+  --bs-btn-disabled-border-color: #074287;
 }
