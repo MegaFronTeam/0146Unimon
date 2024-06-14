@@ -1,0 +1,26 @@
+mixin sBlog(data)
+	// start sBlog
+	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Блог
+			+e.row.row
+				+blogCard('example.jpg', 'Безопасность систем мониторинга', 'Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower', '01.04.2024', '#безопасность', '#надежность')
+				+blogCard('example.jpg', 'Виды мониторинга температуры', 'In the ever-evolving landscape of the Internet of Things (IoT), connectivity is the key to unlocking', '01.04.2024', '#рубрика')
+				+blogCard('example.jpg', 'Безопасность систем мониторинга', 'Milesight HL31 Wi-Fi HaLow Gateway is designed to bring new excitement to the IoT landscape and empower', '01.04.2024', '#безопасность', '#надежность')
+			.btn-wrap.text-center: +e.btn.btn.btn-outline-primary Показать еще
+	// end sBlog
+
+
+mixin blogCard(img, title, text, date, ...tags)
+	+e.col.col-12.col-sm-6.col-lg-4
+		+b.A.blog-card(href='#')
+			+e.content
+				+e.img-wrap: +img(`img/${img}`, 'bg')
+				+e.title.fw-700.text_gradient!= title
+				+e.text!= text
+			+e.footer
+				+e.tag.text_gradient!= tags[0]
+				if tags[1]
+					+e.tag!= tags[1]
+				+e.date!= date

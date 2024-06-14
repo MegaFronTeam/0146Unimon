@@ -172,6 +172,9 @@ main{
 .fw-600 {
 	font-weight: 600;
 }
+.fw-700 {
+	font-weight: 700;
+}
 .fw-100 {
 	font-weight: 100;
 }
@@ -471,4 +474,64 @@ iframe {
 		height: 100%;
 		object-fit: cover;
 	}
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+.text_gradient {
+  background: $gradient-dark;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+
+h1, .h1 {
+  font-size: rem(36);
+  letter-spacing: -0.06em;
+	@include media-breakpoint-up(md) {
+    font-size: rem(64);
+  }
+}
+
+.btn {
+  font-weight: 500;
+  font-size: rem(10);
+  line-height: 160%;
+  letter-spacing: -0.05em;
+	@include media-breakpoint-up(md) {
+    font-size: rem(14);
+    --bs-btn-padding-y: #{rem(24)};
+    --bs-btn-padding-x: #{rem(32)};
+  }
+
+}
+
+.btn-outline-primary {
+  background: $gradient-dark;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  @include mt;
+  --bs-btn-color: #074287;
+  --bs-btn-border-color: #074287;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #{$gradient-dark};
+  --bs-btn-hover-border-color: #{transparent};
+  --bs-btn-focus-shadow-rgb: 7, 66, 135;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #9AAAB3;
+  --bs-btn-active-border-color: #074287;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  --bs-btn-disabled-color: #074287;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #074287;
+  --bs-gradient: none;
+  &:hover, &:active {
+    background-clip: unset;
+  }
 }
