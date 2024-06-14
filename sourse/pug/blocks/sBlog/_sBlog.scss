@@ -111,8 +111,8 @@
   justify-content: space-between;
   gap: rem(50);
   border: 1px solid $gray-100;
-  padding: rem(46) rem(27);
   box-shadow: 1px -5px 44px 0 rgba(0, 0, 0, 0.05);
+  padding: rem(46) rem(27);
   @include mt;
   cursor: pointer;
 	@include media-breakpoint-up(sm) {

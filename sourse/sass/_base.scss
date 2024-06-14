@@ -501,6 +501,13 @@ h2, .h2 {
     font-size: rem(48);
   }
 }
+h4, .h4 {
+  font-size: rem(16);
+  font-weight: 700;
+	@include media-breakpoint-up(md) {
+    font-size: rem(24);
+  }
+}
 
 .btn {
   font-size: rem(10);
@@ -562,4 +569,9 @@ h2, .h2 {
   &:hover {
     background: var(--bs-btn-hover-bg);
   }
+}
+
+.bg-gray {
+  // --bs-body-bg: #{$gray-050};
+  background: $gray-050;
 }

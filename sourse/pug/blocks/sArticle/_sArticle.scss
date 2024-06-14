@@ -1,0 +1,58 @@
+// start .sArticle
+.sArticle {
+	--sPT: #{rem(16)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+    --sPT: #{rem(21)};
+  }
+	
+	&__row{
+		--bs-gutter-x: #{rem(12)};
+		--bs-gutter-y: #{rem(21)};
+	}
+  h2 {
+    font-weight: 700;
+  }
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		padding: rem(21) rem(28);
+    background: $white;
+    border-radius: $border-radius-md;
+    border: 1px solid $gray-100;
+    box-shadow: 1px -5px 44px 0 rgba(0, 0, 0, 0.05);
+    @include media-breakpoint-up(lg) {
+      padding: rem(39) rem(44);
+    }
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sArticle
+
+.articlePart {
+  margin-bottom: rem(50);
+  h4 {
+    margin-bottom: rem(40);
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
+.listItem {
+  margin-bottom: rem(31);
+  span {
+    font-weight: 500;
+  }
+}
