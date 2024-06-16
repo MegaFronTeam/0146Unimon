@@ -126,7 +126,9 @@ main{
 	margin-bottom: var(--sTPB);
 }
 
-
+.text_dark {
+  color: $gray-600;
+}
 
 .mono {
 	font-family: $font-family-code;
