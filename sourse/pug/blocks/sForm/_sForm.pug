@@ -30,3 +30,15 @@ mixin sForm2()
 					+e.btn.btn.btn-primary(type="submit") Отправить заявку
 				.small.fw-500 Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
 	// end sForm
+
+mixin sFormSmall()
+	// start sForm
+	.sForm--small
+		+form-wrap
+			.text-center
+				h2 Подпишитесь на наши новости
+				p Оставьте ваш  электронный адрес и будьте в курсе последних новостей
+				+input("E-mail ",'email')
+				.small.fw-500 Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
+				+e.btn.btn.btn-primary(type="submit") Подписаться
+	// end sForm

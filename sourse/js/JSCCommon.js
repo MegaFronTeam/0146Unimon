@@ -293,6 +293,16 @@ export default class JSCCommon {
 				return false;
 			}
 		});
+		$(document).on("click", " .article-navigation a", function () {
+			const elementClick = $(this).attr("href");
+			if (!document.querySelector(elementClick)) {
+				$(this).attr("href", "/" + elementClick);
+			} else {
+				let destination = $(elementClick).offset().top;
+				$("html, body").animate({scrollTop: destination - 80}, 0);
+				return false;
+			}
+		});
 	}
 	static getCurrentYear(el) {
 		let now = new Date();
@@ -423,7 +433,7 @@ export default class JSCCommon {
 		this.customSelect();
 		this.setScreen();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-		// JSCCommon.animateScroll();
+		JSCCommon.animateScroll();
 
 		// JSCCommon.CustomInputFile();
 	}

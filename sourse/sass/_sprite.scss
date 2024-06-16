@@ -23,9 +23,9 @@
 	width: calc(27 / #{$h} *1em );
 }
 .icon-fb {
-	$h: 24;
+	$h: 30;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(24 / #{$h} *1em );
+	width: calc(31 / #{$h} *1em );
 }
 .icon-instagram {
 	$h: 24;
@@ -56,4 +56,9 @@
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
+}
+.icon-x {
+	$h: 30;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(31 / #{$h} *1em );
 }

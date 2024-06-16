@@ -167,3 +167,16 @@
     align-items: baseline;
   }
 }
+
+
+.blog-card--empty {
+  max-width: 80%;
+  align-items: center;
+  justify-content: center;
+  .h4 {
+    transform: translateX(20%);
+  }
+  img {
+    margin-left: rem(10);
+  }
+}

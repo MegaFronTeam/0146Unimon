@@ -61,6 +61,27 @@ function eventHandler() {
 		freeModeMomentum: true,
 	});
 
+  
+	const sProductSlider = new Swiper(".sArticle__slider--js", {
+		spaceBetween: 8,
+		watchOverflow: true,
+		// spaceBetween: 0,
+		slidesPerView: 'auto',
+		// freeMode: true,
+		// loopFillGroupWithBlank: true,
+		touchRatio: 0.4,
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		breakpoints: {
+			576: {
+        slidesPerView: 2,
+			},
+			992: {
+        slidesPerView: 4,
+			},
+		},
+	});
+
 	
 }
 if (document.readyState !== "loading") {
