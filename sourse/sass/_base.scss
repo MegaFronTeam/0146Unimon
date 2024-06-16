@@ -128,6 +128,12 @@ main{
 
 .text_dark {
   color: $gray-600;
+  a {
+    color: $gray-600;
+    &:hover {
+      color: $blue-600;
+    }
+  }
 }
 
 .mono {
@@ -578,6 +584,24 @@ h4, .h4 {
   &:hover {
     background: var(--bs-btn-hover-bg);
   }
+}
+
+.btn-light {
+  --bs-btn-padding-y: #{rem(17)} !important;
+  --bs-btn-color: #{$primary};
+  --bs-btn-bg: #{$white};
+  --bs-btn-border-color: #{$white};
+  --bs-btn-hover-color: #{$primary};
+  --bs-btn-hover-bg: #{$gray-100};
+  --bs-btn-hover-border-color: #b8b8b8;
+  --bs-btn-focus-shadow-rgb: 196, 196, 196;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #b8b8b8;
+  --bs-btn-active-border-color: #adadad;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #e6e6e6;
+  --bs-btn-disabled-border-color: #e6e6e6;
 }
 
 .bg-gray {

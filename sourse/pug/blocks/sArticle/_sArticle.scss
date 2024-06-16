@@ -87,11 +87,14 @@
 		
 	}
 
-  &__desciption {
+  &__title-block {
     margin-bottom: rem(38);
     @include media-breakpoint-up(md) {
       margin-bottom: rem(54);
     }
+  }
+
+  &__desciption {
     ol {
       padding-left: rem(16);
     }
@@ -100,12 +103,12 @@
     }
   }
 
-	&__item{
+	&__item {
 		padding: rem(21) rem(28);
     background: $white;
     border-radius: $border-radius-md;
     border: 1px solid $gray-100;
-    box-shadow: 1px -5px 44px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: $box-shadow;
     @include media-breakpoint-up(lg) {
       padding: rem(39) rem(44);
     }
@@ -137,48 +140,6 @@
     }
   }
 
-  &__read {
-    .swiper-slide {
-      height: auto;
-    }
-    .h3 {
-      @include media-breakpoint-down(lg) {
-        text-align: center;
-      }
-    }
-
-    .swiper {
-      overflow: visible;
-    }
-
-    .swiper-slide {
-      @include media-breakpoint-up(lg) {
-        width: calc(26% - 8px) !important;
-      }
-    }
-    .swiper-slide:last-child {
-      @include media-breakpoint-up(lg) {
-        width: calc(20% + 8px) !important;
-      }
-    }
-    .swiper-wrapper {
-      padding-top: rem(34);
-      padding-bottom: rem(40);
-      @include media-breakpoint-up(md) {
-        padding-bottom: rem(56);
-      }
-      @include media-breakpoint-down(md) {
-        width: 80%;
-      }
-    }
-    .blog-card {
-      @include media-breakpoint-down(md) {
-        padding: rem(20);
-        padding-bottom: rem(30);
-        min-height: auto;
-      }
-    }
-  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -322,39 +283,46 @@
   }
 }
 
-.share-links {
-  background: $gradient-dark;
-  border-radius: $border-radius;
-  padding: rem(16) rem(20);
-  padding-bottom: rem(20);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: rem(15);
-  position: relative;
-  overflow: hidden;
-  margin-bottom: rem(22);
-  &::after {
-    content: '';
-    position: absolute;
-    background: $white;
-    width: rem(300);
-    height: rem(200);
-    opacity: .1;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%)  rotate(125deg);
 
+.read-more {
+  .swiper-slide {
+    height: auto;
   }
-  @include media-breakpoint-up(lg) {
-    align-items: flex-start;
+  .h3 {
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
   }
 
-  &__title {
-    color: $white;
+  .swiper {
+    overflow: visible;
   }
-  img:not(:last-child) {
-    margin-right: rem(20);
+
+  .swiper-slide {
+    @include media-breakpoint-up(lg) {
+      width: calc(26% - 8px) !important;
+    }
+  }
+  .swiper-slide:last-child {
+    @include media-breakpoint-up(lg) {
+      width: calc(20% + 8px) !important;
+    }
+  }
+  .swiper-wrapper {
+    padding-top: rem(34);
+    padding-bottom: rem(40);
+    @include media-breakpoint-up(md) {
+      padding-bottom: rem(56);
+    }
+    @include media-breakpoint-down(md) {
+      width: 80%;
+    }
+  }
+  .blog-card {
+    @include media-breakpoint-down(md) {
+      padding: rem(20);
+      padding-bottom: rem(30);
+      min-height: auto;
+    }
   }
 }

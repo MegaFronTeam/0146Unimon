@@ -1,0 +1,27 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sArticle/_sArticle.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Статья'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+	.bg-gray
+		+parts('header')
+		main
+			+headerBlock
+			+sArticle2
+			+sForm2

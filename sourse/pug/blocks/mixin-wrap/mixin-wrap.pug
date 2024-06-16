@@ -44,3 +44,20 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+
+mixin shareLinks
+	+b.share-links
+		+e.title Поделиться статьей
+		+e.links
+			+img(src="img/facebook.svg", alt="")
+			+img(src="img/twitter.svg", alt="")
+			+img(src="img/linkedin.svg", alt="")
+
+mixin calculate
+	+b.calculateCost
+		+e.title Калькулятор стоимости<br>аналогичной системы
+		+e.A.btn.btn.btn-light(href='#') Сделать рассчет
+		+e.img-wrap
+			+img(src="img/calc-bg-2.png", alt="").img-left
+			+img(src="img/calc-bg-1.png", alt="").img-right
