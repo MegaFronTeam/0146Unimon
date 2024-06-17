@@ -21,6 +21,10 @@
     border-radius: $border-radius-lg;
     overflow: hidden;
     position: relative;
+    aspect-ratio: 442/263;
+    @include media-breakpoint-up(md) {
+      aspect-ratio: 1350/523;
+    }
     &::after {
       content: '';
       width: 100%;
@@ -37,6 +41,27 @@
 	&__slide{
 		height: auto;
 	}
+
+  &--light {
+    .headerBlock__img-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include media-breakpoint-up(md) {
+        aspect-ratio: 1350/447;
+      }
+      &::after {
+        z-index: 0;
+        background: $gradient-white;
+      }
+      img {
+        max-width: 55%;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+  }
 
 	@include media-breakpoint-up(xl) {}
 

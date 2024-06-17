@@ -4,3 +4,10 @@ mixin headerBlock()
 		.container
 			+e.img-wrap: +img('img/header-bg.png', 'bg')
 	// end headerBlock
+
+mixin headerBlock2()
+	// start headerBlock
+	+b.headerBlock--light.section#headerBlock&attributes(attributes)
+		.container
+			+e.img-wrap: +img(src="img/Dodo-Logo.svg", alt="")
+	// end headerBlock
