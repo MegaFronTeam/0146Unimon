@@ -16,7 +16,12 @@
 
 body,
 html {
+  --bs-body-font-size: 14px;
 	font-size: var(--bs-body-font-size);
+  // font-size: 14px;
+	@include media-breakpoint-up(md) {
+    --bs-body-font-size: 20px;
+  }
 }
 html{
 	-webkit-text-size-adjust: 100%;
@@ -505,6 +510,7 @@ h1, .h1 {
 }
 h2, .h2 {
   font-size: rem(24);
+  line-height: 107%;
 	@include media-breakpoint-up(md) {
     font-size: rem(48);
   }
