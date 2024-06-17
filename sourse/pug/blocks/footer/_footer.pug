@@ -1,9 +1,34 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
+			+e.row.row
 				.col
-					
-				.col Footer
+					+e.inner-wrapper
+						+e.title Мониторинг
+						ul
+							li: a(href="#") Температуры
+							li: a(href="#") Влажность
+							li: a(href="#") Отопление
+							li: a(href="#") Микроклимат
 				.col
-				.col-auto
+					+e.inner-wrapper
+						+e.title Применения
+						ul
+							li: a(href="#") Хранение лекарств
+							li: a(href="#") Термокартирование
+							li: a(href="#") Управление отоплением
+				.col
+					+e.inner-wrapper
+						+e.title Оборудование
+						ul
+							li: a(href="#") AlertBox Lite
+							li: a(href="#") AlertBox Radio Lite
+							li: a(href="#") AlertBox Radio
+							li: a(href="#") AlertBox Pro
+							li: a(href="#") AlertBox Enterprise
+				.col.col-xl-4
+					+e.wrapper
+						+e.title: a(href="#") Партнерство
+						+e.title: a(href="#") Карта сайта
+				.col-12
+					a(href="#"): +img(src="img/logo.png", alt="").logo
