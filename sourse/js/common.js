@@ -88,26 +88,31 @@ function eventHandler() {
   menuItems.forEach(item => {
       item.addEventListener('click', function(event) {
           event.stopPropagation();
-
-          // Закрываем все другие меню
           menuItems.forEach(otherItem => {
               if (otherItem !== item) {
                   otherItem.classList.remove('active');
               }
           });
 
-          // Переключаем класс 'active' для текущего элемента
           item.classList.toggle('active');
       });
   });
 
-  // Закрытие всех меню при клике вне области меню
   document.addEventListener('click', function(event) {
       if (!event.target.closest('.menu-item-has-children')) {
           menuItems.forEach(item => {
               item.classList.remove('active');
           });
       }
+  });
+
+  /* side sticky */
+
+  let sidebar = document.querySelector('.sidebar-sticky');
+  new hcSticky(sidebar, {
+      stickTo: '.sticky-wrap',
+      top: 10,
+      bottomEnd: 10
   });
 }
 if (document.readyState !== "loading") {

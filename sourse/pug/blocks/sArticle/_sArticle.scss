@@ -123,6 +123,9 @@
     .sArticle__item {
       padding: rem(28) rem(34);
       margin-bottom: rem(22);
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     .title {
       font-weight: 500;
