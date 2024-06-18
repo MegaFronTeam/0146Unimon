@@ -1,13 +1,14 @@
 .top-nav {
-	// --sPT: #{rem()};
+	// --sPT: #{rem(16)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+	&__row {
+      padding-top: rem(14);
 		// --bs-gutter-x: #{rem()};
 		// @include media-breakpoint-up(md) {
-			--bs-gutter-y: var(--bs-gutter-x);
+			// --bs-gutter-y: var(--bs-gutter-x);
 		// }
-
+    align-items: center;
 	}
 	.section-title{
 		
@@ -18,9 +19,68 @@
 	&__item{
 
 	}
-	&__slide{
-		height: auto;
+  .logo {
+    max-width: 30vw;
+  }
+
+	&__btn {
+		margin-bottom: rem(36);
 	}
+
+  &__social {
+    display: flex;
+    gap: rem(10);
+    align-items: center;
+  }
+
+  &__link-contacts {
+    margin-bottom: rem(27);
+    font-size: rem(18);
+    a {
+      color: $white;
+    }
+    a:last-child {
+      font-size: rem(15);
+    }
+  }
+
+  &__link-item {
+    background: $white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(50);
+    height: rem(50);
+    .icon-youtube, .icon-telegram {
+      fill: $gray-600;
+      font-size: rem(18);
+    }
+  }
+  .link-item {
+    &_outlined {
+      width: rem(36);
+      height: rem(36);
+      border: 1px solid $primary;
+    }
+  }
+  .icon-user {
+    fill: $gray-600;
+    stroke: none;
+    margin-right: rem(8);
+  }
+
+  .menu {
+    @include media-breakpoint-down(lg) {
+      padding-bottom: rem(16);
+      margin-bottom: rem(16);
+      border-bottom: rem(1) solid rgba(255, 255, 255, 0.37);
+    }
+  }
+  
+  .btn-primary {
+    --bs-btn-padding-y: #{rem(14)};
+  }
 
 
 	@include media-breakpoint-up(sm) {}

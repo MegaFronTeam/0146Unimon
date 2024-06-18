@@ -4,9 +4,9 @@ mixin mnu()
 		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 			each link in nav
 				if !link.subnav
-					li.menu-item.menu-item_main(itemprop="item"): a(href= link.url itemprop="url")= link.name
+					li.menu-item(itemprop="item"): a(href= link.url itemprop="url")= link.name
 				if link.subnav
-					li.menu-item.menu-item_main.menu-item-has-children
+					li.menu-item.menu-item-has-children
 						a(href="#" itemprop="url")= link.name
 							+icon('arr-down')
 						ul.sub-menu

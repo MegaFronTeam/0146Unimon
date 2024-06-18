@@ -539,8 +539,8 @@ h4, .h4 {
     --bs-btn-padding-y: #{rem(20)};
     --bs-btn-padding-x: #{rem(32)};
   }
-
 }
+
 
 .btn-outline-primary {
   background: $gradient-dark;
@@ -593,7 +593,7 @@ h4, .h4 {
 }
 
 .btn-light {
-  --bs-btn-padding-y: #{rem(17)} !important;
+  --bs-btn-padding-y: #{rem(17)};
   --bs-btn-color: #{$primary};
   --bs-btn-bg: #{$white};
   --bs-btn-border-color: #{$white};
@@ -608,6 +608,13 @@ h4, .h4 {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #e6e6e6;
   --bs-btn-disabled-border-color: #e6e6e6;
+}
+
+.btn-sm {
+  --bs-btn-padding-y: #{rem(7)} !important;
+  --bs-btn-padding-x: #{rem(8)} !important;
+  --bs-btn-font-size: #{rem(12)} !important;
+  --bs-btn-border-radius: #{$border-radius-lg};
 }
 
 .bg-gray {

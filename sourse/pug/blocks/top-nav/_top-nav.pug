@@ -16,20 +16,35 @@ mixin mob-mnu()
 			span
 		+e.inner
 			+mnu()
-	//  мобильное меню
+	//	мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-					+img(src="img/logo-dark.png", alt="")
-				.col.order-lg-0.order-last
+				.col-auto
+					a(href="#"):  +img(src="img/logo-dark.png", alt="").logo
+				.col.order-lg-0
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
+							+e.btn.btn.btn-sm.btn-light(href='#').d-lg-none
+								+icon('user')
+								| Вход в систему
 							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+							+e.link-contacts.d-lg-none
+								+e.contacts(href="tel:+79682864967") + 7 968 286 49 67
+								+e.contacts(href='mailto:unimon@mail.ru') unimon@mail.ru
+							+e.social.d-lg-none
+								+e.link-item(href='#'): +icon('telegram')
+								+e.link-item(href='#'): +icon('youtube')
+				.col-auto
+					+e.btn.btn.btn-primary(href='#').d-none.d-lg-inline
+						| Вход в систему
+						+icon('user')
+				.col-auto.d-lg-none.ms-auto
+					+e.social
+						+e.link-item.link-item_outlined(href="tel:+79682864967"): +img(src="img/phone.svg", alt="")
+						+e.link-item.link-item_outlined(href='#'): +img(src="img/message.svg", alt="")
+						+menu-toggle()
 	// end top-nav

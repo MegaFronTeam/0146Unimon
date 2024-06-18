@@ -2,8 +2,8 @@
 	// start .topLine
 .topLine {
   background: $blue-300;
-  --sPT: #{rem(6)};
-	--sPB: #{rem(6)};
+  --sPT: #{rem(0)};
+	--sPB: #{rem(2)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
