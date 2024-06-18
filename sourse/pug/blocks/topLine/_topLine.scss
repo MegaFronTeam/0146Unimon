@@ -1,21 +1,44 @@
 
 	// start .topLine
-	.topLine {
-		 
-		// --sPT: #{rem()};
-	// --sPB: #{rem()};
+.topLine {
+  background: $blue-300;
+  --sPT: #{rem(6)};
+	--sPB: #{rem(6)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
+
 	.section-title{
 		
 	}
 	&__col{
 
 	}
+
+  &__wrapper {
+    width: max-content;
+  }
+
+  &__contacts {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 114%;
+    letter-spacing: -0.05em;
+    color: $gray-600;
+    margin-right: rem(16);
+    &:not(:last-child) {
+      margin-right: rem(28);
+      margin-left: rem(10);
+    }
+  }
+
+  &__link {
+    margin-right: rem(10);
+  }
+
 	&__item{
 
 	}
