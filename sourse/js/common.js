@@ -112,7 +112,7 @@ function eventHandler() {
   new hcSticky(sidebar, {
       stickTo: '.sticky-wrap',
       top: 10,
-      bottomEnd: 10
+      bottomEnd: 0
   });
 }
 if (document.readyState !== "loading") {
