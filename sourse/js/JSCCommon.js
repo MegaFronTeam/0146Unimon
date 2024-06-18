@@ -283,16 +283,16 @@ export default class JSCCommon {
 		);
 	}
 	static animateScroll() {
-		$(document).on("click", " .menu li a, .scroll-link", function () {
-			const elementClick = $(this).attr("href");
-			if (!document.querySelector(elementClick)) {
-				$(this).attr("href", "/" + elementClick);
-			} else {
-				let destination = $(elementClick).offset().top;
-				$("html, body").animate({scrollTop: destination - 80}, 0);
-				return false;
-			}
-		});
+		// $(document).on("click", " .menu li a, .scroll-link", function () {
+		// 	const elementClick = $(this).attr("href");
+		// 	if (!document.querySelector(elementClick)) {
+		// 		$(this).attr("href", "/" + elementClick);
+		// 	} else {
+		// 		let destination = $(elementClick).offset().top;
+		// 		$("html, body").animate({scrollTop: destination - 80}, 0);
+		// 		return false;
+		// 	}
+		// });
 		$(document).on("click", " .article-navigation a", function () {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {

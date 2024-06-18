@@ -2,7 +2,7 @@
 	@include media-breakpoint-up(lg) {
 
 		display: flex;
-		text-align: center;
+		// text-align: center;
 		@include roww(20px);
 		flex-wrap: wrap;
 	}
@@ -11,13 +11,12 @@
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
+  // background: $white;
 	li{
-		
-		// margin-left: 0;
-		// margin-right: 0;
 		padding: 0;
 	}
-	a{
+	a {
+    font-size: rem(14);
 		display: block;
 		padding: rem(20) calc(var(--bs-gutter-x) / 2);
 	}
@@ -77,8 +76,6 @@
 }
 @include media-breakpoint-down(lg) {
 
-	
-
 	.menu-mobile {
 		position: fixed !important;
 		z-index: 999;
@@ -116,13 +113,21 @@
 		}
 		&__inner {
 			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
-			overflow-x: hidden;
-			overflow-y: auto;
+			// overflow-x: hidden;
+			// overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
 			height: 100vh;
+      background: $gray-600;
 			// @include mt(.3s);
 			// transition-delay: .4s;
 			// opacity: var(--opacity);
+      a {
+        color: $white;
+        font-weight: 400;
+        .icon {
+          stroke: $white;
+        }
+      }
 		}
 
 		&.active { 
@@ -139,15 +144,78 @@
 		li {
 			display: block;
 			margin: 0;
-			border-top: 1px solid rgba(255, 255, 255, .13);
 
 			a {
-				// font-size: 16px;
-
+				font-size: 18px;
 				padding: 10px;
 				display: block;
 
 			}
 		}
 	}
+}
+
+.menu-item-has-children {
+  position: relative;
+  .icon {
+    fill: none;
+    stroke-width: 1px;
+    stroke: $gray-600;
+    transform: rotate(0deg);
+    @include mt;
+  }
+  &.active {
+    & > a {
+      @include media-breakpoint-up(lg) {
+      font-weight: 600;
+      }
+    }
+    .icon {
+      transform: rotate(180deg);
+      @include media-breakpoint-up(lg) {
+        stroke-width: 2px;
+      }
+    }
+    .sub-menu {
+      --op: 1;
+      transition: all .3s ease-in;
+      visibility: visible;
+      @include media-breakpoint-down(lg) {
+        position: relative;
+      }
+    }
+  }
+}
+
+.menu-item-has-children .sub-menu {
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  list-style-type: none;
+  opacity: var(--op, 0);
+  --op: 0;
+  width: 100%;
+  background: $gray-600;
+  visibility: hidden;
+  @include mt(.1s);
+    position: absolute;
+	@include media-breakpoint-up(lg) {
+    background: $white;
+    border-radius: rem(8);
+    top: calc(var(--pad-top) * -1);
+    left: 0;
+    box-shadow: $box-shadow;
+    min-width: max-content;
+    z-index: 5;
+    // width: calc(100% + rem(24));
+    // padding: rem(12) rem(16) rem(8);
+    color: $gray-600;
+    font-size: rem(14);
+    // left: calc(var(--desktop-menu-width) / 2 - rem(24));
+  }
+
+  a {
+    font-size: rem(13);
+    padding: rem(12) rem(16) rem(8);
+  }
+
 }
