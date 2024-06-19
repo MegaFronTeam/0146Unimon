@@ -7,9 +7,12 @@
 	}
 
 	list-style: none;
-	position: relative;
+	// position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
+  ul {
+    list-style-type: none;
+  }
 	li {
 		padding: 0;
     &:hover > a {
@@ -146,7 +149,7 @@
 
 
 		ul {
-			position: relative;
+			// position: relative;
 		}
 
 		li {
@@ -165,7 +168,7 @@
 }
 
 .menu-item-has-children {
-  position: relative;
+  // position: relative;
   @include mt;
   .icon {
     fill: none;
@@ -200,41 +203,91 @@
 .menu-item-has-children .sub-menu {
   // overflow-x: hidden;
   // overflow-y: auto;
-  list-style-type: none;
   opacity: var(--op, 0);
   --op: 0;
   width: 100%;
   background: $gray-600;
   visibility: hidden;
-  @include mt(.1s);
     position: absolute;
+  @include mt(.1s);
 	@include media-breakpoint-up(lg) {
     background: $white;
     border-radius: rem(8);
-    top: calc(var(--pad-top) * -1);
-    left: 0;
+    top: rem(60);
+    left: 50%;
+    transform: translateX(-50%);
     box-shadow: $box-shadow;
-    min-width: max-content;
+    max-width: 1400px;
+    padding: 3vw 3vw;
     z-index: 5;
-    // width: calc(100% + rem(24));
-    // padding: rem(12) rem(16) rem(8);
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    justify-content: space-between;
+    gap: 3vw;
+    width: 100%;
+    overflow-y: auto;
     color: $gray-600;
     font-size: rem(14);
-    // left: calc(var(--desktop-menu-width) / 2 - rem(24));
+    max-height: calc(100vh - 70px);
   }
 
 
   a {
     font-size: rem(13);
-    padding: rem(12) rem(16) rem(8);
-    @include media-breakpoint-down(lg) {
-      padding-left: rem(3);
+    padding: rem(8) rem(16) rem(8) rem(3);
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
     }
+    // padding: 0;
   }
 
   .menu-item:first-child a {
     @include media-breakpoint-down(lg) {
       padding-top: 0;
+    }
+  }
+}
+
+.menu-item-has-children .sub-menu .menu-item-last {
+  &__title {
+    opacity: .6;
+    position: relative;
+    display: inline;
+    @include media-breakpoint-up(lg) {
+      color: $gray-600;
+      font-size: rem(20);
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 95%;
+      height: rem(1);
+      background: $blue-600;
+    }
+  }
+
+  ul {
+    margin-top: rem(10);
+    @include media-breakpoint-up(lg) {
+      margin-top: 2vw;
+    }
+  }
+
+  &__link {
+    a {
+      opacity: .9;
+      @include media-breakpoint-up(lg) {
+        font-size: rem(16);
+        color: $gray-700;
+        opacity: 1;
+      }
+    }
+    &:hover a {
+      @include media-breakpoint-up(lg) {
+        color: $primary;
+      }
     }
   }
 }

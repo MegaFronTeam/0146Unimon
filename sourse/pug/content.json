@@ -2,37 +2,144 @@
 	"nav":[
 		{ "name":"Показатели", "url":"#", "subnav":
       [
-        {"name":"температура и влажность", "url":"#"},
-        {"name":"С02", "url":"#"},
-        {"name":"прочие показатели", "url":"#"}
+        [
+          {
+            "name": "Радиомодули",
+            "subnav": [
+              {"name": "AlertNode", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"}
+            ]
+          },
+          {
+            "name": "Контроллеры",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"},
+              {"name": "Контроллер AlertNode 2", "url": "#"}
+            ]
+          },
+          {
+            "name": "Датчики микроклимата",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"}
+            ]
+          },
+          {
+            "name": "Датчики микроклимата",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"}
+            ]
+          }
+        ]
       ]
     },
 		{"name":"Решения", "url":"#", "subnav":
       [
-        {"name":"едицина", "url":"#"},
-        {"name":"продукты", "url":"#"},
-        {"name":"заводы", "url":"#"},
-        {"name":"розница", "url":"#"},
-        {"name":"склады", "url":"#"},
-        {"name":"производства", "url":"#"},
-        {"name":"чистые помещения", "url":"#"},
-        {"name":"теплицы", "url":"#"},
-        {"name":"ТК/ЖК", "url":"#"}
+        [
+          {
+            "name": "Радиомодули",
+            "subnav": [
+              {"name": "AlertNode", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"}
+            ]
+          },
+          {
+            "name": "Контроллеры",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"},
+              {"name": "Контроллер AlertNode 2", "url": "#"}
+            ]
+          },
+          {
+            "name": "Датчики микроклимата",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"}
+            ]
+          },
+          {
+            "name": "Датчики микроклимата",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"}
+            ]
+          }
+        ]
       ]
     },
 		{ "name":"Каталог", "url":"#", "subnav":
       [
-        { "name":"мониторинг", "url":"#"},
-        { "name":"картирование", "url":"#"},
-        { "name":"валидация", "url":"#"}
+        [
+          {
+            "name": "Радиомодули",
+            "subnav": [
+              {"name": "AlertNode", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"}
+            ]
+          },
+          {
+            "name": "Контроллеры",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"},
+              {"name": "Контроллер AlertNode 2", "url": "#"}
+            ]
+          },
+          {
+            "name": "Датчики микроклимата",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"}
+            ]
+          }
+        ]
       ]
     } ,
 		{ "name":"Клиенты", "url":"#"},
     { "name":"Услуги", "url":"#", "subnav":
       [
-        { "name":"мониторинг", "url":"#" },
-        { "name":"картирование", "url":"#" },
-        { "name":"валидация", "url":"#" }
+        [
+          {
+            "name": "Радиомодули",
+            "subnav": [
+              {"name": "AlertNode", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"},
+              {"name": "AlertNode RTD Max", "url": "#"}
+            ]
+          },
+          {
+            "name": "Контроллеры",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"},
+              {"name": "Контроллер AlertNode 2", "url": "#"}
+            ]
+          },
+          {
+            "name": "Датчики микроклимата",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"}
+            ]
+          },
+          {
+            "name": "Датчики микроклимата",
+            "subnav": [
+              {"name": "Контроллер Node", "url": "#"},
+              {"name": "Контроллер RTD Max", "url": "#"}
+            ]
+          }
+        ]
       ]
     },
     { "name":"Софт", "url":"#" },

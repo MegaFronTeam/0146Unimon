@@ -9,9 +9,15 @@ mixin mnu()
 					li.menu-item.menu-item-has-children
 						a(href="#" itemprop="url")= link.name
 							+icon('arr-down')
-						ul.sub-menu
-							each sublink in link.subnav
-								li.menu-item(itemprop="item" )
-									a(href= sublink.url itemprop="url")= sublink.name
+						each subnavGroup in link.subnav
+							ul.sub-menu
+								each sublink in subnavGroup
+									if sublink.subnav
+										li.menu-item-last
+											a(href="#" itemprop="url").menu-item-last__title= sublink.name
+											ul
+												each subSublink in sublink.subnav
+													li(itemprop="item").menu-item-last__link
+														a(href= subSublink.url itemprop="url")= subSublink.name
 
 //- menu
