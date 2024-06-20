@@ -81,22 +81,27 @@
 
 .search-block{
 	position: relative;
-	input{
+	input {
+    all: unset;
 		font-size: 14px;
 		width: 100%;
+    box-sizing: border-box;
 		outline: none !important;
 		padding-left: rem(35);
-		padding-top: rem(4);
+		padding-top: rem(5);
 		padding-bottom: rem(4);
-    border-color: $gray-200;
+    border: $gray-200 rem(1) solid;
     border-radius: $border-radius-sm;
+    @include media-breakpoint-up(lg) {
+      padding-bottom: rem(5);
+    }
 	}
-	.icon{
+	.icon {
 		font-size: rem(20);
 		border: none !important;
     fill: $gray-700;
 	}
-	button{
+	button {
 		position: absolute;
 		left: 5px;
 		top: 0;

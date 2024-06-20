@@ -293,7 +293,7 @@ export default class JSCCommon {
 		// 		return false;
 		// 	}
 		// });
-		$(document).on("click", " .article-navigation a", function () {
+		$(document).on("click", ".article-navigation a", function () {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", "/" + elementClick);
