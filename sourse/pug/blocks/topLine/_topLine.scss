@@ -33,6 +33,14 @@
       margin-right: rem(28);
       margin-left: rem(10);
     }
+    &:hover {
+      background: $gradient-dark;
+      background-clip: text;
+      color: transparent;
+    }
+    &:active {
+      opacity: .5;
+    }
   }
 
   &__link {

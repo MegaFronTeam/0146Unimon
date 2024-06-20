@@ -37,6 +37,16 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-quest {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
+}
+.icon-questGr {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
+}
 .icon-search {
 	$h: 17;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

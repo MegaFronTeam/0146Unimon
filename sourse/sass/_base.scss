@@ -532,7 +532,7 @@ h4, .h4 {
 
 .btn {
   font-size: rem(10);
-  line-height: 160%;
+  line-height: 114%;
   letter-spacing: -0.05em;
 	@include media-breakpoint-up(md) {
     font-size: rem(14);
@@ -615,6 +615,47 @@ h4, .h4 {
   --bs-btn-padding-x: #{rem(8)} !important;
   --bs-btn-font-size: #{rem(12)} !important;
   --bs-btn-border-radius: #{$border-radius-lg};
+}
+
+.btn-outline-secondary {
+  align-items: center;
+  gap: rem(8);
+  margin-bottom: 0;
+  font-size: rem(12);
+	@include media-breakpoint-up(md) {
+    font-size: rem(14);
+    --bs-btn-padding-y: #{rem(14)};
+    --bs-btn-padding-x: #{rem(14)};
+  }
+  --bs-btn-color: #{$gray-650};
+  --bs-btn-border-color: #{$gray-650};
+  --bs-btn-hover-color: #{transparent};
+  --bs-btn-hover-bg: #{transparent};
+  --bs-btn-hover-border-color: #{$blue-700};
+  --bs-btn-focus-shadow-rgb: 14, 52, 74;
+  --bs-btn-active-color: #{$gray-650};
+  --bs-btn-active-bg: #{transparent};
+  --bs-btn-active-border-color: #{$gray-650};
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  --bs-btn-disabled-color: #0e344a;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #0e344a;
+  --bs-gradient: none;
+  @include mt;
+  &:hover {
+    background: $gradient-dark;
+    background-clip: text;
+    color: transparent;
+    .icon {
+      fill: #1f5796cc;
+    }
+  }
+  .icon {
+    // margin-left: rem(8);
+  }
+  &:active {
+    opacity: .5;
+  }
 }
 
 .bg-gray {

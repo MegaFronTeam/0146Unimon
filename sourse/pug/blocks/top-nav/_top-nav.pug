@@ -39,6 +39,9 @@ mixin top-nav()
 								+e.link-item(href='#'): +icon('telegram')
 								+e.link-item(href='#'): +icon('youtube')
 				.col-auto
+					+e.btn.btn.btn-outline-secondary(href='#').d-none.d-lg-inline-flex
+						| Справочник
+						+icon('quest')
 					+e.btn.btn.btn-primary(href='#').d-none.d-lg-inline
 						| Вход в систему
 						+icon('user')
