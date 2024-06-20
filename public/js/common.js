@@ -87,12 +87,13 @@ function eventHandler() {
 
   menuItems.forEach(item => {
       item.addEventListener('click', function(event) {
-          event.stopPropagation();
-          menuItems.forEach(otherItem => {
-              if (otherItem !== item) {
-                  otherItem.classList.remove('active');
-              }
-          });
+        event.preventDefault()
+        event.stopPropagation();
+        menuItems.forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+            }
+        });
 
           item.classList.toggle('active');
       });
