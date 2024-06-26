@@ -1,0 +1,58 @@
+mixin sCases(data)
+	// start sCases
+	+b.SECTION.sCases.section#sCases&attributes(attributes)
+		.container 
+			+b.filter-line
+				.row
+					.col
+						+b.filter-dropbdown
+							+e.title.d-lg-none Все рубрики
+								+icon("chevron-down")
+							+e.list
+								mixin item(title) 
+									+b.LABEL.btn-check-block
+										input(type="checkbox").btn-check.form-check-input
+										+e.text.btn.btn-outline-light!= title
+								+item('Все')
+								+item("Фармдистрибьюторы")
+								+item("Розничные сети")
+								+item("Медучреждения")
+								+item("	Агрокомплексы")
+								+item("Офисы")
+								+item("Производства")
+								+item("Лаборатории")
+								+item("БЦ, ТЦ, ЖКХ")
+								+item("Теплицы")
+								
+								
+								
+								
+					.d-lg-none.col-sm-auto.col-12
+						+search
+
+			+e.row
+				mixin item(img, text)
+					+b.case-item
+						+e.img-wrap
+							+img(`img/case-${img}.png`).res-i
+						if text
+							+e.content 
+								+e.text!= text
+						block
+				+item('1', 'Успешный опыт внедрения датчиков газа, температуры ')
+					+e.btn.btn.btn-outline-light(href="#") Подробнее
+				+item('2')
+				+item('3')
+					+e.btn.btn.btn-outline-light(href="#") Подробнее
+				+item('4', 'Успешный опыт внедерния  ')
+					+e.btn.btn.btn-outline-light(href="#") читать в блоге
+				+item('5', 'Успешный опыт внедрения датчиков газа, температуры  ')
+					+e.btn.btn.btn-outline-light(href="#") Подробнее
+				+item('6')
+				+item('7', 'Успешный опыт внедерния  ')
+					+e.btn.btn.btn-outline-light(href="#") читать в блоге
+				+item('8', 'Успешный опыт внедрения датчиков газа, температуры  ')
+					+e.btn.btn.btn-outline-light(href="#") Подробнее
+				+item('9', 'Успешный опыт внедрения датчиков газа, температуры  ')
+					+e.btn.btn.btn-outline-light(href="#") Подробнее
+	// end sCases

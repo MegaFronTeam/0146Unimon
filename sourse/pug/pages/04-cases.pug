@@ -7,7 +7,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sForm/_sForm.pug
-include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sCases/_sCases.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -18,11 +18,11 @@ block title
 	title= title
 block pagecontent
 	//- +mob-mnu()
-
-	.bg-gray
-		+parts('header')
-		main
-			+headerBlock2
-			+sArticle2
-			+sForm2
+	
+	
+	+parts('header')
+	main
+		+page-head(title, title)
+		+sCases
+		+sForm
 	+parts('footer')
