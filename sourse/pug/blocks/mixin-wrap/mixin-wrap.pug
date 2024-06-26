@@ -61,3 +61,11 @@ mixin calculate
 		+e.img-wrap
 			+img(src="img/calc-bg-2.png", alt="").img-left
 			+img(src="img/calc-bg-1.png", alt="").img-right
+
+mixin block-with-img(img)
+	+b.block-with-img
+		+e.caption
+			block
+		picture()
+			source(srcset=`img/${img}-d.png` media="(min-width: 768px)")
+			img(src=`img/${img}-m.png`, alt="Каталог товаров")
