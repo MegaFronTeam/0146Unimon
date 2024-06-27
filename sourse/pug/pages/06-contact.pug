@@ -1,0 +1,64 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalogHead/_sCatalogHead.pug
+include ../blocks/sCatalogBody/_sCatalogBody.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Наши контакты'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title, title)
+			+e.btn.btn.btn-primary(href="#") 
+				| Заказать звонок
+				+icon('arrow-angle-right')
+		+sContact 
+	+footer
+		.container
+			+b.footer-form.section
+				+e.row.row
+					+e.text-block.col 
+						+e.footer-title  Нет затрат на приобретение сервера, 
+							span лицензий ПО и зарплатусистемному администратору
+						+e.footer-text.small Список пополняется — мы постоянно работаем над интеграцией новых систем в платформу Unimon
+					+e.col.col-xl-auto
+						+form-wrap.--base.--light
+							+e.head-row.row
+								.col-sm.order-sm-last
+									.small Получить коммерческое предложение для дистрибьюторов
+								.col-auto
+									+e.title Мы ищем партнеров!
+							.row
+								.col-md-6
+									+input("Ваше имя") 
+								.col-md-6
+									+input("Ваша электронная почта",'email') 
+								.col-md-6
+									+input("Ваш номер телефона",'tel') 
+								.col-md-6
+									+input("Страна")
+								.col-md-12
+									+input("Сообщение","textarea")
+
+							+e.footer-row.row
+								+e.col-text.small.col
+									| Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
+								+e.col.col-auto
+									+e.btn.btn.btn-primary(type="submit") Отправить заявку
+										+icon('arrow-angle-right')

@@ -1,114 +1,163 @@
 .footer {
 	background: $gradient-dark;
 	margin-top: auto;
-// --sPT: #{rem()};
+	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	&__row {
 		--bs-gutter-x: #{rem(40)};
 		--bs-gutter-y: #{rem(50)};
-    @include media-breakpoint-down(md) {
-      margin-left: rem(10);
-      margin-right: rem(10);
-    }
+		@include media-breakpoint-down(md) {
+			margin-left: rem(10);
+			margin-right: rem(10);
+		}
 	}
-	.section-title{
-		
+	.section-title {
 	}
-	&__col{
-
+	&__col {
 	}
-	&__item{
-
+	&__item {
 	}
-	&__slide{
+	&__slide {
 		height: auto;
 	}
 
-  ul {
-    list-style-type: none;
-  }
-  a {
-    color: $white;
-  }
+	ul {
+		list-style-type: none;
+	}
+	a {
+		color: $white;
+	}
 
-  &__title {
-    margin-bottom: rem(20);
-    font-weight: 500;
-    letter-spacing: -0.05em;
-    @include media-breakpoint-up(md) {
-      margin-bottom: rem(30);
-    }
-    @include media-breakpoint-down(md) {
-      font-size: rem(16);
-    }
-  }
-  &__inner-wrapper {
-    color: $white;
-    a {
-      display: inline-block;
-      padding: rem(8) 0;
-      // margin-bottom: rem(4);
-      @include media-breakpoint-up(md) {
-        font-size: rem(16);
-      }
-      opacity: .4;
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
+	&__title {
+		margin-bottom: rem(20);
+		font-weight: 500;
+		letter-spacing: -0.05em;
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(30);
+		}
+		@include media-breakpoint-down(md) {
+			font-size: rem(16);
+		}
+	}
+	&__inner-wrapper {
+		color: $white;
+		a {
+			display: inline-block;
+			padding: rem(8) 0;
+			// margin-bottom: rem(4);
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+			}
+			opacity: 0.4;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
 
-  &__wrapper {
-    @include media-breakpoint-up(xl) {
-      display: flex;
-      justify-content: space-between;
-      flex-shrink: 0;
-    }
-  }
+	&__wrapper {
+		@include media-breakpoint-up(xl) {
+			display: flex;
+			justify-content: space-between;
+			flex-shrink: 0;
+		}
+	}
 
-  .logo {
-    max-width: 50%;
-    @include media-breakpoint-up(xl) {
-      margin-top: rem(30);
-    }
-  }
-// 
-@include media-breakpoint-up(xl) {}
+	.logo {
+		max-width: 50%;
+		@include media-breakpoint-up(xl) {
+			margin-top: rem(30);
+		}
+	}
+	//
+	@include media-breakpoint-up(xl) {
+	}
 
-@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(md) {
+	}
 
-@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-up(xs) {
+	}
 
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+	//
+	@include media-breakpoint-only(xs) {
+	}
 
+	@include media-breakpoint-only(sm) {
+	}
 
-// 
-@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(md) {
+	}
 
-@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(lg) {
+	}
 
-@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(xl) {
+	}
 
-@include media-breakpoint-only(lg) {}
+	//
+	@include media-breakpoint-down(xl) {
+	}
 
-@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(lg) {
+	}
 
+	@include media-breakpoint-down(md) {
+	}
 
-// 
-@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+	}
 
-@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(xs) {
+	}
+}
 
-@include media-breakpoint-down(md) {}
+.footer-form {
+	padding-top: 0;
+	&__row {
+		--bs-gutter-y: #{rem(40)};
+	}
+	&__footer-title {
+		font-style: normal;
+		font-weight: 500;
+		// font-size: 42px;
+		@include rfs(42px);
+		line-height: 98.3%;
+		/* or 41px */
+		letter-spacing: -0.05em;
+		max-width: rem(533);
+		margin-bottom: 2rem;
+		span {
+			opacity: 0.5;
+		}
+		color: #ffffff;
+	}
+	&__text-block {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__footer-text {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 24px;
+		max-width: rem(433);
+		/* or 133% */
+		letter-spacing: -0.05em;
 
-@include media-breakpoint-down(sm) {}
+		color: #ffffff;
 
-@include media-breakpoint-down(xs) {}
+		opacity: 0.6;
+	}
 }

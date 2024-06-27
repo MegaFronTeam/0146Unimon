@@ -549,7 +549,23 @@ h4,
 }
 
 .btn-primary {
-	background: $gradient-dark;
+	background-size: 100% 200%;
+	background-position: 0 center;
+	position: relative;
+	z-index: 2;
+	&::before {
+		content: "";
+		z-index: -1;
+		position: absolute;
+		border-radius: inherit;
+		background-image: $gradient-dark;
+		// z-index: -1;
+		width: calc(100% + 2px);
+		height: calc(100% + 2px);
+		left: -1px;
+		top: -1px;
+		@include mt;
+	}
 	@include mt;
 	--bs-btn-color: #fff;
 	--bs-btn-bg: #{$primary};
@@ -567,6 +583,10 @@ h4,
 	--bs-btn-disabled-border-color: #074287;
 	&:hover {
 		background: var(--bs-btn-hover-bg);
+		&::before {
+			opacity: 0;
+		}
+		// background-position: right center;
 	}
 }
 
@@ -657,4 +677,9 @@ input:checked + .btn-outline-light {
 	color: #fff;
 	--bs-btn-border-color: transparent;
 	background: linear-gradient(159deg, #3793ae, #074287);
+}
+
+.footer-form {
+	border-bottom: 1px solid rgba(#fff, 0.8);
+	margin-bottom: 30px;
 }

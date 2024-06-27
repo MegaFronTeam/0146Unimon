@@ -2,8 +2,69 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
+			+e.HEADER.head.section
+				+e.row.row
+					.col-xl
+						.row
+							mixin col(t)
+								
+								+e.group.col-md-6 
+									+e.col-title= t
+									block
+							+col("Консультация по продуктам")
+								+e.color.text-lg
+									a(href="tel:+7(499)288-07-82") + 7 (499) 288-07-82
+							+col("Техподдержка")
+								+e.color.text-lg
+									a(href="tel:+7(499)653-60-08") +7 (499) 653-60-08
+							+col("По всем вопросам")
+								+e.color
+									a(href="mailto:zakaz+135093@unimon.ru") zakaz+135093@unimon.ru
+							+col("Время работы")
+								+e.color Пн-Пт 10:00 – 19:00
+							+col("Адрес")
+								+e.color.text-sm Москва, улица Льва Толстого, 19/2, офис 33
+								p Парк Культуры
+									img(src="img/subway-icon.svg", alt="")
+							+col("Реквизиты")
+								p ООО «Эволюция»
+									br
+									| ОГРН 1137746560192
+									br
+									| ИНН 7701363534
+					+e.col.col-auto
+						+e.map
+							script.
+								city_default = 'Москва';
+								map_array ={"\\u041c\u043e\u0441\u043a\u0432\u0430":"https:\/\/yandex.ru\/map-widget\/v1\/?um=constructor%3A57a56bc44235cf433be6000bbbbe96f6d98b19c923ecb1a7746e4da1ca26652b&amp;source=constructor&amp;scroll=false"};
+							<iframe scrolling="no" src="https://yandex.ru/map-widget/v1/?um=constructor%3A57a56bc44235cf433be6000bbbbe96f6d98b19c923ecb1a7746e4da1ca26652b&amp;source=constructor&amp;scroll=false" width="100%" height="400" frameborder="0"></iframe>
+
+			+b.section-title
+				.h1 О системе
 			+e.row.row
+					+e.text-block.col 
+						p 
+							strong Unimon
+							| – простой и удобный сервис для удаленного контроля датчиков и управления оборудованием через Интернет и SMS. Готовый диспетчерский пульт в Вашем браузере и телефоне.
+
+						p Работает с датчиками температуры, влажности, давления, освещенности, протечки, дыма, движения, открытия двери, уровня жидкости, разбития стекла и многими другими.
+
+						p Возможно управление отоплением, кондиционированием, вентиляцией, насосами и другим электрооборудованием – как вручную, так и по расписанию или сценарию.
+
+						p Основные области применения: мониторинг, автоматизация и диспетчеризация загородных домов, котельных, холодильных камер, складов, серверных, птичников, теплиц, бассейнов и других частных и промышленных объектов.
+					+e.col.col-auto
+						+form-wrap.--base
+							+e.title Обратная связь
+							+input("Ваше имя")
+								img(src="img/user.svg", alt="").input-icon
+							+input("Ваш номер телефона",'tel')
+								img(src="img/phone-2.svg", alt="").input-icon
+							+input("Ваша электронная почта",'email')
+								img(src="img/email.svg", alt="").input-icon
+							+e.footer-row.row
+								+e.col.col-auto
+									+e.btn.btn.btn-outline-white(type="submit") Отправить заявку
+										+icon('arrow-angle-right')
+								+e.col-text.small
+									| Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
 	// end sContact
