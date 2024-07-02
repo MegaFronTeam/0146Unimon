@@ -91,7 +91,7 @@ $color-contrast-light: $white !default;
 
 // fusv-disable
 $blue-100: tint-color($blue, 80%) !default;
-$blue-200: tint-color($blue, 60%) !default;
+$blue-200: #E6ECEF;
 $blue-300: #f0f9ff;
 $blue-400: tint-color($blue, 20%) !default;
 $blue-500: $blue !default;

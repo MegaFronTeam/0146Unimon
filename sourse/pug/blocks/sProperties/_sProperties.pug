@@ -6,7 +6,7 @@ mixin sProperties(data)
 				.h1 Профессиональный функционал для бизнес-задач
 			+e.row.row
 				+e.col.col-12.col-lg-5.order-lg-2
-					+e.img-wrap: +img(src="img/properties-img.png", alt="")
+					+e.img-wrap: +img(src="img/properties-img.png", alt="").m-left
 				+e.col.col-12.col-lg-7
 					+ddGroup
 						+ddGroupItem('Хранение и выгрузка данных до 5 лет', 'active')
@@ -22,3 +22,31 @@ mixin sProperties(data)
 						+ddGroupItem('Простая самостоятельная настройка')
 							p Кроме среднего значения, отображается минимум и максимум, что существенно упрощает восприятие графиков
 	// end sProperties
+
+mixin sProperties2(data)
+	// start sProperties
+	+b.SECTION.sProperties.bg_blue.section#sProperties2&attributes(attributes)
+		.container
+			+e.row-center.row
+				+e.col.col-12.col-lg-6.order-lg-2
+					+e.img-wrapper.d-none.d-lg-block
+						+img(src="img/properties-img-2.png", alt="").img
+						+e.span-wrapper: .span
+				+e.col.col-12.col-lg-6
+					.title-wrap.mb: .h1 Простой интерфейс и ничего лишнего
+					+e.img-wrapper.img-wrapper--mob.d-lg-none.text-center
+						+img(src="img/properties-img-mobile-2.png", alt="")
+						+e.span-wrapper: .span
+					+e.btn-wrap
+						+e.btn.btn.btn-primary Получить демо-доступ
+							+icon('arrow-angle-right')
+						+e.btn.btn.btn-outline-primary Подробнее
+					+e.cert-wrapper: +cardCertificate('eagle', 'В госреестре отечественного программного обеспечения', '№12345-2024')
+
+
+mixin cardCertificate(img, text, number)
+	+b.card-certificate
+		+img(src=`img/${img}.svg`, alt="")
+		+e.descr-wrap
+			+e.text.text_gradient= text
+			+e.number.text_gradient= number
