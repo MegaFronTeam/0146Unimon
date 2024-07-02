@@ -90,7 +90,7 @@ $color-contrast-dark: $black !default;
 $color-contrast-light: $white !default;
 
 // fusv-disable
-$blue-100: tint-color($blue, 80%) !default;
+$blue-100: #D2F1FC;
 $blue-200: #E6ECEF;
 $blue-300: #f0f9ff;
 $blue-400: tint-color($blue, 20%) !default;
@@ -181,7 +181,7 @@ $teal-800: shade-color($teal, 60%) !default;
 $teal-900: shade-color($teal, 80%) !default;
 
 $cyan-100: tint-color($cyan, 80%) !default;
-$cyan-200: tint-color($cyan, 60%) !default;
+$cyan-200: #C1E6F2;
 $cyan-300: tint-color($cyan, 40%) !default;
 $cyan-400: tint-color($cyan, 20%) !default;
 $cyan-500: $cyan !default;

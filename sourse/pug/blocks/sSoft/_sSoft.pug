@@ -1,0 +1,29 @@
+mixin sSoft(data)
+	// start sSoft
+	+b.SECTION.sSoft.section#sSoft&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				.h1 Программное обеспечение работает на любых платформах
+			+e.store-links
+				+storeLink('app')
+				+storeLink('ruStore')
+				+storeLink('appHuawei')
+				+storeLink('googlePlay')
+			+e.row
+				+deviceCard('Компьютер', '1')
+				+deviceCard('Телефон', '2')
+				+deviceCard('Планшет', '3')
+	// end sSoft
+
+
+mixin storeLink(icon)
+	+b.store-link(href='#'): +img(src=`img/${icon}.svg`, alt="")
+
+mixin deviceCard(title, n)
+	.col-12.col-sm-4
+		+b.device-card(class= `device-card_${n}`)
+			+e.title
+				.h4= title
+			+e.img-wrap
+				+img(src=`img/device-${n}.png`, alt="").d-none.d-md-inline
+				+img(src=`img/device-${n}-mob.png`, alt="").d-md-none

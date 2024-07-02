@@ -7,6 +7,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sProperties/_sProperties.pug
+include ../blocks/sSoft/_sSoft.pug
 include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
@@ -22,6 +23,7 @@ block pagecontent
 	
 	+parts('header')
 	main
+		+sSoft
 		+sProperties2
 		+sProperties
 		//- +sCatalog
