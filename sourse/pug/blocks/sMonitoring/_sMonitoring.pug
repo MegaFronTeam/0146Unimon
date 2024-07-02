@@ -1,0 +1,25 @@
+mixin sMonitoring(data)
+	// start sMonitoring
+	+b.SECTION.sMonitoring.section#sMonitoring&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				.h1 Онлайн мониторинг данных #[span - это легко!]
+			+e.row.row
+				.col-12.col-md-6
+					+e.item
+						+listItemL('01', 'Подберите оптимальное оборудование вместе с нашим специалистом')
+						+listItemL('02', 'Получите любым удобным для Вас способом готовую систему мониторинга показателей')
+						+listItemL('03', 'Включите и разместите беспроводные датчики. Воткните контроллер в розетку')
+						+listItemL('04', 'Войдите в личный кабинет и завершите настройку Вашей системы мониторинга')
+				.col-12.col-md-6
+					+e.img-wrap
+						+img(src=`img/monitoring.png`, alt="").d-none.d-md-block
+						+img(src=`img/monitoring-mob.png`, alt="").d-md-none
+	// end sMonitoring
+
+
+mixin listItemL(n, text)
+	.listItem.listItem--large
+		.numb= n
+		.wrap= text
+		+icon('arrow-part')
