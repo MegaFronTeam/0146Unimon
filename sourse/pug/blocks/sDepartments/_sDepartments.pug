@@ -1,0 +1,32 @@
+mixin sDepartments(data)
+	// start sDepartments
+	+b.SECTION.sDepartments.bg_blue.section#sDepartments&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				.h1.d-lg-none Подходит для отчетности
+				.h1.d-none.d-lg-block Идеальна для различных ведомств
+			+e.row.row
+				+e.col.col-12
+					+e.item
+						+departmentCard('department-1', 'Росздравнадзор', 'Оставьте заявку любым удобным способом Оставьте заявку любым удобным способом')
+						+departmentCard('department-2', 'Роспотребнадзор', 'Оставьте заявку любым удобным способом Оставьте заявку любым удобным способом')
+						+departmentCard('department-3', 'Суды', 'Оставьте заявку любым удобным способом Оставьте заявку любым удобным способом')
+				+e.col.col-12
+					+e.item2
+						.text-center
+							.title.text_gradient Система валидируема по стандартам
+						.stamps
+							.img-wrap: +img(src="img/stamp-1.svg", alt="")
+							.img-wrap: +img(src="img/stamp-2.svg", alt="")
+							.img-wrap: +img(src="img/stamp-3.svg", alt="")
+							.img-wrap: +img(src="img/stamp-4.svg", alt="")
+						
+	// end sDepartments
+
+
+mixin departmentCard(img, title, text)
+	+b.department-card.text-center
+		+e.img-wrap
+			+img(src=`img/${img}.png`, alt="")
+		+e.title.h4= title
+		+e.text.d-none.d-lg-block= text

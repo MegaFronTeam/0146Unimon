@@ -1,0 +1,99 @@
+// start .sDepartments
+.sDepartments {
+	--sPT: #{rem(32)};
+	--sPB: #{rem(25)};
+  @include media-breakpoint-up(lg) {
+    --sPT: #{rem(108)};
+    --sPB: #{rem(88)};
+  }
+
+	&__row{
+		--bs-gutter-y: #{rem(18)};
+    @include media-breakpoint-up(lg) {
+      --bs-gutter-y: #{rem(50)};
+    }
+    @include media-breakpoint-up(xxl) {
+      max-width: 90%;
+      margin: auto;
+    }
+	}
+
+	&__item {
+		display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(160px, 1fr) );
+    gap: rem(7);
+    @include media-breakpoint-up(lg) {
+      gap: rem(30);
+    }
+	}
+
+  &__item2 {
+    background: rgba(255, 255, 255, 0.50);
+    border-radius: rem(11);
+    padding: rem(26) rem(10);
+    @include media-breakpoint-up(lg) {
+      border-radius: rem(14);
+      padding: rem(44) rem(20);
+    }
+    .title {
+      font-size: rem(18);
+      margin-bottom: rem(27);
+      @include media-breakpoint-up(lg) {
+        font-size: rem(36);
+        margin-bottom: rem(60);
+      }
+    }
+  }
+
+  .stamps {
+    display: flex;
+    justify-content: center;
+    gap: rem(7);
+    @include media-breakpoint-up(lg) {
+      gap: rem(30);
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sDepartments
+
+.department-card {
+  display: flex;
+  flex-direction: column;
+  gap: rem(19);
+  background: $white;
+  border-radius: rem(8);
+  padding: rem(16);
+	@include media-breakpoint-up(lg) {
+    border-radius: $border-radius-xl;
+    padding: rem(32);
+  }
+
+  &__img-wrap {
+    margin-bottom: rem(10);
+    img {
+      max-width: 90%;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    @include media-breakpoint-down(lg) {
+      order: -1;
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: rem(14);
+    }
+  }
+}
