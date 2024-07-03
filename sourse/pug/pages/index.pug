@@ -8,6 +8,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sProperties/_sProperties.pug
 include ../blocks/sDepartments/_sDepartments.pug
+include ../blocks/sProductSlider/_sProductSlider.pug
 include ../blocks/sMonitoring/_sMonitoring.pug
 include ../blocks/sServices/_sServices.pug
 include ../blocks/sSoft/_sSoft.pug
@@ -30,8 +31,10 @@ block pagecontent
 		//- +sProperties2
 		//- +sProperties
 		//- +sDepartments
+		+sProductSlider
+		+sProductSlider2
 		//- +sMonitoring
-		+sServices
+		//- +sServices
 		//- +sCatalog
 		//- +sForm()
 		//- +sContact()

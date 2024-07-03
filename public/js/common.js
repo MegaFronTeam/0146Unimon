@@ -80,6 +80,24 @@ function eventHandler() {
 			},
 		},
 	});
+  /* product slider with thumb */
+  let prodCardThumb = new Swiper(".sProdCard-thumb-js", {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		// breakpoints: {
+		// 	1200: {
+		// 		slidesPerView: 3,
+		// 	},
+    // }
+	});
+	let prodCardSlider = new Swiper(".sProdCard-slider-js", {
+		// spaceBetween: 50,
+    slidesPerView: 1,
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		// loop: true,
+	}); //
 
 	/* nav */
 	const menuItems = document.querySelectorAll(".menu-item-has-children");

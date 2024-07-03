@@ -1,0 +1,183 @@
+// start .sProductSlider
+.sProductSlider {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	background: linear-gradient(180deg, #b3d0dc 0%, #e6eef1 100%), linear-gradient(180deg, rgba(230, 238, 241, 0) 0%, #e6eef1 100%), linear-gradient(180deg, rgba(146, 193, 211, 0.63) 0%, rgba(230, 238, 241, 0.63) 100%);
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+  .sub-title {
+    letter-spacing: -0.05em;
+    opacity: .7;
+    font-size: rem(16);
+    line-height: 150%;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(27);
+      line-height: 89%;
+    }
+  }
+
+  &__features-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: rem(22);
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat( 2, 1fr);
+    }
+    gap: rem(7) rem(5);
+    @include media-breakpoint-up(lg) {
+      gap: rem(11) rem(15);
+      grid-template-columns: repeat( 3, 1fr);
+      margin-bottom: rem(42);
+    }
+  }
+
+  &__btn-wrap {
+    @include media-breakpoint-up(md) {
+      .btn {
+        margin-right: rem(26);
+      }
+    }
+    @include media-breakpoint-down(md) {
+      display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(208px, 1fr) );
+      gap: rem(5);
+    }
+  }
+
+  .swiper-wrapper {
+    align-items: center;
+  }
+
+  .slide-item-1 {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      width: rem(100);
+      height: rem(100);
+      z-index: -1;
+
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .sProdCard-slider-js {
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sProductSlider
+
+
+.product-feature-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: rem(8);
+  border: 1px solid $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(14);
+  padding: rem(10);
+	@include media-breakpoint-up(lg) {
+    padding: rem(28);
+  }
+
+  &__title {
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: 133%;
+    letter-spacing: -0.05em;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(20);
+    }
+  }
+
+  &__img-wrap {
+    max-height: rem(20);
+    @include media-breakpoint-up(lg) {
+      max-height: rem(47);
+    }
+    img {
+      height: 100%;
+    }
+  }
+
+  &--icons {
+    .icons-wrap {
+      display: flex;
+      gap: rem(2);
+      @include media-breakpoint-up(lg) {
+        gap: rem(12);
+      }
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(6);
+    }
+
+    .img-wrap {
+      border: 1px solid rgba(55, 147, 174, 0.47);
+      width: rem(22);
+      height: rem(22);
+      border-radius: rem(4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include media-breakpoint-up(lg) {
+        width: rem(52);
+        height: rem(52);
+        border-radius: rem(8);
+      }
+      &.inactive {
+        opacity: .4;
+      }
+    }
+
+    img {
+      width: 50%;
+    }
+
+    .descr {
+      font-size: rem(6);
+      @include media-breakpoint-up(lg) {
+        font-size: rem(11);
+      }
+    }
+  }
+
+}

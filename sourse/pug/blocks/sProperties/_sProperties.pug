@@ -31,18 +31,20 @@ mixin sProperties2(data)
 				+e.col.col-12.col-lg-6.order-lg-2
 					+e.img-wrapper.d-none.d-lg-block
 						+img(src="img/properties-img-2.png", alt="").img
-						+e.span-wrapper: .span
+						+spanWrapper
 				+e.col.col-12.col-lg-6
 					.title-wrap.mb: .h1 Простой интерфейс и ничего лишнего
 					+e.img-wrapper.img-wrapper--mob.d-lg-none.text-center
 						+img(src="img/properties-img-mobile-2.png", alt="")
-						+e.span-wrapper: .span
+						+spanWrapper
 					+e.btn-wrap
 						+e.btn.btn.btn-primary Получить демо-доступ
 							+icon('arrow-angle-right')
 						+e.btn.btn.btn-outline-primary Подробнее
 					+e.cert-wrapper: +cardCertificate('eagle', 'В госреестре отечественного программного обеспечения', '№12345-2024')
 
+mixin spanWrapper
+	.span-wrapper-bg: .span
 
 mixin cardCertificate(img, text, number)
 	+b.card-certificate
