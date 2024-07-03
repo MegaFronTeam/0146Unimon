@@ -22,7 +22,11 @@ $black: #000 !default;
 // scss-docs-end gray-color-variables
 
 $gradient-dark: linear-gradient(159deg, #3793ae 0%, #074287 100%);
-$gradient-dark_to-right: linear-gradient(90deg, #3793ae 0%, #074287 100%);
+$gradient-dark_to-right: linear-gradient(
+  90deg,
+  #3793ae 0%,
+  #074287 100%
+);
 
 $gradient-light: linear-gradient(
 	45deg,
