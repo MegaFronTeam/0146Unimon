@@ -141,13 +141,16 @@
   }
 
   &__text {
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: rem(14);
     line-height: 1.29;
     color: $gray-700;
+    @include media-breakpoint-up(md) {
+      -webkit-line-clamp: 2;
+    }
   }
 
   &__tag {

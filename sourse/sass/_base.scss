@@ -610,16 +610,34 @@ h4,
 	--bs-btn-disabled-color: #000;
 	--bs-btn-disabled-bg: #e6e6e6;
 	--bs-btn-disabled-border-color: #e6e6e6;
+  
+  .icon {
+    margin-left: 0 !important;
+  }
 }
 
 .btn-sm {
-	--bs-btn-padding-y: #{rem(7)} !important;
+	--bs-btn-padding-y: #{rem(11)} !important;
 	--bs-btn-padding-x: #{rem(8)} !important;
 	--bs-btn-font-size: #{rem(12)} !important;
 	--bs-btn-border-radius: #{$border-radius-lg};
 }
 
 .btn-outline-secondary {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 14px;
+    width: 14px;
+    height: 14px;
+    background: $gray-650;
+    border-radius: 50%;
+    z-index: -1;
+    @include mt;
+  }
 	align-items: center;
 	gap: rem(8);
 	margin-bottom: 0;
@@ -643,7 +661,20 @@ h4,
 	--bs-btn-disabled-bg: transparent;
 	--bs-btn-disabled-border-color: #0e344a;
 	--bs-gradient: none;
+		// background-clip: text;
+		// color: transparent;
+		// background: #656565;
 	@include mt;
+  .icon {
+    position: relative;
+    z-index: 1;
+    stroke: white;
+    color: white;
+    stroke-width: 1px;
+    fill: white;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 	&:hover {
 		background: $gradient-dark;
 		background-clip: text;
@@ -651,6 +682,9 @@ h4,
 		.icon {
 			fill: #1f5796cc;
 		}
+    &::before {
+      opacity: 0;
+    }
 	}
 	.icon {
 		// margin-left: rem(8);
