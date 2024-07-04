@@ -625,25 +625,34 @@ h4,
 
 .btn-outline-secondary {
   position: relative;
-  &::before {
+  &::before, &::after {
     content: '';
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 14px;
-    width: 14px;
-    height: 14px;
-    background: $gray-650;
-    border-radius: 50%;
-    z-index: 0;
+    display: block;
+    border-radius: inherit;
+    z-index: -1;
     @include mt;
+  }
+  &::before {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    left: -1px;
+    top: -1px;
+    background: $gradient-dark;
+    opacity: var(--op, 0);
+  }
+  &::after {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: $white;
   }
 	align-items: center;
 	gap: rem(8);
 	margin-bottom: 0;
-	font-size: rem(12);
+	font-size: rem(12) !important;
 	@include media-breakpoint-up(md) {
-		font-size: rem(14);
 		--bs-btn-padding-y: #{rem(14)};
 		--bs-btn-padding-x: #{rem(14)};
 	}
@@ -666,25 +675,15 @@ h4,
 		// background: #656565;
 	@include mt;
   .icon {
-    position: relative;
-    z-index: 1;
-    stroke: white;
-    color: white;
-    stroke-width: 1px;
-    fill: white;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
   }
-	&:hover {
+	&:hover, &:active {
+    --op: 1;
 		background: $gradient-dark;
 		background-clip: text;
 		color: transparent;
 		.icon {
 			fill: #1f5796cc;
 		}
-    &::before {
-      opacity: 0;
-    }
 	}
 	.icon {
 		// margin-left: rem(8);

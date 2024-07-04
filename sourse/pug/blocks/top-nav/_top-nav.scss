@@ -27,6 +27,9 @@
 	&__btn.d-lg-none {
 		margin-bottom: rem(36);
 	}
+	&__btn.btn-primary {
+		--bs-btn-padding-x: #{rem(28)};
+	}
 
   &__social {
     display: flex;
