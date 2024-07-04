@@ -40,17 +40,20 @@ block pagecontent
 					+e.col.col-xl-auto
 						+form-wrap.--base.--light
 							+e.head-row.row
-								.col-sm.order-sm-last
-									.small Получить коммерческое предложение для дистрибьюторов
 								.col-auto
 									+e.title Мы ищем партнеров!
+								.col-sm
+									.small Получить коммерческое предложение для дистрибьюторов
 							.row
 								.col-md-6
 									+input("Ваше имя") 
+										img(src="img/user.svg", alt="").input-icon
 								.col-md-6
-									+input("Ваша электронная почта",'email') 
+									+input("E-mail",'email') 
+										img(src="img/email.svg", alt="").input-icon
 								.col-md-6
 									+input("Ваш номер телефона",'tel') 
+										img(src="img/phone-2.svg", alt="").input-icon
 								.col-md-6
 									+input("Страна")
 								.col-md-12

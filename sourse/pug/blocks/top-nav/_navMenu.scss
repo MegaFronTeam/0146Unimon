@@ -1,5 +1,5 @@
 .menu {
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 		display: flex;
 		@include roww(20px);
 		flex-wrap: wrap;
@@ -45,7 +45,7 @@
 		--position: 0;
 		--rotate: 45deg;
     border-radius: rem(4);
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       background: rgba(0, 0, 0, 0.2);
     }
 	}
@@ -88,7 +88,7 @@
 		transform-origin: 50% 50%;
 	}
 }
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(xl) {
 
 	.menu-mobile {
 		position: fixed !important;
@@ -179,13 +179,13 @@
   }
   &.active {
     & > a {
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
       font-weight: 600;
       }
     }
     .icon {
       transform: rotate(180deg);
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         stroke-width: 2px;
       }
     }
@@ -193,7 +193,7 @@
       --op: 1;
       transition: all .3s ease-in;
       visibility: visible;
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(xl) {
         position: relative;
       }
     }
@@ -210,7 +210,7 @@
   visibility: hidden;
     position: absolute;
   @include mt(.1s);
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
     background: $white;
     border-radius: rem(8);
     top: rem(60);
@@ -235,14 +235,14 @@
   a {
     font-size: rem(13);
     padding: rem(8) rem(16) rem(8) rem(3);
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       padding-left: 0;
     }
     // padding: 0;
   }
 
   .menu-item:first-child a {
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       padding-top: 0;
     }
   }
@@ -253,7 +253,7 @@
     opacity: .6;
     position: relative;
     display: inline;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       color: $gray-600;
       font-size: rem(20);
     }
@@ -270,7 +270,7 @@
 
   ul {
     margin-top: rem(10);
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       margin-top: 2vw;
     }
   }
@@ -278,14 +278,14 @@
   &__link {
     a {
       opacity: .9;
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         font-size: rem(16);
         color: $gray-700;
         opacity: 1;
       }
     }
     &:hover a {
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         color: $primary;
       }
     }

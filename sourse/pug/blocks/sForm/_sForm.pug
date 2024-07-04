@@ -8,8 +8,9 @@ mixin sForm()
 					+e.col.col-md-5
 						p Оставьте ваш	электронный адрес и будьте в курсе последних новостей
 					+e.col.col-md-7
-						.d-flex
+						.btns-wrapper
 							+input("Адрес электронной почты",'email')
+								img(src="img/email.svg", alt="").input-icon
 							+e.btn.btn.btn-primary(type="submit") Отправить заявку
 						+policy
 	// end sForm
@@ -25,8 +26,11 @@ mixin sForm2()
 					.d-lg-none: p Закажите бесплатную консультацию специалиста по выбору оптимального оборудования
 				.form-wrapper
 					+input("*Ваше имя ",'text')
+						img(src="img/user.svg", alt="").input-icon
 					+input("E-mail ",'email')
+						img(src="img/email.svg", alt="").input-icon
 					+input("*Номер телефона ",'tel')
+						img(src="img/phone-2.svg", alt="").input-icon
 					+e.btn.btn.btn-primary(type="submit") Отправить заявку
 				.small.fw-500 Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
 	// end sForm
@@ -39,6 +43,7 @@ mixin sFormSmall()
 				h2 Подпишитесь на наши новости
 				p Оставьте ваш  электронный адрес и будьте в курсе последних новостей
 				+input("E-mail ",'email')
+					img(src="img/email.svg", alt="").input-icon
 				.small.fw-500 Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
 				+e.btn.btn.btn-primary(type="submit") Подписаться
 	// end sForm

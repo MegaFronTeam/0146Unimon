@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js.d-xl-none
 		span
 mixin mob-mnu()
 	-
@@ -24,28 +24,28 @@ mixin top-nav()
 			+e.row.row
 				.col-auto
 					a(href="#"):  +img(src="img/logo-dark.png", alt="").logo
-				.col.order-lg-0
+				.col.order-xl-0
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
-							+e.btn.btn.btn-sm.btn-light(href='#').d-lg-none
+							+e.btn.btn.btn-sm.btn-light(href='#').d-xl-none
 								+icon('user')
 								| Вход в систему
 							+mnu()
-							+e.link-contacts.d-lg-none
+							+e.link-contacts.d-xl-none
 								+e.contacts(href="tel:+79682864967") + 7 968 286 49 67
 								+e.contacts(href='mailto:unimon@mail.ru') unimon@mail.ru
-							+e.social.d-lg-none
+							+e.social.d-xl-none
 								+e.link-item(href='#'): +icon('telegram')
 								+e.link-item(href='#'): +icon('youtube')
 				.col-auto
-					+e.btn.btn.btn-outline-secondary(href='#').d-none.d-lg-inline-flex
+					+e.btn.btn.btn-outline-secondary(href='#').d-none.d-xl-inline-flex
 						| Справочник
 						+icon('quest')
-					+e.btn.btn.btn-primary(href='#').d-none.d-lg-inline
+					+e.btn.btn.btn-primary(href='#').d-none.d-xl-inline-block
 						| Вход в систему
 						+icon('user')
-				.col-auto.d-lg-none.ms-auto
+				.col-auto.d-xl-none.ms-auto
 					+e.social
 						+e.link-item.link-item_outlined(href="tel:+79682864967"): +img(src="img/phone.svg", alt="")
 						+e.link-item.link-item_outlined(href='#'): +img(src="img/message.svg", alt="")
