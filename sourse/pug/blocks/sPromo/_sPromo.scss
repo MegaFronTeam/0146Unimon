@@ -1,0 +1,135 @@
+// start .sPromo
+.sPromo {
+  overflow: hidden;
+	// --sPT: #{rem()};
+	--sPB: #{rem(0)};
+	--sTPB: #{rem(30)};
+    @include media-breakpoint-up(lg) {
+      --sPB: #{rem(80)};
+
+    }
+	
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+    .h1 {
+      line-height: 112%;
+    }
+		span {
+      color: $primary;
+      opacity: .5;
+    }
+	}
+
+  .inner-wrapper {
+    position: relative;
+    z-index: 1;
+    @include media-breakpoint-up(lg) {
+    overflow: hidden;
+      padding: rem(54) rem(60);
+      border-radius: rem(15);
+      border: 1px solid $blue-400;
+      background: linear-gradient(180deg,
+      #b3d0dc 0%,
+      #e6eef1 100%),
+      linear-gradient(180deg, rgba(230, 238, 241, 0) 0%, #e6eef1 100%), linear-gradient(180deg, rgba(146, 193, 211, 0.63) 0%, rgba(230, 238, 241, 0.63) 100%);
+    }
+  }
+
+  .span-wrapper-bg {
+    // right: 20%;
+    top: 110%;
+    // bottom: -20%;
+    transform: translate(-50%,-50%);
+    .span {
+      width: rem(480);
+      height: rem(480);
+    }
+    @include media-breakpoint-up(lg) {
+      left: auto;
+      top: auto;
+      right: rem(-200);
+      bottom: -70%;
+      transform: translate(0,0);
+    }
+  }
+
+  &__list {
+    margin-bottom: rem(30);
+  }
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    margin-bottom: rem(14);
+    &::before {
+      content: '';
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      background-color: $blue-600;
+      border-radius: 50%;
+      @include media-breakpoint-up(lg) {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  .col-12 {
+    position: relative;
+  }
+
+  .btn {
+    max-width: rem(392);
+  }
+
+	&__img-wrap {
+    position: relative;
+    height: 100%;
+    min-height: rem(270);
+		.img-promo {
+      position: absolute;
+      width: rem(300);
+      max-width: 100%;
+      right: 50%;
+      bottom: rem(-150);
+      transform: translateX(50%);
+      @include media-breakpoint-up(lg) {
+        transform: rotate(-15deg);
+        bottom: rem(-180);
+        right: -34%;
+      }
+    }
+	}
+
+  .img-gost {
+    position: absolute;
+    width: rem(72);
+    top: 5%;
+    right: 22%;
+    @include media-breakpoint-up(md) {
+      right: 32%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: rem(80);
+      right: 1%;
+      top: auto;
+      bottom: rem(150);
+    }
+  }
+	&__item{
+		
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPromo

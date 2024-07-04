@@ -3,7 +3,10 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	background: linear-gradient(180deg, #b3d0dc 0%, #e6eef1 100%), linear-gradient(180deg, rgba(230, 238, 241, 0) 0%, #e6eef1 100%), linear-gradient(180deg, rgba(146, 193, 211, 0.63) 0%, rgba(230, 238, 241, 0.63) 100%);
+	background: linear-gradient(180deg,
+  #b3d0dc 0%,
+  #e6eef1 100%),
+  linear-gradient(180deg, rgba(230, 238, 241, 0) 0%, #e6eef1 100%), linear-gradient(180deg, rgba(146, 193, 211, 0.63) 0%, rgba(230, 238, 241, 0.63) 100%);
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};

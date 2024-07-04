@@ -1,0 +1,21 @@
+mixin sPromo(data)
+	// start sPromo
+	+b.SECTION.sPromo.bg_blue.section#sPromo&attributes(attributes)
+		.container
+			.inner-wrapper
+				+b.section-title
+					.h1 Сенсор температуры и относительной влажности с поверкой #[span на 2 года]
+				+e.row.row
+					.col-12.col-lg-8
+						+e.list.list.text_gradient
+							.list-item Внесен в Госреестр средств измерений России, Беларуси, Казахстан
+							.list-item Результаты поверки в аккредитованном ЦСМ вносятся в ГИС "Аршин"
+							.list-item Удовлетворяет требованиям Росздравнадзора, Роспотребнадзора, судов
+							.list-item На складе сенсоры уже поверенны, поэтому отгружаем за 1 день
+						+e.btn.btn.btn-outline-primary(href='#').d-none.d-lg-block Свидетельство в ГИС АРШИН
+					.col-12.col-lg-4
+						.span-wrapper-bg: .span
+						+e.img-wrap
+							+img(src="img/prod-10-b.png", alt="").img-promo
+							+img(src="img/gost.svg", alt="").img-gost
+	// end sPromo
