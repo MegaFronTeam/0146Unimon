@@ -122,20 +122,25 @@
   &__col-aside {
     .sArticle__item {
       padding: rem(28) rem(34);
-      margin-bottom: rem(22);
+      margin-bottom: rem(20);
       &:last-child {
         margin-bottom: 0;
       }
     }
     .title {
       font-weight: 500;
-      margin-bottom: rem(24);
+      font-size: rem(14);
+      margin-bottom: rem(10);
     }
     ul {
       list-style-type: none;
+      margin-bottom: 0;
     }
     li {
-      margin-bottom: rem(26);
+      margin-bottom: rem(16);
+      &:last-child {
+        margin-bottom: 0;
+      }
       a {
         color: $dark;
         font-size: rem(12);
