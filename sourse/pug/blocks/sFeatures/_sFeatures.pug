@@ -1,0 +1,30 @@
+mixin sFeatures(data)
+	// start sFeatures
+	+b.SECTION.sFeatures.bg_blue.section#sFeatures&attributes(attributes)
+		.container
+			+e.inner-wrap
+				+b.section-title
+					.h1 Заботу о сервере берем на себя
+					.sub-text Быстрое внедрение без затрат на покупку серверного оборудования и расходов на системного администратора
+				+featureItem('f-5', 'Регулярно обновляем ПО, расширяя функционал')
+				+featureItem('f-4', 'Система легко масштабируется в зависимости от потребностей')
+				+featureItem('f-3', 'Быстрый запуск мониторинга – просто залогиньтесь')
+				+featureItem('f-1', 'Круглосуточно следим за работой серверов')
+				+featureItem('f-6', 'Основной и дублирующий ЦОДы расположены на территории РФ')
+				+featureItem('f-2', 'Каждые 6 часов происходит резервное копирование ')
+				.consultation-card-wrap: +consultationCard('Можно установить и на сервер клиента', 'Будет работать в локальной сети клиента, даже без подключения к Интернету!', 'Запросить консультацию')
+	// end sFeatures
+
+mixin consultationCard(title, text, btn)
+	+b.consultation-card
+		+e.inner-wrap
+			+e.descr-wrap
+				+e.title= title
+				+e.text= text
+			+e.btn.btn.btn-outline-primary= btn
+
+
+mixin featureItem(img, title)
+	+b.feature-item-card
+		+e.img-wrap: +img(src=`img/${img}.svg`, alt="")
+		+e.title= title
