@@ -11,3 +11,31 @@ mixin headerBlock2()
 		.container
 			+e.img-wrap: +img(src="img/Dodo-Logo.svg", alt="")
 	// end headerBlock
+
+
+mixin headerMain()
+	+b.headerBlock--main.section#headerBlock&attributes(attributes)
+		.container
+			.text-center
+				+b.section-title
+					h1 Российские системы мониторинга температуры, влажности, СO2 и других показателей
+				+e.sub-text “Коробочные“ решения для бизнеса.<br>Разрабатываем. Производим. Устанавливаем.
+				+e.btn.btn.btn-primary Получить консультацию
+			+e.features-wrap
+				+featureSpanItem('5', 'лет на', 'рынке')
+				+featureSpanItem('8000+', 'датчиков онлайн', 'по РФ и СНГ')
+				+featureSpanItemSVG('gost','в госреестрах СИ')
+
+mixin featureSpanItem(span, text1, text2)
+	+b.feature-span-item
+		.wrap: .span.text_gradient= span
+		+e.text-wrap
+			+e.text= text1
+			+e.text= text2
+
+mixin featureSpanItemSVG(svg, text)
+	+b.feature-span-item--svg
+		.wrap: +img(src=`img/${svg}.svg`, alt="").svg
+		+e.text-wrap
+			+e.text= text
+			+img(src=`img/flags.svg`, alt="")
