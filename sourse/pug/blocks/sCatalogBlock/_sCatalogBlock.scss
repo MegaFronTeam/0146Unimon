@@ -1,0 +1,139 @@
+// start .sCatalogBlock
+.sCatalogBlock {
+	// --sPT: #{rem()};
+	--sPB: #{rem(20)};
+	--sTPB: #{rem(50)};
+	
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+    // display: grid;
+
+	}
+	.section-title{
+
+	}
+	&__col{
+		
+	}
+	&__inner-wrapper {
+    display: grid;
+    gap: rem(10) rem(6);
+    grid-template-columns: repeat( auto-fill, (minmax(142px, 1fr)));
+    margin-bottom: rem(37);
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(5,1fr);
+      grid-template-rows: repeat(3,1fr);
+      gap: rem(15);
+    }
+	}
+
+  .form-wrap {
+    grid-column: span 2;
+    grid-row: span 2;
+    @include media-breakpoint-down(xl) {
+      padding: rem(22);
+      .form-wrap__title {
+        font-size: rem(28);
+        margin-bottom: rem(16);
+      }
+    }
+    .btn {
+      font-size: rem(16);
+      width: rem(210);
+      --bs-btn-padding-y: #{rem(24)};
+      // --bs-btn-padding-x: #{rem(20)};
+    }
+  }
+  &__btn {
+    width: rem(252);
+    font-size: rem(12);
+    --bs-btn-padding-y: #{rem(20)};
+  }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCatalogBlock
+
+.card-item-small {
+  border-radius: rem(15);
+  background: $white;
+  padding: rem(15);
+  display: block;
+  text-align: center;
+    @include media-breakpoint-up(xl) {
+      padding: rem(30);
+    }
+  &__title {
+    color: $blue-800;
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 150%;
+    letter-spacing: -0.05em;
+    margin-bottom: rem(6);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(20);
+      line-height: 105%;
+    }
+  }
+
+  .wrapper-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    gap: rem(10);
+  }
+
+  &__img-wrap {
+    aspect-ratio: 1/.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__sub {
+    color: $primary;
+    opacity: .55;
+    font-size: rem(11);
+    line-height: 1.2;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(13);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .18);
+  }
+
+  img {
+    max-width: 50%;
+  }
+
+  &:not(.visible) {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &--empty {
+
+    .title-wrapper {
+      display: flex;
+      align-items:center;
+      height: 100%;
+    }
+    border: 2px solid $blue-400;
+  }
+}
+
+.main-wrap .h1 {
+  @include media-breakpoint-down(lg) {
+    font-size: rem(32);
+  }
+}

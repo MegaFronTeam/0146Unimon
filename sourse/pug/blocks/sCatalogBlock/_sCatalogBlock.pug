@@ -1,0 +1,45 @@
+mixin sCatalogBlock(data)
+	// start sCatalogBlock
+	+b.SECTION.sCatalogBlock.bg_blue.section#sCatalogBlock&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				.h1 Сенсоры для радиомодулей
+			+e.inner-wrapper
+				+form-wrap.--base.d-none.d-lg-block
+					+e.title Бесплатная консультация специалиста #[span по выбору оптимального оборудования]
+					+input("Ваше имя")
+						img(src="img/user.svg", alt="").input-icon
+					+input("Ваш номер телефона",'tel')
+						img(src="img/phone-2.svg", alt="").input-icon
+					+input("Ваша электронная почта",'email')
+						img(src="img/email.svg", alt="").input-icon
+					+e.footer-row.row
+						+e.col.col-auto
+							+e.btn.btn.btn-outline-white(type="submit") Отправить заявку
+								+icon('arrow-angle-right')
+						+e.col-text.small
+							| Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
+				+cardItemSmall('prod-10', 'Unimon TH-W', 'Cенсор температуры', 'visible')
+				+cardItemSmall('prod-11', 'Unimon TH-W', 'Cенсор температуры и влажности', 'visible')
+				+cardItemSmall('prod-11', 'Unimon TH-W', 'Cенсор температуры и влажности', 'visible')
+				+cardItemSmall('prod-8', 'Unimon TH-W', 'Cенсор температуры', 'visible')
+				+cardItemSmall('prod-8', 'Unimon TH-W', 'Cенсор температуры и влажности ', 'visible')
+				+cardItemSmall('prod-6', 'Unimon TH-W', 'Cенсор температуры', 'visible')
+				+cardItemSmall('prod-10', 'Unimon TH-W', 'Cенсор температуры ')
+				+cardItemSmall('prod-11', 'Unimon TH-W', 'Cенсор температуры и влажности')
+				+cardItemSmall('prod-11', 'Unimon TH-W', 'Cенсор температуры и влажности')
+				+cardItemSmall('prod-8', 'Unimon TH-W', 'Cенсор температуры')
+				+b.card-item-small--empty(href='#').d-none.d-lg-block
+					.title-wrapper
+						.h4 Перейти в каталог >
+			.text-center: +e.btn.btn.btn-primary.d-lg-none(href='#') Перейти в каталог >
+	// end sCatalogBlock
+
+mixin cardItemSmall(img, title, text, isVisible)
+	+b.card-item-small(href='#')(class=isVisible)
+		.wrapper-flex
+			+e.img-wrap
+				+img(src=`img/${img}.png`, alt="")
+			.descr
+				+e.title= title
+				+e.sub= text
