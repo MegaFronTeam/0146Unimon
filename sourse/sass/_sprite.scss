@@ -7,6 +7,11 @@
 	fill: currentColor;
 }
 
+.icon-alarm {
+	$h: 33;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
+}
 .icon-arr-down {
 	$h: 10;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -52,6 +57,21 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-mail {
+	$h: 33;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(35 / #{$h} *1em );
+}
+.icon-message {
+	$h: 31;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(31 / #{$h} *1em );
+}
+.icon-push {
+	$h: 33;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
+}
 .icon-quest {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -61,6 +81,11 @@
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
+}
+.icon-report {
+	$h: 34;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(33 / #{$h} *1em );
 }
 .icon-search {
 	$h: 17;

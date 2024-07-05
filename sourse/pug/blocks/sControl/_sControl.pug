@@ -1,0 +1,39 @@
+mixin sControl(data)
+	// start sControl
+	+b.SECTION.sControl.bg_blue.section#sControl&attributes(attributes)
+		.container
+			+e.row.row
+				.col-12.col-lg-5.order-lg-1
+					+b.section-title
+						.h1 Онлайн контроль<br>#[span объектов в одном интерфейсе]
+				.col-12.col-lg-7
+					+e.img-wrap: +img(src="img/map.png", alt="")
+			+e.row.row
+				.col-12.col-lg-5
+					+controlCard('Оповещения', 'при отклонениях от нормы')
+						.info-items-wrap
+							+infoItem('message', 'SMS')
+							+infoItem('telegram', 'telegram')
+							+infoItem('mail', 'email')
+							+infoItem('push', 'push-уведомления')
+							+infoItem('alarm', 'сирена на объекте')
+							+infoItem('report', 'отчеты по расписанию')
+				.col-12.col-lg-7
+					+controlCard('Автоматизация', 'отчетности')
+						+e.img-wrap.text-center: +img(src="img/scheme.png", alt="").img
+
+	// end sControl
+
+
+mixin controlCard(title, sub)
+	+b.control-card-item
+		+e.text-wrap.text_gradient
+			+e.title= title
+			+e.sub= sub
+		if block
+			block
+
+mixin infoItem(icon, text)
+	+b.control-info-item
+		+icon(icon)
+		+e.text.text-center= text

@@ -36,7 +36,7 @@ mixin sCatalogBlock(data)
 	// end sCatalogBlock
 
 mixin cardItemSmall(img, title, text, isVisible)
-	+b.card-item-small(href='#')(class=isVisible)
+	+b.card-item-small(href='#', class=isVisible)
 		.wrapper-flex
 			+e.img-wrap
 				+img(src=`img/${img}.png`, alt="")
