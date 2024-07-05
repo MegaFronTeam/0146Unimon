@@ -47,6 +47,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(12 / #{$h} *1em );
 }
+.icon-clock {
+	$h: 18;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(18 / #{$h} *1em );
+}
 .icon-fb {
 	$h: 30;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -96,6 +101,11 @@
 	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );
+}
+.icon-update {
+	$h: 18;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(18 / #{$h} *1em );
 }
 .icon-user {
 	$h: 16;

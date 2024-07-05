@@ -1,0 +1,36 @@
+mixin sSystems(data)
+	// start sSystems
+	+b.SECTION.sSystems.section#sSystems&attributes(attributes)
+		+img(src="img/bg.png", alt="").img
+		.container
+			+b.section-title.text-center
+				.h1 Используйте сменные сенсоры и забудьте о проблемах с периодической поверкой 
+			+e.row.row
+				.col-12.col-lg-6
+					+systemCard('Для систем UNIMON', 'system-card_success', 'сроки 1-3 часа', 1)
+						+listItemL('1', 'Получить новые уже поверенные сенсоры по цене поверки')
+						.listItem.listItem--large
+							.numb 2
+							.wrap Заменить сенсоры у радиомодулей #[span без остановки системы]
+				.col-12.col-lg-6
+					+systemCard('Для обычных систем', 'system-card_error', 'сроки 2-4 недели')
+						+listItemL('1', 'Демонстрировать датчики')
+						+listItemL('2', 'Разместить комплект временных поверенных датчиков')
+						+listItemL('3', 'Отвезти	датчики на поверку в аккредитованную лабораторию')
+						+listItemL('4', 'Настроить датчики')
+						+listItemL('5', 'Смонтировать поверенные датчики')
+	// end sSystems
+
+mixin systemCard(title, color, clock, info)
+	+b.system-card(class=color)
+		+e.title= title
+		+e.list-wrap
+			if block
+				block
+		.time
+			+icon('clock')
+			p= clock
+		if info
+			.additional
+				+icon('update')
+				| Обновляется гарантия на сенсоры
