@@ -1,8 +1,14 @@
 // start .sCatalogBlock
 .sCatalogBlock {
-	// --sPT: #{rem()};
-	--sPB: #{rem(20)};
+	--sPT: #{rem(10)};
+	--sPB: #{rem(70)};
 	--sTPB: #{rem(50)};
+  @include media-breakpoint-up(lg) {
+    --sTB: #{rem(20)};
+  }
+  @include media-breakpoint-up(xl) {
+    --sPT: #{rem(100)};
+  }
 	
 	&__row {
 		// --bs-gutter-x: #{rem()};
@@ -75,10 +81,11 @@
     font-size: rem(14);
     line-height: 150%;
     letter-spacing: -0.05em;
-    margin-bottom: rem(6);
+    // margin-bottom: rem(6);
     @include media-breakpoint-up(lg) {
       font-size: rem(20);
       line-height: 105%;
+      margin-bottom: rem(6);
     }
   }
 
@@ -87,7 +94,10 @@
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    gap: rem(10);
+    gap: rem(26);
+    @include media-breakpoint-up(lg) {
+      gap: rem(10);
+    }
   }
 
   &__img-wrap {

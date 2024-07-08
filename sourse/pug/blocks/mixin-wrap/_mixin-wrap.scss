@@ -22,6 +22,31 @@
 
 }
 
+.swiper-button-hand {
+	--swiperArrowSize: #{rem(30)};
+  @include media-breakpoint-up(lg) {
+
+  }
+  opacity: .35;
+  &:hover {
+    opacity: 1;
+  }
+  box-shadow: none;
+  --swiperBgDefHover: transparent;
+  background: transparent;
+  border: none;
+  .icon {
+		fill: none;
+    font-size: rem(30);
+		stroke: $blue-600;
+		stroke-width: 2;
+    border: none;
+    @include media-breakpoint-up(lg) {
+      // font-size: rem(48);
+    }
+	}
+}
+
 
 .counter{
 	counter-reset: num;

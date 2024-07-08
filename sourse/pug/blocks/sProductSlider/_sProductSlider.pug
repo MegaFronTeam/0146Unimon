@@ -5,8 +5,8 @@ mixin sProductSlider(data)
 			+b.section-title
 				.h1 Контроллер AlertBox Radio
 				.sub-title Флагманская модель с полным функционалом
-			+e.row.row
-				+e.col.col-12.col-lg-8
+			+e.row.row.row1
+				+e.col.col-12.col-xl-8
 					+e.features-wrapper
 						+productFeatureCard('feature-1', 'Беспроводные датчики и реле')
 						+productFeatureCard('feature-2', 'Встроен аккумулятор для резервного питания')
@@ -28,53 +28,88 @@ mixin sProductSlider(data)
 					+e.btn-wrap
 						+e.btn.btn.btn-primary(href='#') Рассчитать стоимость системы
 						+e.btn.btn.btn-outline-primary(href='#') Подробнее
-				+e.col.col-12.col-lg-4
+				+e.col.col-12.col-xl-4
+					.span-wrapper-bg: .span
 					+e.slider-wrap
-						.swiper.sProdCard-slider-js
+						.swiper.sProdCard-slider-js-1
 							mixin sProdCardSlide(imgNum)
-								.swiper-slide
+								.swiper-slide.text-center
 									+e.s-img(href=`img/product-${imgNum}.png` data-fancybox='sProdCardSlide')
 										img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
 							.swiper-wrapper
-								+sProdCardSlide('1')
+								+sProdCardSlide('11')
 								+sProdCardSlide('2')
-								+sProdCardSlide('3')
-								+sProdCardSlide('1')
+								+sProdCardSlide('12')
+								+sProdCardSlide('11')
 								+sProdCardSlide('2')
-								+sProdCardSlide('3')
-					+e.thumb-wrap.d-none.d-lg-block
-						.swiper.sProdCard-thumb-js
+								+sProdCardSlide('12')
+						.arrow-wrap1.d-xl-none: +arrow()
+					+e.thumb-wrap.d-none.d-xl-block
+						.swiper.sProdCard-thumb-js-1
 							mixin sProdCardThumb(imgNum)
 								.swiper-slide
 									.slide-item-1
 										.wrapper: img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
 							.swiper-wrapper
-								+sProdCardThumb('1')
+								+sProdCardThumb('11')
 								+sProdCardThumb('2')
-								+sProdCardThumb('3')
-								+sProdCardThumb('1')
+								+sProdCardThumb('12')
+								+sProdCardThumb('11')
 								+sProdCardThumb('2')
-								+sProdCardThumb('3')
+								+sProdCardThumb('12')
+						.arrow-wrapThumb1: +arrow()
 	// end sProductSlider
 
 mixin sProductSlider2(data)
 	// start sProductSlider
 	+b.SECTION.sProductSlider.section#sProductSlider2&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title--right
 				.h1 Радиомодуль AlertNode RTD Max
 				.sub-title Флагманская модель с полным функционалом
-			+e.row.row
-				+e.col.col-12.col-lg-4
-					+e.btn-wrap
+			+e.row.row.row-2
+				+e.col.col-12.col-xl-4.col_top
+					.span-wrapper-bg: .span
+					+e.slider-wrap
+						.swiper.sProdCard-slider-js-2
+							mixin sProdCardSlide(imgNum)
+								.swiper-slide.text-center
+									+e.s-img(href=`img/product-${imgNum}.png` data-fancybox='sProdCardSlide')
+										img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
+							.swiper-wrapper
+								+sProdCardSlide('11')
+								+sProdCardSlide('2')
+								+sProdCardSlide('12')
+								+sProdCardSlide('11')
+								+sProdCardSlide('2')
+								+sProdCardSlide('12')
+						.arrow-wrap2.d-xl-none: +arrow()
+					+e.thumb-wrap.d-none.d-xl-block
+						.swiper.sProdCard-thumb-js-2.swiper_vertical
+							mixin sProdCardThumb(imgNum)
+								.swiper-slide
+									.slide-item-1
+										.wrapper: img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
+							.swiper-wrapper
+								+sProdCardThumb('11')
+								+sProdCardThumb('2')
+								+sProdCardThumb('12')
+								+sProdCardThumb('11')
+								+sProdCardThumb('2')
+								+sProdCardThumb('12')
+						.arrow-wrapThumb2: +arrow()
+					+e.btn-wrap.text-center.d-none.d-xl-block
 						+e.btn.btn.btn-primary(href='#') Рассчитать стоимость системы
-				+e.col.col-12.col-lg
+				+e.col.col-12.col-xl-8
 					+e.features-wrapper
 						+productFeatureCard('feature-1', 'Беспроводные датчики и реле')
 						+productFeatureCard('feature-11', 'Встроен аккумулятор для резервного питания')
 						+productFeatureCard('feature-12', 'Встроенная память')
 						+productFeatureCard('feature-13', 'Дальность до 500 м')
 						+productFeatureCard('feature-14', 'Встроенный сенсор температуры и влажности')
+						+b.product-feature-card--flex(href='#')
+							+e.title.text_gradient Подробнее >
+			.d-xl-none.text-center: +e.btn.btn.btn-primary(href='#') Рассчитать стоимость системы
 	// end sProductSlider
 
 

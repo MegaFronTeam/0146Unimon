@@ -80,24 +80,62 @@ function eventHandler() {
 			},
 		},
 	});
+
   /* product slider with thumb */
-  let prodCardThumb = new Swiper(".sProdCard-thumb-js", {
+  let prodCardThumb = new Swiper(".sProdCard-thumb-js-1", {
 		slidesPerView: 3,
 		spaceBetween: 20,
-		// breakpoints: {
-		// 	1200: {
-		// 		slidesPerView: 3,
-		// 	},
-    // }
 	});
-	let prodCardSlider = new Swiper(".sProdCard-slider-js", {
-		// spaceBetween: 50,
+	let prodCardSlider = new Swiper(".sProdCard-slider-js-1", {
     slidesPerView: 1,
 		thumbs: {
 			swiper: prodCardThumb,
 		},
-		// loop: true,
-	}); //
+		navigation: {
+			nextEl: ".arrow-wrap1 .swiper-button-next",
+			prevEl: ".arrow-wrap1 .swiper-button-prev",
+		},
+		breakpoints: {
+			1200: {
+				navigation: {
+          nextEl: ".arrow-wrapThumb1 .swiper-button-next",
+          prevEl: ".arrow-wrapThumb1 .swiper-button-prev",
+        },
+			},
+		}
+	});
+
+  /* 2 */
+  
+  let prodCardThumb2 = new Swiper(".sProdCard-thumb-js-2", {
+		slidesPerView: 3,
+		spaceBetween: 20,
+    direction: 'horizontal',
+    breakpoints: {
+        1700: {
+          direction: 'vertical',
+        }
+      }
+	});
+
+	let prodCardSlider2 = new Swiper(".sProdCard-slider-js-2", {
+    slidesPerView: 1,
+		thumbs: {
+			swiper: prodCardThumb2,
+		},
+		navigation: {
+			nextEl: ".arrow-wrap2 .swiper-button-next",
+			prevEl: ".arrow-wrap2 .swiper-button-prev",
+		},
+		breakpoints: {
+			1200: {
+				navigation: {
+          nextEl: ".arrow-wrapThumb2 .swiper-button-next",
+          prevEl: ".arrow-wrapThumb2 .swiper-button-prev",
+        },
+			},
+		}
+	});
 
 	/* nav */
 	const menuItems = document.querySelectorAll(".menu-item-has-children");
