@@ -293,41 +293,45 @@
   position: relative;
   overflow-x: auto;
   overflow-y: hidden;
-
   table {
     width: 100%;
-    border-radius: $border-radius;
-    overflow: hidden;
-    font-size: rem(14);
-    border-color: $gray-400;
   }
 
-  thead {
-    background: $gradient-dark;
-  }
-
-  th {
-    color: $white;
-    padding: rem(16) rem(20);
-  }
-
-  tbody tr:nth-of-type(even) {
-    background: $blue-300;
-  }
-
-  tr {
-    th {
-      width: 25%;
-      min-width: rem(206);
-      font-weight: 700;
-      border: none;
+  &--art {
+    table {
+      border-radius: $border-radius;
+      overflow: hidden;
+      font-size: rem(14);
+      border-color: $gray-400;
     }
-  }
 
-  td {
-    padding: rem(16) rem(20);
-    color: $gray-800;
-    border: 1px solid $gray-300;
+    thead {
+      background: $gradient-dark;
+    }
+
+    th {
+      color: $white;
+      padding: rem(16) rem(20);
+    }
+
+    tbody tr:nth-of-type(even) {
+      background: $blue-300;
+    }
+
+    tr {
+      th {
+        width: 25%;
+        min-width: rem(206);
+        font-weight: 700;
+        border: none;
+      }
+    }
+
+    td {
+      padding: rem(16) rem(20);
+      color: $gray-800;
+      border: 1px solid $gray-300;
+    }
   }
 }
 

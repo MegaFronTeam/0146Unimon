@@ -1,0 +1,65 @@
+mixin sTableS(data)
+	// start sTable
+	+b.SECTION.sTableS.bg_dark-blue-920.section#sTable&attributes(attributes)
+		+img(src="img/bg-2.png", alt="").img
+		.container
+			+b.section-title.d-lg-none
+				.h2 Радиосвязь LoRa пробивает любые стены
+			+e.row.row
+				+e.col.col-12.col-lg-7
+					.table-wrap
+						table
+							thead
+								tr
+									th
+									th
+										+tableHeadTh('bluetooth', 'Bluetooth')
+									th
+										+tableHeadTh('wifi2', 'Wi-Fi')
+									th
+										+tableHeadTh('z', 'ZigBee')
+									th
+										+tableHeadTh('lora', 'LoraWAN')
+							tbody
+								tr
+									td Гипсокартон
+									td: .status.status_full
+									td: .status.status_full
+									td: .status.status_full
+									td: .status.status_full
+								tr
+									td Кирпич
+									td: .status.status_partly
+									td: .status.status_partly
+									td: .status.status_full
+									td: .status.status_full
+								tr
+									td Холодильник
+									td: .status.status_partly
+									td: .status.status_partly
+									td: .status.status_full
+									td: .status.status_full
+								tr
+									td Железобетон
+									td: .status.status_partly
+									td: .status.status_partly
+									td: .status.status_full
+									td: .status.status_full
+								tr
+									td Сэндвич панели морозильных камер
+									td: .status.status_empty
+									td: .status.status_empty
+									td: .status.status_empty
+									td: .status.status_full
+				+e.col.col-12.col-lg-5
+					+b.section-title.d-none.d-lg-block
+						.h2 Радиосвязь LoRa пробивает любые стены
+					+b.form-send-wrapper
+						+e.text Оставьте заявку, если вам необходима проводная система мониторинга
+						+e.btn.btn.btn-outline-light(href='#') Отправить заявку
+	// end sTable
+
+mixin tableHeadTh(img, text)
+	+b.thead.text-center
+		+img(src=`img/${img}.svg`, alt="")
+		+e.text= text

@@ -432,6 +432,19 @@ iframe {
   background: $blue-200;
 }
 
+.bg_dark-blue {
+  background: $blue-900;
+  // .h1, .h2 {
+  //   color: $white;
+  // }
+}
+.bg_dark-blue-920 {
+  background: $blue-920;
+  .h1, .h2 {
+    color: $white;
+  }
+}
+
 .btn,
 .form-control,
 .form-select {

@@ -97,13 +97,14 @@ $color-contrast-light: $white !default;
 // fusv-disable
 $blue-100: #D2F1FC;
 $blue-200: #E6ECEF;
-$blue-300: #f0f9ff;
+$blue-300: #2B6DB8;
 $blue-400: #74b4ca;
 $blue-500: $blue !default;
 $blue-600: #3793ae;
 $blue-700: #074287;
 $blue-800: #2B5967;
 $blue-900: #003466;
+$blue-920: #000D3A;
 
 $indigo-100: tint-color($indigo, 80%) !default;
 $indigo-200: tint-color($indigo, 60%) !default;
