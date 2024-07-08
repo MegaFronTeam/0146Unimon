@@ -69,7 +69,7 @@ mixin tableHeadTh(img, text)
 mixin sTitleSection(data)
 	// start sTable
 	+b.SECTION.sTitleSection.bg_dark-blue-920.section#sTitleSection&attributes(attributes)
-		+img(src="img/ellipse.svg", alt="").img
+		+img(src="img/ellipse.svg", alt="").ellipse
 		.container
 			+e.row.row
 				+e.col.col-12.col-lg-8
@@ -78,3 +78,27 @@ mixin sTitleSection(data)
 					+e.btn.btn.btn-outline-light(href='#') Подробнее
 				+e.col.col-12.col-lg-4
 					+e.img-wrap: +img(src="img/title-bg.png", alt="")
+
+mixin sTitleSection2(data)
+	// start sTable
+	+b.SECTION.sTitleSection.bg_dark-blue-920.section#sTitleSection2&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-12.col-lg-7
+					+b.section-title
+						.h2 Используем международный стандарт LoraWan
+						+e.text Обеспечивает совместимость с оборудованием других производителей
+				+e.col.col-12.col-lg-5.d-none.d-lg-block
+					+e.img-wrap: +img(src="img/bg-3-big.png", alt="").img-desktop
+				+e.col.col-12.col-lg-9
+					+e.cards-wrap
+						+loraCard('signal', '1', 'км', 'дальность по прямой')
+						+loraCard('frequency', '868', 'МГц', 'нелицензируемая частота')
+						+loraCard('charger', '4', 'года', 'работы от батарейки')
+		+img(src="img/bg-3.png", alt="").img.d-lg-none
+
+mixin loraCard(img, num, span, text )
+	+b.lora-card
+		+img(src=`img/${img}.svg`, alt="")
+		+e.title #[span= num ] #{span}
+		+e.text= text
