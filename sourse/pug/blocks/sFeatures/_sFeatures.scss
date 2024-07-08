@@ -1,10 +1,11 @@
 // start .sFeatures
 .sFeatures {
 	--sPT: #{rem(35)};
-	// --sPB: #{rem()};
+	--sPB: #{rem(140)};
 	// --sTPB: #{rem()};
     @include media-breakpoint-up(lg) {
       --sPT: #{rem(70)};
+      --sPB: #{rem(340)};
     }
 	
 	&__row{

@@ -63,3 +63,18 @@ mixin tableHeadTh(img, text)
 	+b.thead.text-center
 		+img(src=`img/${img}.svg`, alt="")
 		+e.text= text
+
+	// end sTable
+
+mixin sTitleSection(data)
+	// start sTable
+	+b.SECTION.sTitleSection.bg_dark-blue-920.section#sTitleSection&attributes(attributes)
+		+img(src="img/ellipse.svg", alt="").img
+		.container
+			+e.row.row
+				+e.col.col-12.col-lg-8
+					+b.section-title
+						.h1 Разрабатываем и производим беспроводные решения
+					+e.btn.btn.btn-outline-light(href='#') Подробнее
+				+e.col.col-12.col-lg-4
+					+e.img-wrap: +img(src="img/title-bg.png", alt="")

@@ -440,8 +440,13 @@ iframe {
 }
 .bg_dark-blue-920 {
   background: $blue-920;
+
   .h1, .h2 {
     color: $white;
+  }
+
+  .btn-outline-light {
+    --bs-btn-color: #{$white};
   }
 }
 
