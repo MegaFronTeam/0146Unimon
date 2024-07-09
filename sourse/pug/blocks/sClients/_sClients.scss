@@ -29,13 +29,16 @@
 	}
 
   &__row-industry {
+    margin: auto;
     margin-bottom: rem(70);
     display: grid;
-    justify-items: center;
+    max-width: rem(350);
+    // justify-items: center;
     align-items: end;
     grid-template-columns: repeat(auto-fill, minmax(142px, 1fr));
     gap: rem(34) rem(20);
     @include media-breakpoint-up(md) {
+      max-width: none;
       justify-items: start;
     }
     @include media-breakpoint-up(lg) {
@@ -109,7 +112,6 @@
   }
 
   &__brand--js {
-    // overflow: visible;
 
     &:nth-child(2) {
       @include media-breakpoint-down(xl) {

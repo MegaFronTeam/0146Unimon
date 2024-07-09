@@ -34,7 +34,7 @@ mixin sProductSlider(data)
 						.swiper.sProdCard-slider-js-1
 							mixin sProdCardSlide(imgNum)
 								.swiper-slide.text-center
-									+e.s-img(href=`img/product-${imgNum}.png` data-fancybox='sProdCardSlide')
+									+e.s-img
 										img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
 							.swiper-wrapper
 								+sProdCardSlide('11')
@@ -74,7 +74,7 @@ mixin sProductSlider2(data)
 						.swiper.sProdCard-slider-js-2
 							mixin sProdCardSlide(imgNum)
 								.swiper-slide.text-center
-									+e.s-img(href=`img/product-${imgNum}.png` data-fancybox='sProdCardSlide')
+									+e.s-img
 										img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
 							.swiper-wrapper
 								+sProdCardSlide('11')

@@ -6,7 +6,7 @@
   
   @include media-breakpoint-up(xl) {
     --sPT: #{rem(100)};
-    --sPB: #{rem(60)};
+    --sPB: #{rem(80)};
     --sTPB: #{rem(40)};
   }
 	background: linear-gradient(180deg,
@@ -47,6 +47,10 @@
   .col_top {
     @include media-breakpoint-up(xl) {
       transform: translateY(-70px);
+    }
+    
+    @media (min-width: 1700px) {
+      transform: translateY(0);
     }
   }
 

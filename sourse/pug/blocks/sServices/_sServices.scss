@@ -25,6 +25,12 @@
       color: $blue-600;
     }
 	}
+  .h1 {
+    @include media-breakpoint-up(lg) {
+      font-size: rem(55);
+    }
+
+  }
 	&__col{
 		
 	}
