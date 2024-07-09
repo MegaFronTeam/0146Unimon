@@ -24,8 +24,10 @@
 	&.form-wrap--base {
 		@include media-breakpoint-up(sm) {
 			padding: rem(45);
+      padding-bottom: rem(20);
 		}
 		padding: rem(30) rem(15);
+    padding-bottom: rem(20);
 
 		background: linear-gradient(90deg, #3793ae 0.7%, #074287 100%), #000d3a;
 		border-radius: 15px;

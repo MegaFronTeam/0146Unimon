@@ -33,3 +33,81 @@ mixin footer()
 						+e.title: a(href="#") Карта сайта
 				.col-12
 					a(href="#"): +img(src="img/logo.png", alt="").logo
+
+
+mixin footer2()
+	+b.FOOTER.footer.footer_large.section
+		.container
+			+b.footer-form.section
+				+e.row.row
+					+e.text-block.col
+						+e.footer-title Нет затрат на приобретение сервера,
+							span лицензий ПО и зарплатусистемному администратору
+						+e.footer-text.small Список пополняется — мы постоянно работаем над интеграцией новых систем в платформу Unimon
+					+e.col.col-xl-auto
+						+form-wrap.--base.--light
+							+e.head-row.row
+								.col-auto
+									+e.title Мы ищем партнеров!
+								.col-sm
+									.small Получить коммерческое предложение для дистрибьюторов
+							.row
+								.col-md-6
+									+input("Ваше имя") 
+										img(src="img/user.svg", alt="").input-icon
+								.col-md-6
+									+input("E-mail",'email') 
+										img(src="img/email.svg", alt="").input-icon
+								.col-md-6
+									+input("Ваш номер телефона",'tel') 
+										img(src="img/phone-2.svg", alt="").input-icon
+								.col-md-6
+									+input("Страна")
+								.col-md-12
+									+input("Сообщение","textarea")
+
+							+e.footer-row.row
+								+e.col-text.small.col
+									| Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
+								+e.col.col-auto
+									+e.btn.btn.btn-primary(type="submit") Отправить заявку
+										+icon('arrow-angle-right')
+		.container
+			+e.row.row
+				.col
+					+e.inner-wrapper
+						+e.title Мониторинг
+						ul
+							li: a(href="#") Температуры
+							li: a(href="#") Влажность
+							li: a(href="#") Отопление
+							li: a(href="#") Микроклимат
+				.col
+					+e.inner-wrapper
+						+e.title Применения
+						ul
+							li: a(href="#") Хранение лекарств
+							li: a(href="#") Термокартирование
+							li: a(href="#") Управление отоплением
+				.col
+					+e.inner-wrapper
+						+e.title Оборудование
+						ul
+							li: a(href="#") AlertBox Lite
+							li: a(href="#") AlertBox Radio Lite
+							li: a(href="#") AlertBox Radio
+							li: a(href="#") AlertBox Pro
+							li: a(href="#") AlertBox Enterprise
+				.col.col-xl-4.col-xxl-auto
+					+e.wrapper
+						+e.title: a(href="#") Партнерство
+						+e.title: a(href="#") Карта сайта
+				.col-12.col-xxl-6.col-logo
+					+e.logo-wrap
+						a(href="#"): +img(src="img/logo.png", alt="").logo.logo_center
+			+e.bottom
+				ul
+					li.text ООО "Эволюция" © Unimon.ru - Universal Monitoring System.Контроль датчиков и управление оборудованием через Интернет и SMS.
+					li: a(href="#") Лицензионное соглашение
+					li: a(href="#") Инструкция
+					li Все права защищены

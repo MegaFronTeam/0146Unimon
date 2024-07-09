@@ -1,0 +1,54 @@
+mixin sClients(data)
+	// start sClients
+	+b.SECTION.sClients.section#sClients&attributes(attributes)
+		.container
+			+b.section-title
+				.h1 Среди наших клиентов
+				
+			+e.row.row
+				.col-12.col-xl-6
+					+e.row-industry
+						+industryCard('1', 'Фармдистрибьюторы')
+						+industryCard('2', 'Розничные сети')
+						+industryCard('2', 'Розничные сети')
+						+industryCard('3', 'Лаборатории')
+						+industryCard('4', 'Медучреждения')
+						+industryCard('4', 'Медучреждения')
+						+industryCard('5', 'Склады')
+						+industryCard('6', 'БЦ, ТЦ, ЖКХ')
+						+industryCard('6', 'БЦ, ТЦ, ЖКХ')
+						+industryCard('7', 'Агрокомплексы')
+						+industryCard('8', 'Производства')
+						+industryCard('8', 'Производства')
+						+e.btn.btn.btn-primary(href='#') Перейти к кейсам
+							+icon('arrow-angle-right')
+				.col-12.col-xl-6
+					+e.row-brands
+						+e.brand--js.swiper(dir='rtl')
+							.swiper-wrapper
+								- for (var x = 1; x < 11; x++)
+									+brandCard(x)
+								- for (var x = 1; x < 11; x++)
+									+brandCard(x)
+						+e.brand--js_left.swiper
+							.swiper-wrapper
+								- for (var x = 2; x < 10; x++)
+									+brandCard(x)
+								- for (var x = 1; x < 11; x++)
+									+brandCard(x)
+						+e.brand--js.swiper(dir='rtl')
+							.swiper-wrapper
+								- for (var x = 5; x < 11; x++)
+									+brandCard(x)
+								- for (var x = 1; x < 11; x++)
+									+brandCard(x)
+	// end sClients
+
+mixin industryCard(img, text)
+	+b.industry-card
+		+e.img-wrap: +img(src=`img/industry-${img}.svg`, alt="")
+		+e.text.text_gradient= text
+
+mixin brandCard(img)
+	.swiper-slide
+		+b.brand-card: +img(src=`img/brand-${img}.svg`, alt="")

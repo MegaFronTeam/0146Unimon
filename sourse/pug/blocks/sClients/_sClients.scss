@@ -1,0 +1,172 @@
+// start .sClients
+.sClients {
+	--sPT: #{rem(56)};
+	--sPB: #{rem(26)};
+	--sTPB: #{rem(30)};
+  @include media-breakpoint-up(lg) {
+    --sPT: #{rem(110)};
+    --sTPB: #{rem(60)};
+  }
+	overflow: hidden;
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+    
+    @include media-breakpoint-up(lg) {
+      max-width: 50%;
+    }
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+
+  &__row-industry {
+    margin-bottom: rem(60);
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    grid-template-columns: repeat(auto-fill, minmax(142px, 1fr));
+    gap: rem(34) rem(20);
+    @include media-breakpoint-up(md) {
+      justify-items: start;
+    }
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    @include media-breakpoint-up(xxl) {
+      gap: rem(54) rem(50);
+      margin-bottom: 0;
+    }
+  }
+
+  &__row-brands {
+    display: flex;
+    flex-direction: column;
+    gap: rem(7);
+    @include media-breakpoint-up(xl) {
+      flex-direction: row;
+      gap: rem(20);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      transform: translateX(30px);
+    }
+  }
+
+  &__btn {
+    font-size: rem(12);
+    --bs-btn-padding-x: #{rem(8)};
+    --bs-btn-padding-y: #{rem(16)};
+    @include media-breakpoint-up(lg) {
+      font-size: rem(16);
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(30);
+    }
+    @include media-breakpoint-up(md) {
+      grid-column: 1/ -1;
+    }
+  }
+
+  .swiper-slide {
+    width: auto;
+    height: auto;
+  }
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  .swiper {
+    max-width: rem(800);
+    overflow: visible;
+    @include media-breakpoint-up(xl) {
+      max-height: rem(700);
+      padding: 0 rem(20);
+      &::after {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 300%;
+        background: $blue-310;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      padding: 0 rem(30);
+
+    }
+  }
+
+  &__brand--js {
+    // overflow: visible;
+
+    &_left {
+      @include media-breakpoint-down(lg) {
+        transform: translateX(-50px);
+      }
+    }
+  }
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sClients
+
+.industry-card {
+  img {
+    width: rem(36);
+    margin-bottom: rem(16);
+    @include media-breakpoint-up(lg) {
+      // margin-bottom: rem(16);
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 171%;
+    letter-spacing: -0.05em;
+    @include media-breakpoint-up(lg) {
+      font-size: rem(18);
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &:nth-child(12) {
+      display: none;
+    }
+  }
+}
+
+.brand-card {
+  background: $blue-310;
+  width: rem(127);
+  height: rem(78);
+  border-radius: rem(6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media-breakpoint-up(xl) {
+    background: transparent;
+  }
+
+  img {
+    max-width: 90%;
+  }
+}

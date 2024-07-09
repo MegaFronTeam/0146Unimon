@@ -18,6 +18,7 @@ include ../blocks/sCatalogBlock/_sCatalogBlock.pug
 include ../blocks/sPromo/_sPromo.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sSystems/_sSystems.pug
+include ../blocks/sClients/_sClients.pug
 include ../blocks/sControl/_sControl.pug
 include ../blocks/footer/_footer.pug
 
@@ -30,8 +31,7 @@ block title
 	title= title
 block pagecontent
 	//- +mob-mnu()
-	
-	
+
 	+parts('header')
 	main
 		.main-wrap
@@ -52,43 +52,5 @@ block pagecontent
 			+sDepartments
 			+sMonitoring
 			+sServices
-		//- +sCatalog
-		//- +sForm()
-		//- +sContact()
-		
-	+footer
-		.container
-			+b.footer-form.section
-				+e.row.row
-					+e.text-block.col 
-						+e.footer-title  Нет затрат на приобретение сервера, 
-							span лицензий ПО и зарплатусистемному администратору
-						+e.footer-text.small Список пополняется — мы постоянно работаем над интеграцией новых систем в платформу Unimon
-					+e.col.col-xl-auto
-						+form-wrap.--base.--light
-							+e.head-row.row
-								.col-auto
-									+e.title Мы ищем партнеров!
-								.col-sm
-									.small Получить коммерческое предложение для дистрибьюторов
-							.row
-								.col-md-6
-									+input("Ваше имя") 
-										img(src="img/user.svg", alt="").input-icon
-								.col-md-6
-									+input("E-mail",'email') 
-										img(src="img/email.svg", alt="").input-icon
-								.col-md-6
-									+input("Ваш номер телефона",'tel') 
-										img(src="img/phone-2.svg", alt="").input-icon
-								.col-md-6
-									+input("Страна")
-								.col-md-12
-									+input("Сообщение","textarea")
-
-							+e.footer-row.row
-								+e.col-text.small.col
-									| Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
-								+e.col.col-auto
-									+e.btn.btn.btn-primary(type="submit") Отправить заявку
-										+icon('arrow-angle-right')
+			+sClients
+	+footer2
