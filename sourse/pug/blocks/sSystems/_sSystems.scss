@@ -1,7 +1,7 @@
 // start .sSystems
 .sSystems {
-	--sPT: #{rem(23)};
-	--sPB: #{rem(60)};
+	--sPT: #{rem(43)};
+	--sPB: #{rem(44)};
 	--sTPB: #{rem(25)};
 	@include media-breakpoint-up(lg) {
     --sPT: #{rem(55)};

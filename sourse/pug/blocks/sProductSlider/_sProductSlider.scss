@@ -64,6 +64,7 @@
   &__features-wrapper {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(177px, 1fr) );
+    // grid-template-rows: repeat(3, 1fr);
     margin-bottom: rem(22);
     @include media-breakpoint-up(sm) {
       grid-template-columns: repeat( 2, 1fr);
@@ -281,6 +282,7 @@
   justify-content: space-between;
   gap: rem(10);
   padding: rem(8) rem(10);
+  min-height: rem(80);
 	@include media-breakpoint-up(lg) {
     padding: rem(28);
     gap: rem(14);

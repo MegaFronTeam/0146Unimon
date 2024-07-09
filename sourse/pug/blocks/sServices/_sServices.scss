@@ -4,8 +4,9 @@
 	--sPB: #{rem(32)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
-    --sPT: #{rem(70)};
+    --sPT: #{rem(66)};
     --sPB: #{rem(64)};
+    --sTPB: #{rem(30)};
   }
 	
 	&__row{
@@ -45,7 +46,7 @@
   border-radius: $border-radius-md;
   @include mt;
   box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.11);
-  padding: rem(20);
+  padding: rem(18) rem(20);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -70,7 +71,7 @@
     font-size: rem(14);
     letter-spacing: -0.05em;
     font-weight: 500;
-    margin-bottom: rem(14);
+    margin-bottom: rem(12);
     line-height: 105%;
     @include media-breakpoint-up(lg) {
       font-size: rem(20);
@@ -80,6 +81,8 @@
 
   p {
     font-size: rem(12);
+    line-height: 130%;
+    margin-bottom: 0;
     @include media-breakpoint-up(lg) {
       font-size: rem(14);
       max-width: 60%;
@@ -97,6 +100,13 @@
       // max-width: 80%;
       max-height: 100%;
     }
+    }
+  }
+  &:not(:first-child) {
+    img {
+      @include media-breakpoint-down(lg) {
+        max-width: rem(90);
+      }
     }
   }
 

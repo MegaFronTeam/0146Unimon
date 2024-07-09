@@ -5,6 +5,7 @@
   @include media-breakpoint-up(lg) {
     --sPT: #{rem(70)};
     --sPB: #{rem(60)};
+    --sTPB: #{rem(70)};
   }
 	// --sTPB: #{rem()};
 	
@@ -68,6 +69,9 @@
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+	@include media-breakpoint-up(lg) {
+    height: rem(50);
   }
 }
 

@@ -1,7 +1,7 @@
 // start .sClients
 .sClients {
 	--sPT: #{rem(56)};
-	--sPB: #{rem(26)};
+	--sPB: #{rem(30)};
 	--sTPB: #{rem(30)};
   @include media-breakpoint-up(lg) {
     --sPT: #{rem(110)};
@@ -29,7 +29,7 @@
 	}
 
   &__row-industry {
-    margin-bottom: rem(60);
+    margin-bottom: rem(70);
     display: grid;
     justify-items: center;
     align-items: end;

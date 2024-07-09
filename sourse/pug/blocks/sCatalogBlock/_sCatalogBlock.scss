@@ -4,10 +4,10 @@
 	--sPB: #{rem(70)};
 	--sTPB: #{rem(50)};
   @include media-breakpoint-up(lg) {
-    --sTB: #{rem(20)};
+    --sPB: #{rem(20)};
   }
   @include media-breakpoint-up(xl) {
-    --sPT: #{rem(100)};
+    --sPT: #{rem(50)};
   }
 	
 	&__row {
