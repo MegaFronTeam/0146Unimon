@@ -1,0 +1,37 @@
+mixin sSafety(data)
+	// start sSafety
+	+b.SECTION.sSafety.section#sSafety&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				.h1 Надежно и безопасно
+				.sub-title Резирвирование и шифрование на каждом этапе передачи данных
+			+e.item.text_gradient.d-none.d-xl-block Шифрование SSL
+			+e.cards-wrap
+				+safetyCard('1', 'Радиомодуль сохранит данные во время отсутствия связи с контролером', 'Отключится Ethernet / wifi подключится GSM')
+				+safetyCard('2', 'Контролер сохранит данные на время отсутствия связи с сервером', 'Пропадет электричество, перейдет на аккумулятор')
+				+b.safety-card
+					.plus-cont.d-none.d-xl-block: .plus +
+					+e.img-wrap
+						+img(src=`img/safe-3.svg`, alt="").img.d-xl-none
+						+img(src=`img/scheme-big.svg`, alt="").d-none.d-xl-block.img-big
+						+img(src="img/line.svg", alt="").line.d-xl-none
+						+img(src="img/line-big.svg", alt="").line.d-none.d-xl-block
+					+e.descr
+						+e.title Для независимых ЦОДА в РФ с резервным питанием и каналами связи хранят данные минимум 2 года
+						+e.text.text_gradient Бэкап серверов каждые 6 часов
+				+safetyCard('4')
+	// end sSafety
+
+mixin safetyCard(img, title, text)
+	+b.safety-card
+		if title
+			.plus-cont.d-none.d-xl-block: .plus +
+		+e.img-wrap
+			+img(src=`img/safe-${img}.svg`, alt="").img
+			if title
+				+img(src="img/line.svg", alt="").line.d-xl-none
+				+img(src="img/line-big.svg", alt="").line.d-none.d-xl-block
+		if title
+			+e.descr
+				+e.title= title
+				+e.text.text_gradient= text

@@ -144,7 +144,7 @@ function eventHandler() {
 		breakpoints: {
 			1200: {
         direction: 'vertical',
-        reverseDirection: true,
+        // reverseDirection: true,
         spaceBetween: 20,
       }
 		},
@@ -160,7 +160,7 @@ function eventHandler() {
     slidesPerView: 'auto',
 		// freeMode: true,
 		spaceBetween: 4,
-    reverseDirection: true,
+    // reverseDirection: true,
 		breakpoints: {
 			1200: {
         direction: 'vertical',

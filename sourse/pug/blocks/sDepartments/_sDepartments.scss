@@ -1,6 +1,6 @@
 // start .sDepartments
 .sDepartments {
-	--sPT: #{rem(32)};
+	--sPT: #{rem(25)};
 	--sPB: #{rem(25)};
   @include media-breakpoint-up(lg) {
     --sPT: #{rem(100)};
@@ -21,7 +21,7 @@
 
 	&__item {
 		display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(160px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(140px, 1fr) );
     gap: rem(7);
     @include media-breakpoint-up(lg) {
       gap: rem(30);
@@ -82,9 +82,12 @@
 
   &__img-wrap {
     margin-bottom: rem(10);
-    max-width: rem(140);
     img {
       width: 100%;
+    }
+    max-width: rem(100);
+    @include media-breakpoint-up(lg) {
+      max-width: rem(140);
     }
   }
 
@@ -105,4 +108,5 @@
   line-height: 1.1;
   font-size: rem(16);
   }
+
 }
