@@ -156,24 +156,6 @@ function eventHandler() {
     speed: 5000,
 	});
 
-  let brandsToLeft = new Swiper(".sClients__brand--js_left", {
-    slidesPerView: 'auto',
-		// freeMode: true,
-		spaceBetween: 4,
-    // reverseDirection: true,
-		breakpoints: {
-			1200: {
-        direction: 'vertical',
-        spaceBetween: 20,
-      }
-		},
-    loop: true,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    speed: 5000,
-	});
 	/* nav */
 	const menuItems = document.querySelectorAll(".menu-item-has-children");
 

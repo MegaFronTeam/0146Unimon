@@ -111,9 +111,18 @@
   &__brand--js {
     // overflow: visible;
 
-    &_left {
-      @include media-breakpoint-down(lg) {
+    &:nth-child(2) {
+      @include media-breakpoint-down(xl) {
         transform: translateX(-50px);
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(3) {
+      @include media-breakpoint-up(xl) {
+      transform: rotate(180deg);
+      .brand-card {
+        transform: rotate(180deg);
+      }
       }
     }
   }
