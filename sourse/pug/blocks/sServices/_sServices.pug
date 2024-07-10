@@ -7,7 +7,7 @@ mixin sServices(data)
 			+e.row
 				+serviceCard('Монтаж', '', 'service-1')
 				+serviceCard('Аренда системы', 'Список пополняется — мы постоянно работаем над интеграцией новых систем в платформу Unimon', 'service-2')
-				+serviceCardWide('Валидация системы', 'Список пополняется — мы постоянно работаем над интеграцией новых систем в платформу Unimon', 'service-3')
+				+serviceCard('Валидация системы', 'Список пополняется — мы постоянно работаем над интеграцией новых систем в платформу Unimon', 'service-3')
 				+serviceCard('Настройка оборудования', 'Список пополняется — мы постоянно работаем над интеграцией новых систем в платформу Unimon', 'service-4')
 				+serviceCard('Картирование помещения', 'Список пополняется — мы постоянно ', 'service-5')
 				+serviceCard('Техническое обслуживание', 'Список пополняется — мы постоянно работаем над интеграцией новых систем в платформу Unimon', 'service-6')
@@ -17,14 +17,6 @@ mixin sServices(data)
 
 mixin serviceCard(title, p, img)
 	+b.service-card
-		+e.description
-			+e.title.text_gradient= title
-			p= p
-		+e.img-wrap: +img(src=`img/${img}.png`, alt="")
-
-
-mixin serviceCardWide(title, p, img)
-	+b.service-card--wide
 		+e.description
 			+e.title.text_gradient= title
 			p= p
