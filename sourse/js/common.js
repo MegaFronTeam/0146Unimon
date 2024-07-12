@@ -195,6 +195,26 @@ function eventHandler() {
 		$(this).next().slideToggle();
 	});
 
+  const btns = document.querySelectorAll('.btn-primary, .main-wrap .btn-outline-light, .main-wrap .btn-outline-white, .main-wrap .btn-outline-primary:not(.consultation-card__btn)')
+  if (btns.length) {
+    btns.forEach(button => {
+      const flashEffect = document.createElement('span');
+      flashEffect.classList.add('flash-effect');
+      button.appendChild(flashEffect);
+
+      const addFlashEffect = () => {
+          flashEffect.classList.add('active');
+          setTimeout(() => {
+              flashEffect.classList.remove('active');
+          }, 1000);
+      };
+
+      setInterval(addFlashEffect, 5000);
+    });
+  }
+
+
+
 	AOS.init({
 		// disable: "mobile",
 		// offset: 200,
