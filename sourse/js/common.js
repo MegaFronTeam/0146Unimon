@@ -196,7 +196,7 @@ function eventHandler() {
 	});
 
 	AOS.init({
-		disable: "mobile",
+		// disable: "mobile",
 		// offset: 200,
 		once: true,
 		duration: 800,
