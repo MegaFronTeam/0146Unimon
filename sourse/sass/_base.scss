@@ -545,11 +545,11 @@ h4,
 
 .flash-effect {
   position: absolute;
-  top: 0;
-  left: -150%;  /* Начальное положение за левой границей кнопки */
-  width: rem(3);
-  height: 200%;  /* Увеличиваем высоту для создания эффекта наклона */
-  background: #fff;
+  margin-left: 60px;
+  top: -150px;
+  left: -150%;
+  height: 300px;
+  width: 30px;
   background: linear-gradient(
     180deg,
     hsla(0, 0%, 100%, 0.7),
@@ -557,18 +557,11 @@ h4,
     hsla(0, 0%, 100%, 0.7)
   );
   display: block;
-  height: 300px;
-  left: -100px;
-  margin-left: 60px;
   opacity: 0.5;
-  position: absolute;
-  top: -150px;
   transform: rotate(45deg);
   transition: none;
-  width: 30px;/* Убираем transition, так как используем анимацию */
 }
 
-/* Анимация для эффекта блика */
 @keyframes flash {
   0% {
       left: -150%;
@@ -578,7 +571,6 @@ h4,
   }
 }
 
-/* Класс для активации эффекта блика */
 .flash-effect.active {
   animation: flash 1s;
 }
