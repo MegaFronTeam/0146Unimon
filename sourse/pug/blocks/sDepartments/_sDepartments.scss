@@ -21,8 +21,11 @@
 
 	&__item {
 		display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(140px, 1fr) );
+    grid-template-columns: repeat(2, 1fr );
     gap: rem(7);
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat( auto-fit, minmax(140px, 1fr) );
+    }
     @include media-breakpoint-up(lg) {
       gap: rem(30);
     }
@@ -80,6 +83,12 @@
     padding: rem(32);
   }
 
+  &:nth-child(3) {
+  @include media-breakpoint-down(sm) {
+    grid-column: span 2;
+  }
+  }
+
   &__img-wrap {
     margin-bottom: rem(10);
     img {
@@ -105,8 +114,8 @@
   }
 
   &__text {
-  line-height: 1.1;
-  font-size: rem(16);
+    line-height: 1.1;
+    font-size: rem(16);
   }
 
 }

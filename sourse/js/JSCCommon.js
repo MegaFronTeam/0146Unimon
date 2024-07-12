@@ -312,6 +312,21 @@ export default class JSCCommon {
 
 	static makeDDGroup() {
 		$(".dd-head-js").on("click", function () {
+      const imgs = document.querySelectorAll('.img--js img')
+      const allHeads = document.querySelectorAll('.dd-group__item')
+      const allContent = document.querySelectorAll('.dd-group__content')
+      allHeads.forEach((head) => head.classList.remove('active'))
+      allContent.forEach((content) => {
+        content.classList.remove('active')
+        content.style.display = 'none'
+      })
+
+      imgs.forEach((img) => {
+        img.classList.add('hideImg')
+      })
+      const index = $(".dd-head-js").index(this);
+      imgs[index].classList.remove('hideImg')
+
 			let clickedHead = this;
 			$(this).parent().toggleClass("active");
 			$(this)

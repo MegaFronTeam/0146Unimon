@@ -6,7 +6,13 @@ mixin sProperties(data)
 				.h1 Профессиональный функционал для бизнес-задач
 			+e.row.row
 				+e.col.col-12.col-xl-7.order-xl-2
-					+e.img-wrap: +img(src="img/properties-img-emp.png", alt="").m-left
+					+e.img-wrap.img--js
+						+img(src="img/properties-img-emp.png", alt="").m-left
+						+img(src="img/properties-img-emp2.png", alt="").m-left.hideImg
+						+img(src="img/properties-img-emp3.png", alt="").m-left.hideImg
+						+img(src="img/properties-img-emp2.png", alt="").m-left.hideImg
+						+img(src="img/properties-img-emp.png", alt="").m-left.hideImg
+						+img(src="img/properties-img-emp3.png", alt="").m-left.hideImg
 				+e.col.col-12.col-xl-5
 					+ddGroup
 						+ddGroupItem('Хранение и выгрузка данных до 5 лет', 'active')

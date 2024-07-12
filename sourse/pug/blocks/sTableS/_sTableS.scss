@@ -337,8 +337,11 @@
     }
     &__cards-wrap {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: rem(8);
+      @include media-breakpoint-up(sm) {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
       @include media-breakpoint-up(md) {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -372,9 +375,16 @@
   background: rgba(9, 34, 86, 0.73);
   backdrop-filter: blur(5px);
   border-radius: rem(15);
+  width: 100%;
   @include media-breakpoint-up(lg) {
     padding: rem(17) rem(26);
   }
+
+  &:nth-child(3) {
+    @include media-breakpoint-down(sm) {
+      grid-column: span 2;
+    }
+    }
 
   &__title {
     font-weight: 500;

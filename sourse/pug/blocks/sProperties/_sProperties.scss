@@ -15,6 +15,19 @@
       --bs-gutter-y: #{rem(32)};
     }
 	}
+  .img--js img {
+    opacity: 1;
+    transition: all .3s;
+    visibility: visible;
+  }
+
+  .hideImg {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none;
+    transition: all .3s;
+  }
+
 
   &__row-center {
     align-items: center
@@ -25,9 +38,7 @@
       max-width: rem(960);
     }
 	}
-	&__item{
-		
-	}
+
   &__col {
     @include media-breakpoint-down(lg) {
       position: relative;
