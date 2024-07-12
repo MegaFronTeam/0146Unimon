@@ -1,7 +1,7 @@
 mixin sSoft(data)
 	// start sSoft
 	+b.SECTION.sSoft.section#sSoft&attributes(attributes)
-		.container
+		.container(data-aos="fade-up")
 			+b.section-title.text-center
 				.h1 Программное обеспечение работает на любых платформах
 			+e.store-links
@@ -9,7 +9,7 @@ mixin sSoft(data)
 				+storeLink('ruStore')
 				+storeLink('appHuawei')
 				+storeLink('googlePlay')
-			+e.row
+			+e.row(data-aos="fade-up")
 				+deviceCard('Компьютер', '1')
 				+deviceCard('Телефон', '2')
 				+deviceCard('Планшет', '3')

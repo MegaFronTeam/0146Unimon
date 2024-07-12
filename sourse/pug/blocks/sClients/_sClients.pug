@@ -2,10 +2,10 @@ mixin sClients(data)
 	// start sClients
 	+b.SECTION.sClients.section#sClients&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(data-aos="fade-up")
 				.h1 Среди наших клиентов
 				
-			+e.row.row
+			+e.row.row(data-aos="fade-up")
 				.col-12.col-xl-6
 					+e.row-industry
 						+industryCard('1', 'Фармдистрибьюторы')

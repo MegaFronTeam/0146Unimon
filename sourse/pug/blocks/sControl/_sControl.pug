@@ -1,14 +1,14 @@
 mixin sControl(data)
 	// start sControl
 	+b.SECTION.sControl.bg_blue.section#sControl&attributes(attributes)
-		.container
+		.container(data-aos="fade-up")
 			+e.row.row
 				.col-12.col-lg-5.order-lg-1
 					+b.section-title
 						.h1 Онлайн контроль<br>#[span объектов в одном интерфейсе]
 				.col-12.col-lg-7
 					+e.img-wrap: +img(src="img/map.png", alt="")
-			+e.row.row
+			+e.row.row(data-aos="fade-up")
 				.col-12.col-lg-5
 					+controlCard('Оповещения', 'при отклонениях от нормы')
 						.info-items-wrap

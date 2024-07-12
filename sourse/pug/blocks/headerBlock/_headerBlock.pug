@@ -27,14 +27,14 @@ mixin headerMain()
 				+featureSpanItemSVG('gost','в госреестрах СИ')
 
 mixin featureSpanItem(span, text1, text2)
-	+b.feature-span-item
+	+b.feature-span-item(data-aos="flip-down", data-aos-duration="500")
 		.wrap: .span.text_gradient= span
 		+e.text-wrap
 			+e.text= text1
 			+e.text= text2
 
 mixin featureSpanItemSVG(svg, text)
-	+b.feature-span-item--svg
+	+b.feature-span-item--svg(data-aos="flip-down", data-aos-duration="500")
 		.wrap: +img(src=`img/${svg}.svg`, alt="").svg
 		+e.text-wrap
 			+e.text= text

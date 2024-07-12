@@ -3,9 +3,9 @@ mixin sTableS(data)
 	+b.SECTION.sTableS.bg_dark-blue-920.section#sTable&attributes(attributes)
 		+img(src="img/bg-2.png", alt="").img
 		.container
-			+b.section-title.d-lg-none
+			+b.section-title.d-lg-none(data-aos="fade-up")
 				.h2 Радиосвязь LoRa пробивает любые стены
-			+e.row.row
+			+e.row.row(data-aos="fade-up")
 				+e.col.col-12.col-lg-7
 					.table-wrap
 						table
@@ -71,7 +71,7 @@ mixin sTitleSection(data)
 	+b.SECTION.sTitleSection.bg_dark-blue-920.section#sTitleSection&attributes(attributes)
 		+img(src="img/ellipse.svg", alt="").ellipse
 		.container
-			+e.row.row
+			+e.row.row(data-aos="fade-up")
 				+e.col.col-12.col-lg-8
 					+b.section-title
 						.h1 Разрабатываем и производим беспроводные решения
@@ -83,7 +83,7 @@ mixin sTitleSection2(data)
 	// start sTable
 	+b.SECTION.sTitleSection.bg_dark-blue-920.section#sTitleSection2&attributes(attributes)
 		.container
-			+e.row.row
+			+e.row.row(data-aos="fade-up")
 				+e.col.col-12.col-lg-7
 					+b.section-title
 						.h2 Используем международный стандарт LoraWan
@@ -98,7 +98,7 @@ mixin sTitleSection2(data)
 		+img(src="img/bg-3.png", alt="").img.d-lg-none
 
 mixin loraCard(img, num, span, text )
-	+b.lora-card
+	+b.lora-card(data-aos="flip-down", data-aos-duration="600", data-aos-delay="400")
 		+img(src=`img/${img}.svg`, alt="")
 		+e.title #[span= num ] #{span}
 		+e.text= text

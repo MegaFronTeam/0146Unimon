@@ -2,10 +2,10 @@ mixin sDepartments(data)
 	// start sDepartments
 	+b.SECTION.sDepartments.bg_blue.section#sDepartments&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-aos="fade-up")
 				.h1.d-lg-none Подходит<br>для отчетности
 				.h1.d-none.d-lg-block Идеальна для различных ведомств
-			+e.row.row
+			+e.row.row(data-aos="fade-up")
 				+e.col.col-12
 					+e.item
 						+departmentCard('department-1', 'Росздравнадзор', 'Оставьте заявку любым удобным способом Оставьте заявку любым удобным способом')

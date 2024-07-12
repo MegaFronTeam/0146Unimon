@@ -194,6 +194,15 @@ function eventHandler() {
 		$(this).toggleClass("active");
 		$(this).next().slideToggle();
 	});
+
+	AOS.init({
+		disable: "mobile",
+		// offset: 200,
+		once: true,
+		duration: 1000,
+		easing: "ease-in-out",
+		// delay: 100,
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();

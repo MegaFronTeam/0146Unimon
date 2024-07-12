@@ -2,11 +2,11 @@ mixin sSafety(data)
 	// start sSafety
 	+b.SECTION.sSafety.section#sSafety&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-aos="fade-up")
 				.h1 Надежно и безопасно
 				.sub-title Резирвирование и шифрование на каждом этапе передачи данных
 			+e.item.text_gradient.d-none.d-xl-block Шифрование SSL
-			+e.cards-wrap
+			+e.cards-wrap(data-aos="fade-up")
 				+safetyCard('1', 'Радиомодуль сохранит данные во время отсутствия связи с контролером', 'Отключится Ethernet / wifi подключится GSM')
 				+safetyCard('2', 'Контролер сохранит данные на время отсутствия связи с сервером', 'Пропадет электричество, перейдет на аккумулятор')
 				+b.safety-card

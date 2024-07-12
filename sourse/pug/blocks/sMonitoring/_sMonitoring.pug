@@ -2,9 +2,9 @@ mixin sMonitoring(data)
 	// start sMonitoring
 	+b.SECTION.sMonitoring.section#sMonitoring&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-aos="fade-up")
 				.h1 Онлайн мониторинг данных #[span - это легко!]
-			+e.row.row
+			+e.row.row(data-aos="fade-up")
 				.col-12.col-md-6
 					+e.item
 						+listItemL('01', 'Подберите оптимальное оборудование вместе с нашим специалистом')

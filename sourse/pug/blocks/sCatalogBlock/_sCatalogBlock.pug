@@ -2,9 +2,9 @@ mixin sCatalogBlock(data)
 	// start sCatalogBlock
 	+b.SECTION.sCatalogBlock.bg_blue.section#sCatalogBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-aos="fade-up")
 				.h1 Сенсоры для радиомодулей
-			+e.inner-wrapper
+			+e.inner-wrapper(data-aos="fade-up")
 				+form-wrap.--base.d-none.d-lg-block
 					+e.title Бесплатная консультация специалиста #[span по выбору оптимального оборудования]
 					+input("Ваше имя")

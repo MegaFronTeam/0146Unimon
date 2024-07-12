@@ -2,10 +2,10 @@ mixin sProductSlider(data)
 	// start sProductSlider
 	+b.SECTION.sProductSlider.section#sProductSlider&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(data-aos="fade-up")
 				.h1 Контроллер AlertBox Radio
 				.sub-title Флагманская модель с полным функционалом
-			+e.row.row.row1
+			+e.row.row.row1(data-aos="fade-up")
 				+e.col.col-12.col-xl-8
 					+e.features-wrapper
 						+productFeatureCard('feature-1', 'Беспроводные датчики и реле')
@@ -64,10 +64,10 @@ mixin sProductSlider2(data)
 	// start sProductSlider
 	+b.SECTION.sProductSlider.section#sProductSlider2&attributes(attributes)
 		.container
-			+b.section-title--right
+			+b.section-title--right(data-aos="fade-up")
 				.h1 Радиомодуль AlertNode RTD Max
 				.sub-title Флагманская модель с полным функционалом
-			+e.row.row.row-2
+			+e.row.row.row-2(data-aos="fade-up")
 				+e.col.col-12.col-xl-4.col_top
 					.span-wrapper-bg: .span
 					+e.slider-wrap

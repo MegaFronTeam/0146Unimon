@@ -3,9 +3,9 @@ mixin sSystems(data)
 	+b.SECTION.sSystems.bg_dark-blue.section#sSystems&attributes(attributes)
 		+img(src="img/bg.png", alt="").img
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-aos="fade-up")
 				.h1 Используйте сменные сенсоры и забудьте о проблемах с периодической поверкой 
-			+e.row.row
+			+e.row.row(data-aos="fade-up")
 				.col-12.col-lg-6
 					+systemCard('Для систем UNIMON', 'system-card_success', 'сроки 1-3 часа', 1)
 						+listItemL('1', 'Получить новые уже поверенные сенсоры по цене поверки')
