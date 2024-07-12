@@ -1,8 +1,8 @@
 mixin sControl(data)
 	// start sControl
 	+b.SECTION.sControl.bg_blue.section#sControl&attributes(attributes)
-		.container(data-aos="fade-up")
-			+e.row.row
+		.container
+			+e.row.row(data-aos="fade-up")
 				.col-12.col-lg-5.order-lg-1
 					+b.section-title
 						.h1 Онлайн контроль<br>#[span объектов в одном интерфейсе]
