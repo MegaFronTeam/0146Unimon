@@ -557,7 +557,7 @@ h4,
     hsla(0, 0%, 100%, 0.7)
   );
   display: block;
-  opacity: 0.5;
+  opacity: 0.3;
   transform: rotate(45deg);
   transition: none;
 }
@@ -572,7 +572,7 @@ h4,
 }
 
 .flash-effect.active {
-  animation: flash 1s;
+  animation: flash 1.5s;
 }
 
 .btn-outline-primary {
