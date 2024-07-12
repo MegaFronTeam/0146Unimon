@@ -4,18 +4,18 @@ mixin sProperties(data)
 		.container
 			+b.section-title.text-center(data-aos="fade-up")
 				.h1 Профессиональный функционал для бизнес-задач
-			+e.row.row(data-aos="fade-up")
+			+e.row.row(data-aos="fade-up").tabs
 				+e.col.col-12.col-xl-7.order-xl-2
 					+e.img-wrap.img--js
-						+img(src="img/properties-img-emp.png", alt="").m-left
-						+img(src="img/properties-img-emp2.png", alt="").m-left.hideImg
-						+img(src="img/properties-img-emp3.png", alt="").m-left.hideImg
-						+img(src="img/properties-img-emp2.png", alt="").m-left.hideImg
-						+img(src="img/properties-img-emp.png", alt="").m-left.hideImg
-						+img(src="img/properties-img-emp3.png", alt="").m-left.hideImg
+						.tabs__content.active: +img(src="img/properties-img-emp.png", alt="").m-left
+						.tabs__content: +img(src="img/properties-img-emp2.png", alt="").m-left
+						.tabs__content: +img(src="img/properties-img-emp3.png", alt="").m-left
+						.tabs__content: +img(src="img/properties-img-emp2.png", alt="").m-left
+						.tabs__content: +img(src="img/properties-img-emp.png", alt="").m-left
+						.tabs__content: +img(src="img/properties-img-emp3.png", alt="").m-left
 				+e.col.col-12.col-xl-5
 					+ddGroup
-						+ddGroupItem('Хранение и выгрузка данных до 5 лет', 'active')
+						+ddGroupItem('Хранение и выгрузка данных до 5 лет', 'active', 'active')
 							p Кроме среднего значения, отображается минимум и максимум, что существенно упрощает восприятие графиков
 						+ddGroupItem('Уникальная система обработки тревог')
 							p Кроме среднего значения, отображается минимум и максимум, что существенно упрощает восприятие графиков

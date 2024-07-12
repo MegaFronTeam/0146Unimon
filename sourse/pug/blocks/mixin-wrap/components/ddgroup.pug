@@ -1,6 +1,6 @@
 mixin ddGroup()
 	//-родителю елементов .dd-group-js
-	+b.dd-group.dd-group-js
+	+b.dd-group.dd-group-js.tabs__caption
 		if block
 			block
 		else
@@ -8,14 +8,13 @@ mixin ddGroup()
 			+ddGroupItem('вопрос2')
 			+ddGroupItem('вопрос3')
 
-mixin ddGroupItem(txt, activeClasses='')
-	//-хедеру и контенту => .dd-head-js, .dd-content-js
-	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
-	+e.item(class=activeClasses)
-		+e.head.dd-head-js=txt
-		+e.content.dd-content-js(class=activeClasses)
-			if block
-				block
-			else
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
+mixin ddGroupItem(txt, activeClasses='', tab='')
+	.tabs__btn(class=tab)
+		+e.item(class=activeClasses)
+			+e.head.dd-head-js=txt
+			+e.content.dd-content-js(class=activeClasses)
+				if block
+					block
+				else
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
