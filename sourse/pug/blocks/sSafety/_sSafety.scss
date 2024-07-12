@@ -80,6 +80,12 @@
   padding-bottom: rem(38);
   margin-bottom: rem(10);
   overflow: hidden;
+  &:nth-child(3) {
+    .plus-cont {
+      left: 63% !important;
+    }
+  }
+
 
   @include media-breakpoint-up(xl) {
     flex-direction: column;
@@ -127,7 +133,6 @@
     }
     @include media-breakpoint-up(xxl) {
       margin-bottom: rem(40);
-
     }
   }
 
@@ -153,7 +158,6 @@
       font-size: rem(18);
       line-height: 117%;
     }
-    
     @include media-breakpoint-up(xl) {
       max-width: rem(220);
     }
@@ -188,9 +192,29 @@
   }
   .img-big {
     margin-top: -33%;
-    // transform: translateY(-26%);
     position: relative;
-    
   }
 
+}
+
+.popover {
+  --bs-popover-border-radius: #{rem(35)} !important;
+  --bs-popover-body-padding-x: #{rem(22)} !important;
+  --bs-popover-body-padding-y: #{rem(9)} !important;
+  
+  --bs-popover-border-color: #{#1e6999} !important;
+  --bs-popover-font-size: #{rem(16)} !important;
+  margin-bottom: rem(15) !important;
+  border-style: dashed !important;
+  .popover-body {
+    font-weight: 500 !important;
+    background: $gradient-dark;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    letter-spacing: -0.06em;
+  }
+  .popover-arrow {
+    display: none !important;
+  }
 }

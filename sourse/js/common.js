@@ -199,10 +199,13 @@ function eventHandler() {
 		disable: "mobile",
 		// offset: 200,
 		once: true,
-		duration: 1000,
+		duration: 800,
 		easing: "ease-in-out",
 		// delay: 100,
 	});
+
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 }
 if (document.readyState !== "loading") {
 	eventHandler();
