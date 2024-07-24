@@ -158,7 +158,13 @@
   &--consult {
     .form-wrap {
       @include media-breakpoint-up(lg) {
+        padding-left: rem(30);
+        padding-right: rem(30);
+      }
+      
+      @include media-breakpoint-up(xxl) {
         padding-left: rem(70);
+
       }
     }
 
@@ -186,7 +192,13 @@
       line-height: 98%;
       letter-spacing: -0.05em;
       @include media-breakpoint-up(lg) {
-        margin-right: rem(64);
+        // margin-right: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-right: rem(0);
+      }
+      @include media-breakpoint-up(xxl) {
+        margin-right: rem(84);
       }
     }
   }
