@@ -31,10 +31,16 @@
     align-items: center;
     margin-bottom: rem(24);
     flex-wrap: wrap;
-    gap: rem(14);
+    gap: rem(6);
     @include media-breakpoint-up(md) {
       margin-bottom: rem(30);
       flex-wrap: nowrap;
+      gap: rem(14);
+    }
+    
+    @include media-breakpoint-down(sm) {
+      margin-left: rem(-10);
+      margin-right: rem(-20);
     }
   }
 

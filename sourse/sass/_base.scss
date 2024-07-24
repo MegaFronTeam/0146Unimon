@@ -585,9 +585,9 @@ h4,
 	@include mt;
 	--bs-btn-color: #074287;
 	--bs-btn-border-color: #074287;
-	--bs-btn-hover-color: #fff;
-	--bs-btn-hover-bg: #{$gradient-dark};
-	--bs-btn-hover-border-color: #{transparent};
+	--bs-btn-hover-color: #{$gray-400};
+	--bs-btn-hover-bg: #9aaab3;
+	--bs-btn-hover-border-color: #{$gray-050};
 	--bs-btn-focus-shadow-rgb: 7, 66, 135;
 	--bs-btn-active-color: #fff;
 	--bs-btn-active-bg: #9aaab3;
@@ -599,6 +599,7 @@ h4,
 	--bs-gradient: none;
 	&:hover,
 	&:active {
+    background: $gray-050;
 		background-clip: unset;
 	}
 }
@@ -749,6 +750,24 @@ h4,
 
 .page-head {
 	padding-top: calc(var(--sPT) / 2);
+	@include media-breakpoint-up(lg) {
+	
+    &__btn {
+      font-size: rem(20) !important;
+      padding-left: rem(58);
+      padding-right: rem(38);
+      --bs-btn-padding-y: #{rem(21)} !important;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__btn {
+      display: none;
+    }
+  }
+
+  .row {
+    align-items: center;
+  }
 }
 .page-head + .section {
 	--sPT: 0;
@@ -758,11 +777,15 @@ h4,
 	--bs-btn-color: #656565;
 }
 
+.btn-check-block input {
+  box-shadow: none !important;
+}
+
 input:checked + .btn-outline-light {
 	// color: $primary;
 	color: #fff;
 	--bs-btn-border-color: transparent;
-	background: linear-gradient(159deg, #3793ae, #074287);
+	// background: linear-gradient(159deg, #3793ae, #074287);
 }
 
 .footer-form {

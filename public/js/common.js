@@ -213,7 +213,54 @@ function eventHandler() {
     });
   }
 
+  function formatDate(dateString) {
+    var parts = dateString.trim().split(' ');
 
+    var monthNames = {
+        'января': 0, 'февраля': 1, 'марта': 2, 'апреля': 3,
+        'мая': 4, 'июня': 5, 'июля': 6, 'августа': 7,
+        'сентября': 8, 'октября': 9, 'ноября': 10, 'декабря': 11
+    };
+    var month = monthNames[parts[1]];
+
+    var dateObject = new Date(parts[2], month, parts[0]);
+
+    var formattedDate = ("0" + dateObject.getDate()).slice(-2) + "." + 
+                        ("0" + (dateObject.getMonth() + 1)).slice(-2) + "." + 
+                        dateObject.getFullYear().toString().slice(-2);
+
+    return formattedDate;
+  }
+
+  let isFormatted = false
+
+  function applyDateTransformation() {
+    if (window.matchMedia("(max-width: 450px)").matches) {
+        var dateElement = document.querySelector('.sArticle__date');
+        if (dateElement && !isFormatted) {
+          var dateText = dateElement.textContent.trim();
+          var formattedDate = formatDate(dateText);
+
+          dateElement.innerHTML = `
+              <svg class="icon icon-calendar">
+                  <use xlink:href="img/svg/sprite.svg#calendar"></use>
+              </svg>
+              ${formattedDate}
+          `;
+          isFormatted = true
+        }
+    }
+}
+
+  window.addEventListener('load', applyDateTransformation);
+  window.addEventListener('resize', applyDateTransformation);
+
+  // var dateElement = document.querySelector('.sArticle__date');
+  // if (dateElement) {
+  //   var dateText = dateElement.textContent.trim();
+  //   var formattedDate = formatDate(dateText);
+  //   dateElement.innerHTML = '<svg class="icon icon-calendar "><use xlink:href="img/svg/sprite.svg#calendar"></use></svg>' + formattedDate;
+  // }
 
 	AOS.init({
 		// disable: "mobile",

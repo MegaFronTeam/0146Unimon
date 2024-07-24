@@ -67,7 +67,7 @@ mixin calculate
 			+img(src="img/calc-bg-1.png", alt="").img-right
 
 mixin block-with-img(img)
-	+b.block-with-img
+	+b.block-with-img(id = `${img}`)
 		+e.caption
 			block
 		picture()
