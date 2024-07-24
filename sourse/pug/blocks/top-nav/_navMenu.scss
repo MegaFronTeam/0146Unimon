@@ -3,58 +3,56 @@
 		display: flex;
 		@include roww(20px);
 		flex-wrap: wrap;
-    justify-content: space-evenly;
+		justify-content: space-evenly;
 	}
 
 	list-style: none;
 	// position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
-  ul {
-    list-style-type: none;
-  }
+	ul {
+		list-style-type: none;
+	}
 	li {
 		padding: 0;
-    &:hover > a {
-      color: $blue-600;
-    }
-    &:hover > a .icon {
-      stroke: $blue-600;
-    }
+		&:hover > a {
+			color: $blue-600;
+		}
+		&:hover > a .icon {
+			stroke: $blue-600;
+		}
 	}
 	a {
-    font-size: rem(14);
+		font-size: rem(14);
 		display: block;
 		padding: rem(5) calc(var(--bs-gutter-x) / 2);
 	}
 }
 
-
-
 .toggle-menu-mobile {
 	--h: #{em(1)};
 	--color: #{$white};
 	--position: calc(var(--h) * 3);
-  background: $gradient-dark;
-  border-radius: rem(21);
+	background: $gradient-dark;
+	border-radius: rem(21);
 	&.on span {
 		--color: transparent;
 	}
 
-	&.on  {
+	&.on {
 		--position: 0;
 		--rotate: 45deg;
-    border-radius: rem(4);
-    @include media-breakpoint-down(xl) {
-      background: rgba(0, 0, 0, 0.2);
-    }
+		border-radius: rem(4);
+		@include media-breakpoint-down(xl) {
+			background: rgba(0, 0, 0, 0.2);
+		}
 	}
 	display: block;
 	height: rem(40);
 	position: relative;
 	font-size: 32px;
 	width: rem(43);
-  padding: rem(8);
+	padding: rem(8);
 	cursor: pointer;
 	span:after,
 	span:before {
@@ -68,14 +66,14 @@
 		display: block;
 	}
 
-	span:before { 
+	span:before {
 		top: var(--position);
-		transform: rotate3d(0,0,1, var(--rotate, 0));
+		transform: rotate3d(0, 0, 1, var(--rotate, 0));
 	}
 
 	span:after {
 		bottom: var(--position);
-		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+		transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
 	}
 	span,
 	span:after,
@@ -84,72 +82,70 @@
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;
-		backface-visibility: hidden; 
+		backface-visibility: hidden;
 		transform-origin: 50% 50%;
 	}
 }
 @include media-breakpoint-down(xl) {
-
 	.menu-mobile {
 		position: fixed !important;
 		z-index: 999;
 		max-width: 85%;
 		width: 280px;
 		top: 0;
-    right: 0;
+		right: 0;
 		// background-color: $body-bg;
-    background: $gray-600;
-    height: calc(var(--vh, 1dvh)* 100);
-    // height: calc(var(--vh, 1vh)* 100);
-		&:not(.active){
-			transform: translate3d(120%, 0,0);
+		background: $gray-600;
+		height: calc(var(--vh, 1dvh) * 100);
+		// height: calc(var(--vh, 1vh)* 100);
+		&:not(.active) {
+			transform: translate3d(120%, 0, 0);
 			--opacity: 0;
-			.toggle-menu-mobile{
+			.toggle-menu-mobile {
 				opacity: 0;
 			}
 		}
-		@include mt(.6s);
+		@include mt(0.6s);
 		will-change: transform;
 
-		
-		.toggle-menu-mobile { 
+		.toggle-menu-mobile {
 			margin-left: -15%;
-			position: absolute; 
-      right: rem(20);
+			position: absolute;
+			right: rem(20);
 			left: auto;
-			color: #FFF;
+			color: #fff;
 			top: 17px;
-			z-index: 9999; 
+			z-index: 9999;
 			span:after,
 			span:before {
 				--color: #ffffff;
 			}
 		}
 		&__inner {
-			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
+			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0
+				calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
 			overflow-x: hidden;
 			overflow-y: auto;
-      padding-top: rem(20);
-      padding-left: rem(30);
-      padding-right: rem(30);
+			padding-top: rem(20);
+			padding-left: rem(30);
+			padding-right: rem(30);
 			-webkit-overflow-scrolling: touch;
 			height: 100%;
-      background: $gray-600;
-      nav a {
-        color: $white;
-        font-weight: 400;
-        .icon {
-          stroke: $white;
-        }
-      }
+			background: $gray-600;
+			nav a {
+				color: $white;
+				font-weight: 400;
+				.icon {
+					stroke: $white;
+				}
+			}
 		}
 
-		&.active { 
+		&.active {
 			.toggle-menu-mobile {
 				opacity: 1;
 			}
 		}
-
 
 		ul {
 			// position: relative;
@@ -163,136 +159,137 @@
 				font-size: 18px;
 				padding: 12px;
 				display: block;
-        padding-left: rem(3);
-        min-width: calc(100% + 2px);
+				padding-left: rem(3);
+				min-width: calc(100% + 2px);
 			}
 		}
 	}
 }
 
 .menu-item-has-children {
-  // position: relative;
-  @include mt;
-  .icon {
-    fill: none;
-    stroke-width: 1px;
-    stroke: $gray-600;
-    transform: rotate(0deg);
-    @include mt;
-  }
-  &.active {
-    & > a {
-      @include media-breakpoint-up(xl) {
-      font-weight: 600;
-      }
-    }
-    .icon {
-      transform: rotate(180deg);
-      @include media-breakpoint-up(xl) {
-        stroke-width: 2px;
-      }
-    }
-    .sub-menu {
-      --op: 1;
-      transition: all .3s ease-in;
-      visibility: visible;
-      @include media-breakpoint-down(xl) {
-        position: relative;
-      }
-    }
-  }
+	// position: relative;
+	@include mt;
+	.icon {
+		fill: none;
+		stroke-width: 1px;
+		stroke: $gray-600;
+		transform: rotate(0deg);
+		@include mt;
+	}
+	&.active {
+		& > a {
+			@include media-breakpoint-up(xl) {
+				font-weight: 600;
+			}
+		}
+		.icon {
+			transform: rotate(180deg);
+			@include media-breakpoint-up(xl) {
+				stroke-width: 2px;
+			}
+		}
+		.sub-menu {
+			--op: 1;
+			transition: all 0.3s ease-in;
+			visibility: visible;
+			@include media-breakpoint-down(xl) {
+				position: relative;
+			}
+		}
+	}
 }
 
 .menu-item-has-children .sub-menu {
-  // overflow-x: hidden;
-  // overflow-y: auto;
-  opacity: var(--op, 0);
-  --op: 0;
-  width: 100%;
-  background: $gray-600;
-  visibility: hidden;
-  position: absolute;
-  @include mt(.1s);
+	// overflow-x: hidden;
+	// overflow-y: auto;
+	opacity: var(--op, 0);
+	--op: 0;
+	width: 100%;
+	background: $gray-600;
+	visibility: hidden;
+	position: absolute;
+	@include mt(0.1s);
 	@include media-breakpoint-up(xl) {
-    border: $gray-100 1px solid;
-    box-shadow: inset 0 4px 21px 0 rgba(192, 192, 192, 0.25);
-    background: $white;
-    border-radius: rem(8);
-    top: rem(84);
-    left: 50%;
-    transform: translateX(-50%);
-    // box-shadow: $box-shadow;
-    // max-width: 1400px;
-    padding: 3vw 3vw;
-    z-index: 5;
-    display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
-    justify-content: space-between;
-    gap: 3vw;
-    width: 100%;
-    overflow-y: auto;
-    color: $gray-600;
-    font-size: rem(14);
-    max-height: calc(100vh - 70px);
-  }
+		border: $gray-100 1px solid;
+		box-shadow: inset 0 4px 21px 0 rgba(192, 192, 192, 0.25);
+		background: $white;
+		background: #fff;
 
+		// border-radius: rem(8);
+		top: rem(84);
+		left: 50%;
+		transform: translateX(-50%);
+		// box-shadow: $box-shadow;
+		// max-width: 1400px;
+		padding: 3vw 3vw;
+		z-index: 5;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		justify-content: space-between;
+		gap: 3vw;
+		width: 100%;
+		overflow-y: auto;
+		color: $gray-600;
+		font-size: rem(14);
+		max-height: calc(100vh - 70px);
+	}
 
-  a {
-    font-size: rem(13);
-    padding: rem(8) rem(16) rem(8) rem(3);
-    @include media-breakpoint-up(xl) {
-      padding-left: 0;
-    }
-    // padding: 0;
-  }
+	a {
+		font-size: rem(13);
+		padding: rem(8) rem(16) rem(8) rem(3);
+		@include media-breakpoint-up(xl) {
+			padding-left: 0;
+		}
+		// padding: 0;
+	}
 
-  .menu-item:first-child a {
-    @include media-breakpoint-down(xl) {
-      padding-top: 0;
-    }
-  }
+	.menu-item:first-child a {
+		@include media-breakpoint-down(xl) {
+			padding-top: 0;
+		}
+	}
 }
 
 .menu-item-has-children .sub-menu .menu-item-last {
-  &__title {
-    opacity: .6;
-    position: relative;
-    display: inline;
-    @include media-breakpoint-up(xl) {
-      color: $gray-600;
-      font-size: rem(20);
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 95%;
-      height: rem(1);
-      background: $blue-600;
-    }
-  }
+	&__title {
+		opacity: 0.6;
+		position: relative;
+		display: inline;
+		@include media-breakpoint-up(xl) {
+			color: $gray-600;
+			font-size: rem(20);
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 95%;
+			height: rem(1);
+			background: $blue-600;
+		}
+	}
 
-  ul {
-    margin-top: rem(10);
-    @include media-breakpoint-up(xl) {
-      margin-top: 2vw;
-    }
-  }
+	ul {
+		margin-top: rem(10);
+		@include media-breakpoint-up(xl) {
+			margin-top: 2vw;
+		}
+	}
 
-  &__link {
-    a {
-      opacity: .9;
-      @include media-breakpoint-up(xl) {
-        font-size: rem(16);
-        color: $gray-700;
-        opacity: 1;
-      }
-    }
-    &:hover a {
-      @include media-breakpoint-up(xl) {
-        color: $primary;
-      }
-    }
-  }
+	&__link {
+		a {
+			opacity: 0.9;
+			@include media-breakpoint-up(xl) {
+				font-size: rem(16);
+				color: $gray-700;
+				opacity: 1;
+			}
+		}
+		&:hover a {
+			@include media-breakpoint-up(xl) {
+				color: $primary;
+			}
+		}
+	}
 }
