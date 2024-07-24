@@ -3,7 +3,7 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	&__row {
-      padding-top: rem(14);
+      padding: rem(18) 0;
 		// --bs-gutter-x: #{rem()};
 		// @include media-breakpoint-up(md) {
 			// --bs-gutter-y: var(--bs-gutter-x);
@@ -11,6 +11,8 @@
     align-items: center;
 	}
   position: relative;
+  box-shadow: 0 4px 21px 0 rgba(192, 192, 192, 0.25);
+  background: $white;
 	.section-title{
 		
 	}
@@ -85,6 +87,10 @@
       padding-bottom: rem(16);
       margin-bottom: rem(16);
       border-bottom: rem(1) solid rgba(255, 255, 255, 0.37);
+    }
+    
+    @include media-breakpoint-up(xxl) {
+      margin-left: rem(90);
     }
   }
 

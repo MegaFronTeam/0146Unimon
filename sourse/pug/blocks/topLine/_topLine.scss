@@ -5,6 +5,7 @@
   --sPT: #{rem(0)};
 	--sPB: #{rem(2)};
 	// --sTPB: #{rem()};
+  border-bottom: $gray-100 1px solid;
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -27,8 +28,11 @@
     font-size: rem(14);
     line-height: 114%;
     letter-spacing: -0.05em;
-    color: $gray-600;
-    margin-right: rem(16);
+    // color: rgba(14, 52, 74, 0.47);
+    margin-right: rem(4);
+    background: rgba(14, 52, 74, 0.47);
+    background-clip: text;
+    color: transparent;
     &:not(:last-child) {
       margin-right: rem(28);
       margin-left: rem(10);
@@ -44,7 +48,10 @@
   }
 
   &__link {
-    margin-right: rem(10);
+    // margin-right: rem(10);
+    &:nth-child(2) {
+      margin-right: rem(20);
+    }
   }
 
 	&__item{

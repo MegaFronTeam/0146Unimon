@@ -211,16 +211,18 @@
   width: 100%;
   background: $gray-600;
   visibility: hidden;
-    position: absolute;
+  position: absolute;
   @include mt(.1s);
 	@include media-breakpoint-up(xl) {
+    border: $gray-100 1px solid;
+    box-shadow: inset 0 4px 21px 0 rgba(192, 192, 192, 0.25);
     background: $white;
     border-radius: rem(8);
-    top: rem(60);
+    top: rem(84);
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: $box-shadow;
-    max-width: 1400px;
+    // box-shadow: $box-shadow;
+    // max-width: 1400px;
     padding: 3vw 3vw;
     z-index: 5;
     display: grid;
