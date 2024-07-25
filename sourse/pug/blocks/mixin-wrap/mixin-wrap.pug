@@ -68,8 +68,12 @@ mixin calculate
 
 mixin block-with-img(img)
 	+b.block-with-img(id = `${img}`)
+		+cercles
 		+e.caption
 			block
 		picture()
 			source(srcset=`img/${img}-d.png` media="(min-width: 768px)")
 			img(src=`img/${img}-m.png`, alt="Каталог товаров")
+
+mixin cercles
+	.cercles-wrapper-bg.d-none.d-lg-block: .span
