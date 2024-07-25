@@ -292,6 +292,9 @@
       height: auto;
       max-height: none;
     }
+    @include media-breakpoint-up(xxl) {
+      top: -300px;
+    }
   }
 }
 
