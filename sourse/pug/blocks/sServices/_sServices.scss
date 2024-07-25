@@ -48,6 +48,7 @@
 } // end.sServices
 
 .service-card {
+  cursor: pointer;
   background: $white;
   border-radius: $border-radius-md;
   @include mt;
@@ -89,6 +90,8 @@
     font-size: rem(12);
     line-height: 130%;
     margin-bottom: 0;
+    color: #0E344A;
+    opacity: .6;
     @include media-breakpoint-up(lg) {
       font-size: rem(14);
       max-width: 60%;

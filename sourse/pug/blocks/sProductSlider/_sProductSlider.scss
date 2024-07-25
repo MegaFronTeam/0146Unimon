@@ -75,7 +75,7 @@
       grid-template-columns: repeat( 2, 49%);
     }
     gap: rem(7) rem(5);
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       gap: rem(11) rem(15);
       grid-template-columns: repeat( 3, 33%);
     }

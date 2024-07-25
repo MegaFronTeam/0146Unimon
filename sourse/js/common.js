@@ -156,6 +156,21 @@ function eventHandler() {
     speed: 5000,
 	});
 
+  
+  let monitorSlider = new Swiper(".sProperties__slider-js", {
+    slidesPerView: 1,
+		// freeMode: true,
+		spaceBetween: 4,
+		breakpoints: {
+		},
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 1000,
+	});
+
 	/* nav */
 	const menuItems = document.querySelectorAll(".menu-item-has-children");
 
@@ -195,7 +210,7 @@ function eventHandler() {
 		$(this).next().slideToggle();
 	});
 
-  const btns = document.querySelectorAll('.btn-primary, .main-wrap .btn-outline-light, .main-wrap .btn-outline-white, .main-wrap .btn-outline-primary:not(.consultation-card__btn)')
+  const btns = document.querySelectorAll('.btn-primary, .main-wrap .btn-outline-light, .main-wrap .btn-outline-white, .main-wrap .btn-outline-primary:not(.consultation-card__btn), .card-certificate__eagle-wrap')
   if (btns.length) {
     btns.forEach(button => {
       const flashEffect = document.createElement('span');
@@ -254,13 +269,6 @@ function eventHandler() {
 
   window.addEventListener('load', applyDateTransformation);
   window.addEventListener('resize', applyDateTransformation);
-
-  // var dateElement = document.querySelector('.sArticle__date');
-  // if (dateElement) {
-  //   var dateText = dateElement.textContent.trim();
-  //   var formattedDate = formatDate(dateText);
-  //   dateElement.innerHTML = '<svg class="icon icon-calendar "><use xlink:href="img/svg/sprite.svg#calendar"></use></svg>' + formattedDate;
-  // }
 
 	AOS.init({
 		// disable: "mobile",

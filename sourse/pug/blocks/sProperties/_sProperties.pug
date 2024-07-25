@@ -36,7 +36,17 @@ mixin sProperties2(data)
 			+e.row-center.row(data-aos="fade-up")
 				+e.col.col-12.col-lg-6.order-lg-2
 					+e.img-wrapper.d-none.d-lg-block
-						+img(src="img/properties-img-2.png", alt="").img
+						+e.slider-js
+							.swiper-wrapper
+								.swiper-slide
+									+img(src="img/properties-img-emp.png", alt="").inner
+								.swiper-slide
+									+img(src="img/properties-img-emp.png", alt="").inner
+								.swiper-slide
+									+img(src="img/properties-img-emp.png", alt="").inner
+								.swiper-slide
+									+img(src="img/properties-img-emp.png", alt="").inner
+						+img(src="img/properties-footer.png", alt="").img
 						+spanWrapper
 				+e.col.col-12.col-lg-6
 					.title-wrap.mb: .h1 Простой интерфейс и ничего лишнего
@@ -54,7 +64,7 @@ mixin spanWrapper
 
 mixin cardCertificate(img, text, number)
 	+b.card-certificate
-		+img(src=`img/${img}.svg`, alt="")
+		+e.eagle-wrap: +img(src=`img/${img}.svg`, alt="")
 		+e.descr-wrap
 			+e.text.text_gradient= text
 			+e.number.text_gradient= number
