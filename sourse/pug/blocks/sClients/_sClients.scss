@@ -30,9 +30,6 @@
   .col-12 {
     position: relative;
   }
-  .col-12 {
-    position: relative;
-  }
 
   &__row-industry {
     margin: auto;
@@ -73,7 +70,6 @@
     }
 
     @include media-breakpoint-up(xxl) {
-      transform: translateX(30px) translateY(calc(-2*var(--sPT)));
       transform: translateX(30px) translateY(calc(-2*var(--sPT)));
     }
   }
