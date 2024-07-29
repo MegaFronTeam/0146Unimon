@@ -30,6 +30,9 @@
   .col-12 {
     position: relative;
   }
+  .col-12 {
+    position: relative;
+  }
 
   &__row-industry {
     margin: auto;
@@ -61,12 +64,16 @@
       position: absolute;
       top: 0;
       left: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
       flex-direction: row;
       gap: rem(20);
       transform: translateY(-25%);
     }
 
     @include media-breakpoint-up(xxl) {
+      transform: translateX(30px) translateY(calc(-2*var(--sPT)));
       transform: translateX(30px) translateY(calc(-2*var(--sPT)));
     }
   }
