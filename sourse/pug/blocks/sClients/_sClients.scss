@@ -27,6 +27,9 @@
 	&__item{
 		
 	}
+  .col-12 {
+    position: relative;
+  }
 
   &__row-industry {
     margin: auto;
@@ -55,12 +58,16 @@
     flex-direction: column;
     gap: rem(7);
     @include media-breakpoint-up(xl) {
+      position: absolute;
+      top: 0;
+      left: 0;
       flex-direction: row;
       gap: rem(20);
+      transform: translateY(var(--sPT));
     }
 
     @include media-breakpoint-up(xxl) {
-      transform: translateX(30px);
+      transform: translateX(30px) translateY(calc(-2*var(--sPT)));
     }
   }
 
@@ -92,7 +99,7 @@
     max-width: rem(800);
     overflow: visible;
     @include media-breakpoint-up(xl) {
-      max-height: rem(700);
+      max-height: rem(820);
       padding: 0 rem(20);
       &::after {
         content: '';

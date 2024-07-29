@@ -139,7 +139,7 @@ function eventHandler() {
 
   let brands = new Swiper(".sClients__brand--js", {
     slidesPerView: 'auto',
-		freeMode: true,
+		// freeMode: true,
 		spaceBetween: 4,
 		breakpoints: {
 			1200: {
