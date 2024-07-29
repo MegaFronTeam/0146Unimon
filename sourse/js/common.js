@@ -137,9 +137,42 @@ function eventHandler() {
 		}
 	});
 
+  if (document.querySelector('#sProductSlider') &&
+    window.getComputedStyle(document.querySelector('#sProductSlider .sProductSlider__thumb-wrap')).display !== 'none'
+  ) {
+    let updateActiveThumb = function() {
+      let activeIndex = prodCardSlider.activeIndex;
+      prodCardThumb.slideTo(activeIndex);
+      document.querySelectorAll('.sProdCard-thumb-js-1 .swiper-slide').forEach(function (slide) {
+        slide.classList.remove('slide-item-1_light');
+      });
+      prodCardThumb.slides[activeIndex].classList.add('slide-item-1_light');
+    };
+
+    prodCardSlider.on('slideChange', updateActiveThumb);
+    updateActiveThumb();
+  }
+
+  if (document.querySelector('#sProductSlider2') &&
+  window.getComputedStyle(document.querySelector('#sProductSlider2 .sProductSlider__thumb-wrap')).display !== 'none') {
+    let updateActiveThumb2 = function() {
+      let activeIndex = prodCardSlider2.activeIndex;
+      prodCardThumb2.slideTo(activeIndex);
+      document.querySelectorAll('.sProdCard-thumb-js-2 .swiper-slide').forEach(function (slide) {
+        slide.classList.remove('slide-item-1_light');
+      });
+      prodCardThumb2.slides[activeIndex].classList.add('slide-item-1_light');
+    };
+
+    prodCardSlider2.on('slideChange', updateActiveThumb2);
+    updateActiveThumb2();
+  }
+
+
+
   let brands = new Swiper(".sClients__brand--js", {
     slidesPerView: 'auto',
-		freeMode: true,
+		// freeMode: true,
 		spaceBetween: 4,
 		breakpoints: {
 			1200: {

@@ -5,7 +5,7 @@
   @include media-breakpoint-up(lg) {
     --sPT: #{rem(70)};
     --sPB: #{rem(60)};
-    --sTPB: #{rem(70)};
+    --sTPB: #{rem(60)};
   }
 	// --sTPB: #{rem()};
 	
@@ -47,7 +47,7 @@
     gap: rem(8) rem(6);
     @include media-breakpoint-up(lg) {
       grid-template-columns: repeat(4, max-content);
-      margin-bottom: rem(56);
+      margin-bottom: rem(68);
       gap: rem(23);
     }
   }

@@ -14,7 +14,7 @@
     &:first-child {
       margin-bottom: rem(52);
       @include media-breakpoint-up(lg) {
-        margin-bottom: rem(160);
+        margin-bottom: rem(80);
       }
     }
     &:last-child {
@@ -74,11 +74,11 @@
 .control-card-item {
   background: $white;
   border-radius: rem(15);
-  padding: rem(30);
+  padding: rem(20);
   height: 100%;
 	@include media-breakpoint-up(lg) {
     border-radius: rem(24);
-    // padding: rem(39) rem(48);
+    padding: rem(30);
   }
 	@include media-breakpoint-up(xxl) {
     padding: rem(39) rem(48);
@@ -127,7 +127,8 @@
     max-width: rem(310);
     margin: auto;
     @include media-breakpoint-up(xl) {
-      gap: rem(12);
+      gap: rem(17);
+      margin-left: 0;
       max-width: rem(406);
     }
   }
@@ -158,7 +159,8 @@
   padding-bottom: rem(8);
   border-radius: rem(10);
 	@include media-breakpoint-up(xl) {
-    padding: rem(20);
+    padding: rem(13) rem(10) rem(9);
+    // padding-bottom: rem(8);
     gap: rem(14);
   }
 

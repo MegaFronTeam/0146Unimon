@@ -38,14 +38,14 @@ mixin sProperties2(data)
 					+e.img-wrapper.d-none.d-lg-block
 						+e.slider-js
 							.swiper-wrapper
-								.swiper-slide
+								a.swiper-slide(data-fancybox="gallery", href='img/properties-img-emp.png')
 									+img(src="img/properties-img-emp.png", alt="").inner
-								.swiper-slide
+								a.swiper-slide(data-fancybox="gallery", href='img/properties-img-emp2.png')
+									+img(src="img/properties-img-emp2.png", alt="").inner
+								a.swiper-slide(data-fancybox="gallery", href='img/properties-img-emp.png')
 									+img(src="img/properties-img-emp.png", alt="").inner
-								.swiper-slide
-									+img(src="img/properties-img-emp.png", alt="").inner
-								.swiper-slide
-									+img(src="img/properties-img-emp.png", alt="").inner
+								a.swiper-slide(data-fancybox="gallery", href='img/properties-img-emp2.png')
+									+img(src="img/properties-img-emp2.png", alt="").inner
 						+img(src="img/properties-footer.png", alt="").img
 						+spanWrapper
 				+e.col.col-12.col-lg-6
