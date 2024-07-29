@@ -8,5 +8,5 @@
 1. <https://megafronteam.github.io/0146Unimon/06-contact.html>
 1. <https://megafronteam.github.io/0146Unimon/>
 
-<!-- >
-2. <https://megafronteam.github.io/0146Unimon/00-modal.html> -->
+
+2. <https://megafronteam.github.io/0146Unimon/00-modal.html>

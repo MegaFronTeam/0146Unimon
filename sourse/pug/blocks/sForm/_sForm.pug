@@ -35,6 +35,22 @@ mixin sForm2()
 				.small.fw-500 Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
 	// end sForm
 
+mixin sForm3()
+	// start sForm
+	+b.SECTION.sForm--consult.section#sForm&attributes(attributes)
+		.container
+			+form-wrap
+				.text-center: h2 Оставьте заявку и мы скоро с вами свяжемся
+				.form-wrapper
+					+input("*Ваше имя ",'text')
+						img(src="img/user.svg", alt="").input-icon
+					+input("*Номер телефона ",'tel')
+						img(src="img/phone-2.svg", alt="").input-icon
+					+input("E-mail ",'email')
+						img(src="img/email.svg", alt="").input-icon
+					+e.btn.btn.btn-primary(type="submit") Отправить заявку
+				.small.fw-500 Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
+
 mixin sFormSmall()
 	// start sForm
 	.sForm--small

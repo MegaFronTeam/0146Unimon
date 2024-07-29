@@ -81,26 +81,6 @@
     }
   }
 
-  .form-group {
-    width: 100%;
-    position: relative;
-    .input-icon {
-      position: absolute;
-      pointer-events: none;
-      @include media-breakpoint-up(md) {
-        left: rem(36);
-        top: rem(25);
-      }
-      left: rem(18);
-      top: rem(15);
-    }
-    &:has(.input-icon) .form-control {
-      @include media-breakpoint-up(md) {
-        padding-left: rem(74);
-      }
-      padding-left: rem(44);
-    }
-  }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -126,6 +106,29 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sForm
+
+  .form-group {
+    width: 100%;
+    position: relative;
+    .input-icon {
+      position: absolute;
+      pointer-events: none;
+      @include media-breakpoint-up(md) {
+        left: rem(36);
+        // top: rem(25);
+      }
+      left: rem(18);
+      // top: rem(15);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:has(.input-icon) .form-control {
+      @include media-breakpoint-up(md) {
+        padding-left: rem(74);
+      }
+      padding-left: rem(44);
+    }
+  }
 
 .form-control {
   --bs-border-radius: #{rem(50)};
@@ -242,10 +245,10 @@
       pointer-events: none;
       @include media-breakpoint-up(md) {
         left: rem(20);
-        top: rem(15);
+        // top: rem(15);
       }
       left: rem(18);
-      top: rem(15);
+      // top: rem(15);
     }
     &:has(.input-icon) .form-control {
       @include media-breakpoint-up(md) {

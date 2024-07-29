@@ -8,12 +8,28 @@
 }
 .modal-win {
 	// display: block;
+  margin: auto;
 	background-color: #fff;
-	max-width: 100%;
+	max-width: calc(100% - 26px);
 	position: relative;
-	width: rem(500);
+	width: rem(716);
+  border-radius: rem(26);
 	// min-height: 100%; 
-	padding: 40px;
+	padding: 32px;
+  padding-top: rem(52);
+  padding-bottom: rem(69);
+  line-height: 83%;
+  @include media-breakpoint-up(md) {
+    max-width: 100%;
+    padding: 40px;
+    border-radius: rem(28);
+    line-height: 89%;
+    padding-top: rem(80);
+    padding-bottom: rem(46);
+  }
+  .form-wrap {
+    background: transparent;
+  }
 
 	.modal-content {
 		// max-width: 485px;
@@ -25,6 +41,72 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+
+  h2 {
+    font-size: rem(30);
+    margin-bottom: rem(28);
+    @include media-breakpoint-up(md) {
+      font-size: rem(55);
+      margin-bottom: rem(36);
+    }
+  }
+
+  .small {
+    opacity: 0.3;
+    margin: auto;
+    max-width: rem(260);
+    margin-bottom: rem(24);
+    line-height: 98%;
+    font-size: rem(10);
+    text-wrap: pretty;
+    @include media-breakpoint-up(md) {
+      font-size: rem(13);
+    }
+  }
+  .form-wrapper {
+    margin-bottom: rem(30);
+  }
+
+  .btn {
+    font-size: rem(16);
+    --bs-btn-padding-y: #{rem(25)};
+    --bs-btn-padding-x: #{rem(62)};
+    padding-right: rem(50);
+    @include media-breakpoint-up(md) {
+      font-size: rem(20);
+      --bs-btn-padding-y: #{rem(30)};
+      padding-right: rem(50);
+      padding-left: rem(80);
+    }
+  }
+  .form-control {
+    background-color: $gray-050;
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+    @include media-breakpoint-up(md) {
+      padding-top: rem(28);
+      padding-bottom: rem(28);
+    }
+    
+    @include media-breakpoint-down(md) {
+      padding-left: rem(60) !important;
+    }
+    &::placeholder {
+      font-size: rem(14);
+      @include media-breakpoint-up(md) {
+        font-size: rem(16);
+      }
+    }
+  }
+
+  .form-group {
+  margin-bottom: rem(11);
+    @include media-breakpoint-down(md) {
+      .input-icon {
+        padding-left: rem(16);
+      }
+    }
+  }
 }
 
 a {
@@ -87,6 +169,15 @@ a {
 	.modal-text {
 		max-width: 1000px;
 	}
+}
+.fancybox__content>.f-button.is-close-btn {
+  top: rem(12);
+  right: rem(30);
+  --f-button-color: #{#767070};
+  @include media-breakpoint-up(md) {
+    top: rem(30);
+    right: rem(37);
+  }
 }
 
 .polite {

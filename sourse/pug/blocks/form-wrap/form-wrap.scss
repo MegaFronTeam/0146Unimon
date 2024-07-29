@@ -58,10 +58,10 @@
 				pointer-events: none;
 				@include media-breakpoint-up(md) {
 					left: rem(36);
-					top: rem(25);
+					// top: rem(25);
 				}
 				left: rem(18);
-				top: rem(15);
+				// top: rem(15);
 			}
 			&:has(.input-icon) .form-control {
 				@include media-breakpoint-up(md) {
