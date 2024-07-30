@@ -1,0 +1,28 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalogHead/_sCatalogHead.pug
+include ../blocks/sCatalogBody/_sCatalogBody.pug
+include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sUI/_sUI.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'UI'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	//- +parts('header')
+	main
+		+sUI()

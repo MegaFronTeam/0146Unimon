@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>UI</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<main>
+				<!-- start sUI-->
+				<section class="sUI section" id="sUI">
+					<div class="container">
+						<div class="sUI__item">
+							<div class="sUI__title text_gradient">1.Текст с гиперссылкой
+							</div>
+							<div class="sUI__link-item"><a href="#">мониторинг температуры и влажности</a>
+								<p>(До наведения на текст с гиперссылкой)</p>
+							</div>
+							<div class="sUI__link-item"><a class="hover" href="#">мониторинг температуры и влажности</a>
+								<p>( При наведении)</p>
+							</div>
+							<div class="sUI__link-item"><a class="active" href="#">мониторинг температуры и влажности</a>
+								<p>( При нажатии)</p>
+							</div>
+						</div>
+						<div class="sUI__item">
+							<div class="sUI__title text_gradient">2.Таблица с данными
+							</div>
+							<p>Сравнительные характеристики</p>
+							<div class="table-wrap table-wrap--art">
+								<table>
+									<thead>
+										<tr>
+											<th>Наименование датчика</th>
+											<th>Параметры</th>
+											<th>Характеристики</th>
+											<th>Характеристики</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Контроллер AlertBox</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+										</tr>
+										<tr>
+											<td>Контроллер AlertBox</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+										</tr>
+										<tr>
+											<td>Контроллер AlertBox</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+										</tr>
+										<tr>
+											<td>Контроллер AlertBox</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+										</tr>
+										<tr>
+											<td>Контроллер AlertBox</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+										</tr>
+										<tr>
+											<td>Контроллер AlertBox</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+										</tr>
+										<tr>
+											<td>Контроллер AlertBox</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+										</tr>
+										<tr>
+											<td>Контроллер AlertBox</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+										</tr>
+										<tr>
+											<td>Контроллер AlertBox</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+											<td>Table Cell</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="sUI__item">
+							<div class="sUI__title text_gradient">3. Цитата
+							</div>
+							<div class="sUI__blockquote-wrap">
+								<blockquote class="text_gradient">Продукты, хранимые на складе, подвержены различным воздействиям, включая изменения температуры и влажности</blockquote>
+							</div>
+						</div>
+						<div class="sUI__item">
+							<div class="sUI__title text_gradient">4. Фрагмент кода
+							</div>
+							<div class="sUI__code-wrap code-block">
+								<pre><code>&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+	&lt;title&gt;Mr. Camel&lt;/.title&gt;
+	&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"&gt;
+	&lt;style&gt;
+		@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');</code></pre>
+							</div>
+							<div class="sUI__btn btn btn-secondary btn-copy btn-copy--js">Скопировать код
+							</div>
+						</div>
+						<div class="sUI__item item-img">
+							<div class="sUI__title text_gradient">Изображения
+							</div>
+							<div class="sUI__row-img row">
+								<div class="col-md-6"><a data-fancybox="img" href="img/article-bg.png">
+										<div class="sUI__img-wrap"><img src="img/article-bg.png" alt="" loading="lazy"/>
+										</div></a>
+									<div class="small">В настоящее время все более популярным становится использование беспроводных систем</div>
+								</div>
+								<div class="col-md-6"><a data-fancybox="img" href="img/article-bg.png">
+										<div class="sUI__img-wrap"><img src="img/article-bg.png" alt="" loading="lazy"/>
+										</div></a>
+									<div class="small">В настоящее время все более популярным становится использование беспроводных систем</div>
+								</div>
+							</div>
+							<div class="sUI__row-img row">
+								<div class="col-auto">
+									<div class="sUI__img-wrap img-wrap_small"><img src="img/article-bg.png" alt="" loading="lazy"/>
+										<div class="small">Название изображения</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="sUI__img-wrap img-wrap_small"><img src="img/article-bg.png" alt="" loading="lazy"/>
+										<div class="small">Название изображения</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="sUI__img-wrap img-wrap_small"><img src="img/article-bg.png" alt="" loading="lazy"/>
+										<div class="small">Название изображения</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sUI-->
+			</main>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<h2>Оставьте заявку и мы<br>скоро с вами свяжемся</h2>
+						</div>
+						<div class="form-wrapper">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="*Ваше имя "/><img class="input-icon" src="img/user.svg" alt=""/>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="*Номер телефона "/><img class="input-icon" src="img/phone-2.svg" alt=""/>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="E-mail "/><img class="input-icon" src="img/email.svg" alt=""/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="text-center">
+							<div class="small fw-500">Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+								<svg class="icon icon-arrow-angle-right ">
+									<use xlink:href="img/svg/sprite.svg#arrow-angle-right"></use>
+								</svg>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"></script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/aos/aos.js"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script type="module" src="js/common.js"></script>
+	</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Наши контакты</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Наши контакты</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<div class="row">
+							<div class="col">
+								<h1>Наши контакты</h1>
+							</div>
+							<div class="col-auto">
+								<a class="page-head__btn btn btn-primary" href="#">
+									 Заказать звонок
+									<svg class="icon icon-arrow-angle-right ">
+										<use xlink:href="img/svg/sprite.svg#arrow-angle-right"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- start sContact-->
+				<section class="sContact section" id="sContact">
+					<div class="container">
+						<header class="sContact__head section">
+							<div class="sContact__row row">
+								<div class="col-xl">
+									<div class="sContact__row-inner row">
+										<div class="sContact__group col-md-6"> 
+											<div class="sContact__col-title">Консультация по продуктам
+											</div>
+											<div class="sContact__color text-lg"><a href="tel:+7(499)288-07-82">+ 7 (499) 288-07-82</a>
+											</div>
+										</div>
+										<div class="sContact__group col-md-6"> 
+											<div class="sContact__col-title">Техподдержка
+											</div>
+											<div class="sContact__color text-lg"><a href="tel:+7(499)653-60-08">+7 (499) 653-60-08</a>
+											</div>
+										</div>
+										<div class="sContact__group col-md-6"> 
+											<div class="sContact__col-title">По всем вопросам
+											</div>
+											<div class="sContact__color"><a href="mailto:zakaz+135093@unimon.ru">zakaz+135093@unimon.ru</a>
+											</div>
+										</div>
+										<div class="sContact__group col-md-6"> 
+											<div class="sContact__col-title">Время работы
+											</div>
+											<div class="sContact__color">Пн-Пт 10:00 – 19:00
+											</div>
+										</div>
+										<div class="sContact__group col-md-6"> 
+											<div class="sContact__col-title">Адрес
+											</div>
+											<div class="sContact__color text-sm">Москва, улица Льва Толстого, 19/2, офис 33
+											</div>
+											<p>Парк Культуры<img src="img/subway-icon.svg" alt=""/></p>
+										</div>
+										<div class="sContact__group col-md-6"> 
+											<div class="sContact__col-title">Реквизиты
+											</div>
+											<p>ООО «Эволюция»<br/>ОГРН 1137746560192<br/>ИНН 7701363534</p>
+										</div>
+									</div>
+								</div>
+								<div class="sContact__col col-auto">
+									<div class="sContact__map">
+										<script>
+											city_default = 'Москва';
+											map_array ={"\\u041c\u043e\u0441\u043a\u0432\u0430":"https:\/\/yandex.ru\/map-widget\/v1\/?um=constructor%3A57a56bc44235cf433be6000bbbbe96f6d98b19c923ecb1a7746e4da1ca26652b&amp;source=constructor&amp;scroll=false"};
+										</script><iframe scrolling="no" src="https://yandex.ru/map-widget/v1/?um=constructor%3A57a56bc44235cf433be6000bbbbe96f6d98b19c923ecb1a7746e4da1ca26652b&amp;source=constructor&amp;scroll=false" width="100%" height="400" frameborder="0"></iframe>
+									</div>
+								</div>
+							</div>
+						</header>
+						<div class="section-title">
+							<div class="h1">О системе</div>
+						</div>
+						<div class="sContact__row row">
+							<div class="sContact__text-block col"> 
+								<p> <strong>Unimon </strong>– простой и удобный сервис для удаленного контроля датчиков и управления оборудованием через Интернет и SMS. Готовый диспетчерский пульт в Вашем браузере и телефоне.</p>
+								<p>Работает с датчиками температуры, влажности, давления, освещенности, протечки, дыма, движения, открытия двери, уровня жидкости, разбития стекла и многими другими.</p>
+								<p>Возможно управление отоплением, кондиционированием, вентиляцией, насосами и другим электрооборудованием – как вручную, так и по расписанию или сценарию.</p>
+								<p>Основные области применения: мониторинг, автоматизация и диспетчеризация загородных домов, котельных, холодильных камер, складов, серверных, птичников, теплиц, бассейнов и других частных и промышленных объектов.</p>
+							</div>
+							<div class="sContact__col col-auto">
+								<div class="form-wrap form-wrap--base">
+									<form>
+										<div class="form-wrap__title">Обратная связь
+										</div>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше имя"/><img class="input-icon" src="img/user.svg" alt=""/>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваш номер телефона"/><img class="input-icon" src="img/phone-2.svg" alt=""/>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Ваша электронная почта"/><img class="input-icon" src="img/email.svg" alt=""/>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__footer-row row">
+											<div class="form-wrap__col col-auto">
+												<button class="form-wrap__btn btn btn-outline-white" type="submit">Отправить заявку
+													<svg class="icon icon-arrow-angle-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-angle-right"></use>
+													</svg>
+												</button>
+											</div>
+											<div class="form-wrap__col-text small">Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sContact-->
+			</main>
+			<footer class="footer section">
+				<div class="container">
+					<div class="footer-form section">
+						<div class="footer-form__row row">
+							<div class="footer-form__text-block col"> 
+								<div class="footer-form__footer-title"> Нет затрат на приобретение сервера, <span>лицензий ПО и зарплатусистемному администратору</span>
+								</div>
+								<div class="footer-form__footer-text small">Список пополняется — мы постоянно работаем над интеграцией новых систем в платформу Unimon
+								</div>
+							</div>
+							<div class="footer-form__col col-xl-auto">
+								<div class="form-wrap form-wrap--base form-wrap--light">
+									<form>
+										<div class="form-wrap__head-row row">
+											<div class="col-auto">
+												<div class="form-wrap__title">Мы ищем партнеров!
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="small">Получить коммерческое предложение для дистрибьюторов</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше имя"/> <img class="input-icon" src="img/user.svg" alt="">
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="E-mail"/> <img class="input-icon" src="img/email.svg" alt="">
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваш номер телефона"/> <img class="input-icon" src="img/phone-2.svg" alt="">
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Страна"/>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-12">
+												<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Сообщение"></textarea>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+										<div class="form-wrap__footer-row row">
+											<div class="form-wrap__col-text small col">Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных
+											</div>
+											<div class="form-wrap__col col-auto">
+												<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+													<svg class="icon icon-arrow-angle-right ">
+														<use xlink:href="img/svg/sprite.svg#arrow-angle-right"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col">
+							<div class="footer__inner-wrapper">
+								<div class="footer__title">Мониторинг
+								</div>
+								<ul>
+									<li><a href="#">Температуры</a></li>
+									<li><a href="#">Влажность</a></li>
+									<li><a href="#">Отопление</a></li>
+									<li><a href="#">Микроклимат</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col">
+							<div class="footer__inner-wrapper">
+								<div class="footer__title">Применения
+								</div>
+								<ul>
+									<li><a href="#">Хранение лекарств</a></li>
+									<li><a href="#">Термокартирование</a></li>
+									<li><a href="#">Управление отоплением</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col">
+							<div class="footer__inner-wrapper">
+								<div class="footer__title">Оборудование
+								</div>
+								<ul>
+									<li><a href="#">AlertBox Lite</a></li>
+									<li><a href="#">AlertBox Radio Lite</a></li>
+									<li><a href="#">AlertBox Radio</a></li>
+									<li><a href="#">AlertBox Pro</a></li>
+									<li><a href="#">AlertBox Enterprise</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col col-xl-4">
+							<div class="footer__wrapper">
+								<div class="footer__title"><a href="#">Партнерство</a>
+								</div>
+								<div class="footer__title"><a href="#">Карта сайта</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-12"><a href="#"><img class="logo" src="img/logo.png" alt="" loading="lazy"/></a></div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<h2>Оставьте заявку и мы<br>скоро с вами свяжемся</h2>
+						</div>
+						<div class="form-wrapper">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="*Ваше имя "/><img class="input-icon" src="img/user.svg" alt=""/>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="*Номер телефона "/><img class="input-icon" src="img/phone-2.svg" alt=""/>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="E-mail "/><img class="input-icon" src="img/email.svg" alt=""/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="text-center">
+							<div class="small fw-500">Нажимая на кнопку “Отправить заявку” вы соглашаетесь с обработкой персональных данных</div>
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+								<svg class="icon icon-arrow-angle-right ">
+									<use xlink:href="img/svg/sprite.svg#arrow-angle-right"></use>
+								</svg>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"></script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/aos/aos.js"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script type="module" src="js/common.js"></script>
+	</body>
+</html>

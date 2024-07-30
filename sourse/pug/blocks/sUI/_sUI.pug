@@ -1,0 +1,68 @@
+mixin sUI(data)
+	// start sUI
+	+b.SECTION.sUI.section#sUI&attributes(attributes)
+		.container
+			+e.item
+				+e.title.text_gradient 1.Текст с гиперссылкой
+				+e.link-item
+					a(href='#') мониторинг температуры и влажности
+					p (До наведения на текст с гиперссылкой)
+				+e.link-item
+					a.hover(href='#') мониторинг температуры и влажности
+					p ( При наведении)
+				+e.link-item
+					a.active(href='#') мониторинг температуры и влажности
+					p ( При нажатии)
+			+e.item
+				+e.title.text_gradient 2.Таблица с данными
+				p Сравнительные характеристики
+				+table
+					tr
+						td Контроллер AlertBox
+						td Table Cell
+						td Table Cell
+						td Table Cell
+			+e.item
+				+e.title.text_gradient 3. Цитата
+				+e.blockquote-wrap: blockquote.text_gradient Продукты, хранимые на складе, подвержены различным воздействиям, включая изменения температуры и влажности
+			+e.item
+				+e.title.text_gradient 4. Фрагмент кода
+				+e.code-wrap.code-block
+					pre
+						code.
+							&lt;head&gt;
+								&lt;meta charset="UTF-8"&gt;
+								&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+								&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+								&lt;title&gt;Mr. Camel&lt;/.title&gt;
+								&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"&gt;
+								&lt;style&gt;
+									@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+				+e.btn.btn.btn-secondary.btn-copy--js Скопировать код
+			+e.item.item-img
+				+e.title.text_gradient Изображения
+				+e.row-img.row
+					.col-md-6
+						a(data-fancybox="img", href='img/article-bg.png')
+							+e.img-wrap
+								+img(src="img/article-bg.png", alt="")
+						.small В настоящее время все более популярным становится использование беспроводных систем
+					.col-md-6
+						a(data-fancybox="img", href='img/article-bg.png')
+							+e.img-wrap
+								+img(src="img/article-bg.png", alt="")
+						.small В настоящее время все более популярным становится использование беспроводных систем
+				+e.row-img.row
+					.col-auto
+						+e.img-wrap.img-wrap_small
+							+img(src="img/article-bg.png", alt="")
+							.small Название изображения
+					.col-auto
+						+e.img-wrap.img-wrap_small
+							+img(src="img/article-bg.png", alt="")
+							.small Название изображения
+					.col-auto
+						+e.img-wrap.img-wrap_small
+							+img(src="img/article-bg.png", alt="")
+							.small Название изображения
+	// end sUI

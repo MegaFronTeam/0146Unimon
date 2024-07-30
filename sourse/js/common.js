@@ -302,6 +302,28 @@ function eventHandler() {
 
   window.addEventListener('load', applyDateTransformation);
   window.addEventListener('resize', applyDateTransformation);
+  const btnCopy = document.querySelector('.btn-copy--js');
+  if (btnCopy) {
+    btnCopy.addEventListener('click', ()=> {
+      copyCode()
+    })
+  }
+
+  function copyCode() {
+    var codeBlock = document.querySelector('.code-block')
+    var range = document.createRange();
+    range.selectNode(codeBlock);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    // try {
+    //   var successful = document.execCommand('copy');
+    //   var msg = successful ? 'успешно' : 'не удалось';
+    //   alert('Код ' + msg + ' скопирован');
+    // } catch (err) {
+    //   alert('Копирование не удалось');
+    // }
+    window.getSelection().removeAllRanges();
+  }
 
 	AOS.init({
 		// disable: "mobile",
