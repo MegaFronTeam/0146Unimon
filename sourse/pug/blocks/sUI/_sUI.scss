@@ -31,9 +31,13 @@
 
   &__link-item {
     display: grid;
-    grid-template-columns: repeat(2, max-content);
-    gap: rem(60);
+    grid-template-columns: 1fr;
+    gap: rem(20);
     margin-bottom: rem(36);
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(2, max-content);
+      gap: rem(60);
+    }
     a {
       color: $primary;
       text-decoration: underline;
@@ -135,11 +139,7 @@
   }
 
   &__img-wrap {
-    // height: rem(275);
     aspect-ratio: 612/501;
-    @include media-breakpoint-up(md) {
-      // height: rem(308);
-    }
     img {
       border-radius: $border-radius-md;
       width: 100%;
