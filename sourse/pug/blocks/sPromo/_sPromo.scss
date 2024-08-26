@@ -54,8 +54,8 @@
     @include media-breakpoint-up(lg) {
       left: auto;
       top: auto;
-      right: rem(-200);
-      bottom: -70%;
+      right: rem(-140);
+      bottom: -52%;
       transform: translate(0,0);
     }
   }
@@ -88,7 +88,9 @@
   }
 
   .btn {
-    max-width: rem(392);
+    max-width: rem(382);
+    font-size: rem(20);
+    --bs-btn-padding-y: #{rem(30)};
   }
 
 	&__img-wrap {
@@ -104,8 +106,13 @@
       transform: translateX(50%);
       @include media-breakpoint-up(lg) {
         transform: rotate(-15deg);
-        bottom: rem(-180);
-        right: -34%;
+        bottom: rem(-120);
+        right: -24%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: rem(400);
+        bottom: rem(-200);
+
       }
     }
 	}
@@ -119,10 +126,10 @@
       right: 32%;
     }
     @include media-breakpoint-up(lg) {
-      width: rem(80);
-      right: 1%;
+      width: rem(103);
+      right: 10%;
       top: auto;
-      bottom: rem(150);
+      bottom: rem(225);
     }
   }
 	&__item{
