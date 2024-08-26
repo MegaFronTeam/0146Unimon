@@ -1,10 +1,11 @@
 // start .sBlog
 .sBlog {
 	--sPT: #{rem(24)};
-	--sPB: #{rem(33)};
+	--sPB: #{rem(53)};
 	--sTPB: #{rem(20)};
     @include media-breakpoint-up(md) {
       --sPT: #{rem(58)};
+      --sPB: #{rem(33)};
       --sTPB: #{rem(15)};
     }
 
@@ -26,7 +27,7 @@
     @include media-breakpoint-up(md) {
       --bs-gutter-x: #{rem(20)};
       --bs-gutter-y: #{rem(30)};
-      margin-bottom: rem(46);
+      margin-bottom: rem(38);
     }
 	}
 	.section-title {
@@ -141,29 +142,43 @@
   }
 
   &__text {
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: rem(14);
     line-height: 1.29;
     color: $gray-700;
-    @include media-breakpoint-up(md) {
-      -webkit-line-clamp: 2;
-    }
+  }
+
+  &__content {
+    overflow: hidden;
   }
 
   &__tag {
     text-transform: uppercase;
     font-size: rem(11);
+    line-height: 145%;
+    letter-spacing: -0.05em;
   }
 
   &__date {
     font-size: rem(12);
     color: $gray-700;
+    font-weight: 500;
+    line-height: 133%;
+    letter-spacing: -0.05em;
   }
 
   &__footer {
+    display: flex;
+    gap: rem(2) rem(14);
+    align-items: baseline;
+    // flex-wrap: wrap;
+    // align-items: baseline;
+    // display: ;
+  }
+  &__tags {
     display: flex;
     gap: rem(2) rem(14);
     flex-wrap: wrap;

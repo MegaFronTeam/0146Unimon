@@ -1,7 +1,11 @@
 // start .headerBlock
 .headerBlock {
-	--sPT: #{rem(26)};
+	// --sPT: #{rem(26)};
+	--sPT: #{rem(8)};
 	--sPB: #{rem(0)};
+  @include media-breakpoint-up(xl) {
+    --sPT: #{rem(0)};
+  }
 	// --sTPB: #{rem()}; 
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);

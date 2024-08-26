@@ -7,15 +7,21 @@
 	&__row {
 		--bs-gutter-x: #{rem(40)};
 		--bs-gutter-y: #{rem(50)};
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(sm) {
 			margin-left: rem(10);
 			margin-right: rem(10);
+      --bs-gutter-x: #{8vw};
 		}
+
+    .footer__inner-wrapper {
+      @include media-breakpoint-down(sm) {
+        min-width: 35vw;
+      }
+    }
+
+
 	}
-	.section-title {
-	}
-	&__col {
-	}
+
 	&__item {
 	}
 	&__slide {
@@ -24,13 +30,15 @@
 
 	ul {
 		list-style-type: none;
+    margin-bottom: 0;
 	}
 	a {
 		color: $white;
+    text-wrap: nowrap;
 	}
 
 	&__title {
-		margin-bottom: rem(20);
+		margin-bottom: rem(10);
 		font-weight: 500;
 		letter-spacing: -0.05em;
 		@include media-breakpoint-up(md) {
@@ -44,7 +52,7 @@
 		color: $white;
 		a {
 			display: inline-block;
-			padding: rem(8) 0;
+			padding: rem(6) 0;
 			@include media-breakpoint-up(md) {
 				font-size: rem(16);
 			}
@@ -64,7 +72,7 @@
 	}
 
 	.logo {
-		max-width: 50%;
+		max-width: 43%;
 		@include media-breakpoint-up(xl) {
 			margin-top: rem(30);
 		}
