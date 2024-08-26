@@ -6,22 +6,21 @@
   @include media-breakpoint-up(lg) {
     --sPB: #{rem(20)};
   }
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     --sPT: #{rem(50)};
   }
-	
-	&__row {
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-    // display: grid;
+  .container {
+    position: relative;
+  }
+  .span-wrapper-bg {
+    left: 0;
+    z-index: 0;
+    transform: translate(-99%, -50%);
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
 
-	}
-	.section-title{
-
-	}
-	&__col{
-		
-	}
 	&__inner-wrapper {
     display: grid;
     gap: rem(10) rem(6);

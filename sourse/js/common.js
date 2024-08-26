@@ -85,6 +85,7 @@ function eventHandler() {
   let prodCardThumb = new Swiper(".sProdCard-thumb-js-1", {
 		slidesPerView: 3,
 		spaceBetween: 20,
+    // activeIndex: 2,
 	});
 	let prodCardSlider = new Swiper(".sProdCard-slider-js-1", {
     slidesPerView: 1,
@@ -142,9 +143,20 @@ function eventHandler() {
   ) {
     let updateActiveThumb = function() {
       let activeIndex = prodCardSlider.activeIndex;
-      prodCardThumb.slideTo(activeIndex);
+
+      let slidesPerView = prodCardThumb.params.slidesPerView;
+      let centeredIndex = activeIndex - Math.floor(slidesPerView / 2);
+
+      if (centeredIndex < 0) {
+          centeredIndex = 0;
+      } else if (centeredIndex > prodCardThumb.slides.length - slidesPerView) {
+          centeredIndex = prodCardThumb.slides.length - slidesPerView;
+      }
+
+      prodCardThumb.slideTo(centeredIndex);
+
       document.querySelectorAll('.sProdCard-thumb-js-1 .swiper-slide').forEach(function (slide) {
-        slide.classList.remove('slide-item-1_light');
+          slide.classList.remove('slide-item-1_light');
       });
       prodCardThumb.slides[activeIndex].classList.add('slide-item-1_light');
     };
@@ -155,17 +167,28 @@ function eventHandler() {
 
   if (document.querySelector('#sProductSlider2') &&
   window.getComputedStyle(document.querySelector('#sProductSlider2 .sProductSlider__thumb-wrap')).display !== 'none') {
-    let updateActiveThumb2 = function() {
+    let updateActiveThumb = function() {
       let activeIndex = prodCardSlider2.activeIndex;
-      prodCardThumb2.slideTo(activeIndex);
+
+      let slidesPerView = prodCardThumb2.params.slidesPerView;
+      let centeredIndex = activeIndex - Math.floor(slidesPerView / 2);
+
+      if (centeredIndex < 0) {
+          centeredIndex = 0;
+      } else if (centeredIndex > prodCardThumb2.slides.length - slidesPerView) {
+          centeredIndex = prodCardThumb2.slides.length - slidesPerView;
+      }
+
+      prodCardThumb2.slideTo(centeredIndex);
+
       document.querySelectorAll('.sProdCard-thumb-js-2 .swiper-slide').forEach(function (slide) {
-        slide.classList.remove('slide-item-1_light');
+          slide.classList.remove('slide-item-1_light');
       });
       prodCardThumb2.slides[activeIndex].classList.add('slide-item-1_light');
     };
 
-    prodCardSlider2.on('slideChange', updateActiveThumb2);
-    updateActiveThumb2();
+    prodCardSlider2.on('slideChange', updateActiveThumb);
+    updateActiveThumb();
   }
 
 

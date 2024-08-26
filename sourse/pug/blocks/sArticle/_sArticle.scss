@@ -366,7 +366,7 @@
     }
   }
   .blog-card__footer {
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: flex-end;
   }
   @include media-breakpoint-down(md) {
@@ -401,8 +401,8 @@
     @include media-breakpoint-up(md) {
       padding-bottom: rem(56);
     }
-    @include media-breakpoint-down(md) {
-      width: 60%;
+    @include media-breakpoint-down(sm) {
+      width: 70%;
     }
   }
   .blog-card {

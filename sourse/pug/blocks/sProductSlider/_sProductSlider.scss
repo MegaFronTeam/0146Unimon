@@ -173,7 +173,7 @@
   }
   .swiper_vertical {
     @media (min-width: 1700px) {
-      max-height: rem(420);
+      max-height: rem(340);
       position: absolute;
       top: 0;
       right: 100%;
@@ -407,4 +407,10 @@
 
   }
 
+}
+
+.dark-bg {
+  @include media-breakpoint-up(lg) {
+  background: linear-gradient(180deg, #abcdda 0%, #d5e4e9 100%);
+  }
 }

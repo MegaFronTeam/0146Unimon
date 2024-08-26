@@ -407,9 +407,13 @@
     font-size: rem(32);
     line-height: 89%;
     letter-spacing: -0.06em;
+    padding-right: rem(6);
+    color: white;
     opacity: .7;
     @include media-breakpoint-up(lg) {
       font-size: rem(40);
+      color: #BDDBE4;
+      opacity: 1;
     }
   }
 

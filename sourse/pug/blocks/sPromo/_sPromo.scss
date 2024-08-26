@@ -4,7 +4,10 @@
 	// --sPT: #{rem()};
 	--sPB: #{rem(0)};
 	--sTPB: #{rem(30)};
-    @include media-breakpoint-up(lg) {
+  @include media-breakpoint-down(lg) {
+  background: linear-gradient(180deg, #abcdda 0%, #d5e4e9 100%);
+  }
+  @include media-breakpoint-up(lg) {
       --sPT: #{rem(0)};
       --sPB: #{rem(80)};
 

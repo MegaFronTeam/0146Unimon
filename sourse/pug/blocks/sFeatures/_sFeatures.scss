@@ -160,6 +160,7 @@
       background-clip: text;
       color: transparent;
       display: inline-block;
+      max-width: rem(290);
     }
   }
   
@@ -208,6 +209,7 @@
     border-top: none;
     &:nth-child(2){
       position: relative;
+      transform: translateY(1px);
       &::before {
         content: '';
         position: absolute;
