@@ -46,7 +46,7 @@ mixin sTableS(data)
 									td: .status.status_full
 									td: .status.status_full
 								tr
-									td Сэндвич панели морозильных камер
+									td Сэндвич панели морозильных камер
 									td: .status.status_empty
 									td: .status.status_empty
 									td: .status.status_empty
@@ -69,7 +69,8 @@ mixin tableHeadTh(img, text)
 mixin sTitleSection(data)
 	// start sTable
 	+b.SECTION.sTitleSection.bg_dark-blue-920.section#sTitleSection&attributes(attributes)
-		+img(src="img/ellipse.svg", alt="").ellipse
+		+img(src="img/ellipse.svg", alt="").ellipse.d-none.d-lg-block
+		+img(src="img/ellipse-2.svg", alt="").ellipse.d-lg-none
 		.container
 			+e.row.row(data-aos="fade-up")
 				+e.col.col-12.col-lg-8

@@ -15,7 +15,14 @@
       --bs-gutter-y: #{rem(32)};
     }
 	}
-
+  .smaller {
+    
+    @include media-breakpoint-down(md) {
+      .h1 {
+        font-size: rem(30); //заказчик просил уменьшить, было как и в макете 32
+      }
+    }
+  }
 
   &__row-center {
     align-items: center
@@ -54,7 +61,7 @@
     margin-bottom: rem(32);
     img {
       border-radius: rem(34);
-      box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
+      // box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
     }
   }
 
@@ -154,12 +161,19 @@
 
   &__btn-wrap {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: rem(8);
-    margin-bottom: rem(28);
+    margin-bottom: rem(65);
+    @media (min-width: 470px) {
+      flex-wrap: nowrap;
+    }
+
     @include media-breakpoint-up(lg) {
       align-items: start;
+      justify-content: start;
     }
     @include media-breakpoint-up(xl) {
       flex-direction: row;
@@ -168,11 +182,24 @@
     }
 
     .btn {
-      min-width: rem(281);
-      max-width: rem(286);
+      
+    @media (max-width: 470px) {
+      min-width: rem(240);
+    }
+      width: rem(214);
+      text-wrap: nowrap;
       --bs-btn-padding-y: #{rem(20)};
       --bs-btn-padding-x: #{rem(10)};
-      font-size: rem(20);
+      font-size: rem(16);
+      @include media-breakpoint-up(md) {
+        min-width: rem(240);
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: rem(20);
+        min-width: rem(281);
+        max-width: rem(286);
+
+      }
     }
   }
 
@@ -195,28 +222,28 @@
 
   &__slider-js {
     overflow: hidden;
-    // position: absolute;
-    // top: 42%;
-    // left: 50%;
     transform: translate(37%, 14px);
     width: 62%;
     aspect-ratio: 599/384;
     border: 10px black solid;
     border-radius: rem(20) rem(20) rem(5) rem(5);
     border-bottom: 0;
-    // transform: translate(-50%, -50%);
 
     @include media-breakpoint-up(xxl) {
       width: 80%;
       transform: translate(13%, 19px);
-      // transform: translate(-55%, -50%);
-      // transform: translateX(-15%);
     }
-
 
     img {
       max-width: 100%;
     }
+  }
+
+  .span-wrapper-bg {
+    @include media-breakpoint-down(lg) {
+      top: 40%;
+    }
+
   }
 
 	@include media-breakpoint-up(xl) {}
@@ -230,6 +257,7 @@
 
 #sProperties2 {
   overflow: hidden;
+  --sPB: #{rem(10)};
   @include media-breakpoint-up(lg) {
     --sPT: #{rem(60)};
     --sPB: #{rem(90)};

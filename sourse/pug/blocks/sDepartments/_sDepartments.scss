@@ -21,7 +21,7 @@
 
 	&__item {
 		display: grid;
-    grid-template-columns: repeat(2, 1fr );
+    grid-template-columns: repeat(3, calc((100% - 14px) / 3 ));
     gap: rem(7);
     @include media-breakpoint-up(sm) {
       grid-template-columns: repeat( auto-fit, minmax(140px, 1fr) );
@@ -83,12 +83,6 @@
     padding: rem(32);
   }
 
-  &:nth-child(3) {
-  @include media-breakpoint-down(sm) {
-    grid-column: span 2;
-  }
-  }
-
   &__img-wrap {
     margin-bottom: rem(10);
     img {
@@ -110,6 +104,9 @@
     }
     @include media-breakpoint-down(lg) {
       font-size: rem(14);
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 3.2vw;
     }
   }
 

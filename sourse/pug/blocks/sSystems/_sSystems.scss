@@ -16,9 +16,18 @@
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(12)};
 	}
-	.section-title{
-		
-	}
+	&::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 50%;
+    background: inherit;
+    filter: blur(17px);
+    // background: linear-gradient(180deg, rgba(0,52,102,1) 44%, rgba(0,52,102,0) 100%);
+    z-index: 0;
+  }
   .img {
     position: absolute;
     bottom: 0;
@@ -29,7 +38,7 @@
     max-height: 60%;
     width: 100%;
     opacity: .6;
-    filter: blur(10px);
+    filter: blur(4px);
     @include media-breakpoint-up(lg) {
       aspect-ratio: 2000/800;
     }

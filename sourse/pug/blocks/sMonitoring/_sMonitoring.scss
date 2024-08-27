@@ -4,18 +4,22 @@
 	background: $gradient-dark_to-right;
 	--sPT: #{rem(50)};
 	--sPB: #{rem(0)};
-	--sTPB: #{rem(33)};
+	--sTPB: #{rem(23)};
 
 	@include media-breakpoint-up(md) {
     --sPT: #{rem(88)};
-    --sPB: #{rem(90)};
-    --sTPB: #{rem(33)};
+    --sPB: #{rem(130)};
+    --sTPB: #{rem(103)};
   }
 
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(16)};
     align-items: center;
+    position: static;
+    @include media-breakpoint-up(xl) {
+      align-items:normal;
+    }
 	}
 
   .h1 {
@@ -26,20 +30,49 @@
   }
 
 	&__item{
-		max-width: rem(445);
-    margin-left: 3vw;
+		max-width: rem(335);
+    margin-left: 10vw;
+    @include media-breakpoint-up(md) {
+      margin-left: 3vw;
+      max-width: none;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-left: 110px;
+    }
 	}
 
   &__img-wrap {
     min-height: rem(342);
+    height: 100%;
+    @include media-breakpoint-up(lg) {
+      position: relative;
+    }
     img {
       max-width: 100%;
     }
-    .d-md-none {
+    .img-mob {
       width: rem(324);
       position: absolute;
       right: rem(-36);
+      @include media-breakpoint-up(sm) {
+        right: rem(-110);
+      }
+      // right: 0;
       bottom: 0;
+    }
+
+    .img {
+      @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: 0;
+      right: -20px;
+      z-index: -1;
+        max-width: 120%;
+        transform: translateY(-20%);
+      }
+      @include media-breakpoint-up(xl) {
+        max-width: rem(900);
+      }
     }
   }
 

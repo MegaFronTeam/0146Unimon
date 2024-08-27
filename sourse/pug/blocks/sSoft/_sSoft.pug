@@ -20,7 +20,7 @@ mixin storeLink(icon)
 	+b.store-link(href='#'): +img(src=`img/${icon}.svg`, alt="")
 
 mixin deviceCard(title, n)
-	.col-12.col-sm-4
+	.col-4
 		+b.device-card(class= `device-card_${n}`)
 			+e.title
 				.h4= title

@@ -138,7 +138,7 @@
     max-width: 100%;
   }
   &__img-wrap {
-    margin-top: rem(30);
+    // margin-top: rem(30);
     margin-bottom: rem(20);
     @include media-breakpoint-up(lg) {
       margin-top: -70px;

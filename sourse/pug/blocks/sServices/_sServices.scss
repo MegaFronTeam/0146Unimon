@@ -16,8 +16,11 @@
     grid-template-columns: repeat( 2, 49% );
     gap: rem(6);
     @include media-breakpoint-up(xl) {
-      grid-template-columns: .5fr 1fr .5fr 1fr;
+      grid-template-columns: 230px 1fr 230px 1fr;
       gap: rem(17) rem(12);
+    }
+    @include media-breakpoint-up(xxl) {
+      grid-template-columns: 230px 472px 230px 392px;
     }
 	}
 	.section-title{
@@ -105,7 +108,10 @@
     img {
       max-width: 80%;
     @include media-breakpoint-up(xl) {
-      max-height: 100%;
+      // max-height: 100%;
+      max-width: 100%;
+      // margin-top: rem(-7);
+      margin-right: rem(-10);
     }
     }
   }
@@ -136,9 +142,32 @@
       grid-row: span 2;
       flex-direction: column-reverse;
       justify-content: space-evenly;
-      padding: rem(30) rem(24);
+      padding: rem(30) rem(22);
+      .service-card__img-wrap {
+        margin-top: rem(-140);
+      }
+      .service-card__description {
+        margin-top: rem(-40);
+      }
+
       p {
         max-width: none;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    @include media-breakpoint-up(xl) {
+      grid-column: 2/3;
+    }
+  }
+  &:nth-child(5) {
+    @include media-breakpoint-up(xl) {
+      grid-column: -2/-1;
+      grid-row: 1/2;
+      
+      .service-card__title {
+        max-width: rem(240);
       }
     }
   }
