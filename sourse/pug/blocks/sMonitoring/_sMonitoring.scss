@@ -12,13 +12,16 @@
     --sTPB: #{rem(103)};
   }
 
+    @include media-breakpoint-up(xl) {
+      --sPB: #{rem(160)};
+    }
 	&__row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: #{rem(16)};
+		--bs-gutter-y: #{rem(0)};
     align-items: center;
     position: static;
     @include media-breakpoint-up(xl) {
-      align-items:normal;
+      align-items: normal;
     }
 	}
 
@@ -51,11 +54,11 @@
       max-width: 100%;
     }
     .img-mob {
-      width: rem(324);
+      width: rem(290);
       position: absolute;
-      right: rem(-36);
+      right: rem(0);
       @include media-breakpoint-up(sm) {
-        right: rem(-110);
+        right: calc((100vw - 540px)/2 * -1);
       }
       // right: 0;
       bottom: 0;

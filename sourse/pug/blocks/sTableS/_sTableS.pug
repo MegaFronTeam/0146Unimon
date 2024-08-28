@@ -74,9 +74,9 @@ mixin sTitleSection(data)
 		.container
 			+e.row.row(data-aos="fade-up")
 				+e.col.col-12.col-lg-8
-					+b.section-title
+					+b.section-title.ms
 						.h1 Разрабатываем и производим беспроводные решения
-					+e.btn.btn.btn-outline-light(href='#') Подробнее
+					+e.btn.btn.btn-outline-light.ms(href='#') Подробнее
 				+e.col.col-12.col-lg-4
 					+e.img-wrap: +img(src="img/title-bg.png", alt="")
 
@@ -86,7 +86,7 @@ mixin sTitleSection2(data)
 		.container
 			+e.row.row(data-aos="fade-up")
 				+e.col.col-12.col-lg-7
-					+b.section-title
+					+b.section-title.ml
 						.h2 Используем международный стандарт LoraWan
 						+e.text Обеспечивает совместимость с оборудованием других производителей
 				+e.col.col-12.col-lg-5.d-none.d-lg-block
