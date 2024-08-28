@@ -1,7 +1,7 @@
 "use strict";
 
-import Swiper from "../libs/swiper/swiper-bundle.min.mjs";
-import JSCCommon from "./JSCCommon.js";
+// import Swiper from "../libs/swiper/swiper-bundle.min.mjs";
+// import JSCCommon from "./JSCCommon.js";
 
 const $ = jQuery;
 
@@ -192,7 +192,6 @@ function eventHandler() {
   }
 
 
-
   let brands = new Swiper(".sClients__brand--js", {
     slidesPerView: 'auto',
 		// freeMode: true,
@@ -228,29 +227,52 @@ function eventHandler() {
 	});
 
 	/* nav */
-	const menuItems = document.querySelectorAll(".menu-item-has-children");
+  window.addEventListener('load', ()=> {
+    const menuItems = document.querySelectorAll(".menu-item-has-children");
 
-	menuItems.forEach(item => {
-		item.addEventListener("click", function (event) {
-			event.preventDefault();
-			event.stopPropagation();
-			menuItems.forEach(otherItem => {
-				if (otherItem !== item) {
-					otherItem.classList.remove("active");
-				}
-			});
+    menuItems.forEach(item => {
+      item.addEventListener("click", function (event) {
+        console.log('clock');
+        event.preventDefault();
+        // event.stopPropagation();
+        menuItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
 
-			item.classList.toggle("active");
-		});
-	});
+        item.classList.toggle("active");
+      });
+    });
 
-	document.addEventListener("click", function (event) {
-		if (!event.target.closest(".menu-item-has-children")) {
-			menuItems.forEach(item => {
-				item.classList.remove("active");
-			});
-		}
-	});
+    document.addEventListener("click", function (event) {
+      if (!event.target.closest(".menu-item-has-children")) {
+        menuItems.forEach(item => {
+          item.classList.remove("active");
+        });
+      }
+    });
+  })
+
+
+  /* header */
+  window.addEventListener('load', ()=> {
+
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', function() {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+          header.style.transform = 'translateY(-100%)';
+      } else {
+          header.style.transform = 'translateY(0)';
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  });
 
 	/* side sticky */
 
