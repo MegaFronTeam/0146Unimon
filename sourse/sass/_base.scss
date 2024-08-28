@@ -581,6 +581,21 @@ h4,
   animation: flash 1.5s;
 }
 
+.container {
+
+	@include media-breakpoint-up(xl) {
+    --container-margin: 100px;
+    max-width: calc(100% - var(--container-margin)*2 + var(--bs-gutter-x));
+  }
+	@include media-breakpoint-up(xxl) {
+    max-width: 1370px;
+  }
+
+	// @include media-breakpoint-up(xxl) {
+  //   max-width: 2028px;
+  // }
+}
+
 .btn-outline-primary {
 	background: $gradient-dark;
 	background-clip: text;

@@ -166,7 +166,13 @@
       }
     }
   }
-
+  
+  .table-wrap {
+    margin-top: rem(18);
+    @include media-breakpoint-up(md) {
+      margin-top: rem(70);
+    }
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -309,10 +315,6 @@
   position: relative;
   overflow-x: auto;
   overflow-y: hidden;
-  margin-top: rem(18);
-  @include media-breakpoint-up(md) {
-    margin-top: rem(70);
-  }
   table {
     width: 100%;
   }

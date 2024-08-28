@@ -113,7 +113,7 @@ function eventHandler() {
 		spaceBetween: 20,
     direction: 'horizontal',
     breakpoints: {
-        1700: {
+        1200: {
           direction: 'vertical',
         }
       }

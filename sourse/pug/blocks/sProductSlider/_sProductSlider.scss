@@ -49,7 +49,9 @@
       transform: translateY(-70px);
     }
     
-    @media (min-width: 1700px) {
+    // @media (min-width: 1600px) {
+    
+    @include media-breakpoint-up(xl) {
       transform: translateY(0);
     }
   }
@@ -77,7 +79,7 @@
     gap: rem(7) rem(5);
     @include media-breakpoint-up(lg) {
       gap: rem(11) rem(15);
-      grid-template-columns: repeat( 3, 33%);
+      grid-template-columns: repeat( 3, calc((100% - 30px) /3));
     }
   }
 
@@ -172,27 +174,38 @@
     align-items: center;
   }
   .swiper_vertical {
-    @media (min-width: 1700px) {
+    // @media (min-width: 1600px) {
+    
+    @include media-breakpoint-up(xl) {
       max-height: rem(340);
       position: absolute;
       top: 0;
-      right: 100%;
+      transform: translateY(-12%);
+      right: 96%;
       width: rem(100);
     }
+    @include media-breakpoint-up(xxl) {
+      right: 94%;
+    }
   }
-  @media (min-width: 1700px) {
+  // @media (min-width: 1600px) {
+  
+  @include media-breakpoint-up(xl) {
     .arrow-wrapThumb2 {
       .swiper-button-hand {
-        left: -60px;
+        left: -48px;
+        @include media-breakpoint-up(xl) {
+          left: -38px;
+        }
       }
     }
     .arrow-wrapThumb2 .swiper-button-prev {
-      top: -40px;
+      top: -90px;
       bottom: auto;
       transform: rotate(90deg);
     }
     .arrow-wrapThumb2 .swiper-button-next {
-      bottom: 40px;
+      bottom: 100px;
       top: auto;
       transform: rotate(90deg);
     }
@@ -205,7 +218,9 @@
   }
   &#sProductSlider2 {
     .sProductSlider__thumb-wrap {
-      @media (min-width: 1700px) {
+      // @media (min-width: 1600px) {
+      
+      @include media-breakpoint-up(xl) {
         position: static;
       }
     }
@@ -229,8 +244,11 @@
       margin-bottom: rem(82);
     }
     @include media-breakpoint-up(xl) {
-      margin-bottom: rem(50);
+      margin-bottom: 5vw;
       position: relative;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: rem(50);
     }
     img {
       max-width: 100%;
